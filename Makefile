@@ -12,7 +12,7 @@ test:           ## unit and endpoint tests (no GPU needed)
 e2e:            ## browser test of the whole flow (needs headless Firefox and the app on :8765)
 	$(PY) tests/e2e_ui.py
 report:         ## rebuild the PDF report from the logs and results
-	$(PY) scripts/report_data.py && $(PY) scripts/walkthroughs.py && cd report && tectonic report.tex
+	$(PY) scripts/report_data.py && $(PY) scripts/walkthroughs.py && cd report && tectonic report.tex && cp report.pdf SplitSnap_Model_Report.pdf
 studies:        ## local measurements behind the report (need the checkpoint and the app on :8765)
 	$(PY) scripts/before_after.py --ckpt $(CKPT) --n 30
 	$(PY) scripts/degradation_study.py --ckpt $(CKPT)
