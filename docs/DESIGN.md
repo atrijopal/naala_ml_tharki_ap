@@ -1,6 +1,6 @@
 # SplitSnap: design brief and system
 
-Status: **built and tested in demo mode (2026-10-09)**; see change.md, section App. Font check done: Newsreader and Atkinson Hyperlegible Next ship the rupee sign; Spline Sans Mono does not (not used yet).
+Status: **built and tested in demo mode (2026-10-09)**; Font check done: Newsreader and Atkinson Hyperlegible Next ship the rupee sign; Spline Sans Mono does not (not used yet).
 
 ## 1. What this is, and the feeling
 

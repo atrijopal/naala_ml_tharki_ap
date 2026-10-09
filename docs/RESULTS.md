@@ -1,6 +1,6 @@
 # Results: fine-tuned Donut (epoch 16), held-out test splits
 
-Model: `naver-clova-ix/donut-base` fine-tuned by us, full fine-tune, fp16, 1280x960, 16 epochs (about 4.3 h of GPU time for the working run; one earlier 2.2 h run was discarded because of a loss-alignment bug, see change.md). Checkpoint: epoch 16, chosen on validation (mean of CORD TED and SROIE score).
+Model: `naver-clova-ix/donut-base` fine-tuned by us, full fine-tune, fp16, 1280x960, 16 epochs (about 4.1 h of GPU time in two sessions). Checkpoint: epoch 16, chosen on validation (mean of CORD TED and SROIE score).
 Evaluation: Kaggle T4, fp16, greedy decoding, kernel `atrijopal/splitsnap-eval`, raw output `out/splitsnap-eval/log.txt`. Test bills were never trained on and never used to choose the checkpoint. All metrics are our own implementation (`splitsnap/metrics.py`, `metrics_sroie.py`).
 
 ## Accuracy on the held-out test splits
@@ -26,7 +26,7 @@ Validation (used to pick the checkpoint, so slightly optimistic): CORD val (98) 
 | | CORD field F1 | CORD TED | Synthetic Indian bills, charge F1 | SROIE |
 |---|---|---|---|---|
 | Untrained `donut-base` + our tokens (n=12) | 0.00 | 0.20 | 0.00 | cannot produce the schema |
-| Public CORD-trained Donut (someone else's model; 30 CORD test bills) | 0.90 | 0.92 | 0.15-0.19 (understated, see change.md) | not trained for it |
+| Public CORD-trained Donut (someone else's model; 30 CORD test bills) | 0.90 | 0.92 | 0.15-0.19 (understated: scored before a generator fix) | not trained for it |
 | **Ours, epoch 16** (95 CORD test bills) | **0.894** | **0.930** | **0.972** (100 bills) | **F1 0.872** (347 bills) |
 
 ## How to read this

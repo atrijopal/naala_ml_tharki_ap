@@ -2,7 +2,6 @@
 
 | File | What it contains |
 |---|---|
-| `problem_statement.txt` | The hackathon problem statement (Track 1, SplitSnap) |
 | `APIS_AND_SETUP.md` | Accounts and tools needed (Kaggle, Hugging Face), and measured training time |
 | `EDA_RESULTS.md` | Profile of CORD and SROIE that shaped augmentation and splits |
 | `BASELINE_RESULTS.md` | Scores before fine-tuning |

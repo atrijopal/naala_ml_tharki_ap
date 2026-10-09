@@ -37,7 +37,7 @@ Run: CPU kernel `atrijopal/splitsnap-eda` (4.8 min, no GPU). Raw output: `out/sp
 | Possible near-duplicates across train/test | 329 pairs; likely same-store templates, not verified |
 | What the labels do NOT have | **no line items, no charge lines.** Only company/date/address/total. SROIE helps with totals and reading robustness, not with charge classification. |
 
-## What this means (decisions in change.md)
+## What this means
 1. **Cap image size at load.** 35 MP SROIE scans (and 12 MP CORD) would make augmentation slow and memory-hungry (tens of MB per colour channel as float arrays, several loader workers at once). Downscale to about 2,500 px long side before augmenting.
 2. **Augmentation must differ per source.** CORD is already soft and dark; strong blur could make digits unreadable (label noise). SROIE is flat, sharp, bright scans, nothing like the phone photos we must handle, so it needs photo-style augmentation (background/margin, shadow, lower brightness).
 3. **The retake gate misfires.** The current thresholds flag **55% of CORD** (43.5% "blurry", 28% "low resolution", 13% low contrast) and **19% of clean SROIE scans as "washed out"**. Must be recalibrated before R2 prompts are shown to users.

@@ -15,11 +15,6 @@ examples/augmentation_by_profile/sroie_*
 examples/overview.jpg
 examples/cord/
 
-# --- local working notes and planning files (not part of the deliverable) ---
-CLAUDE.md
-change.md
-SplitSnap_Donut_Kaggle_Guide.md
-
 # --- build and cache files ---
 __pycache__/
 *.pyc

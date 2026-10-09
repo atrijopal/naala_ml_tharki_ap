@@ -143,7 +143,7 @@ PS_CHARGE_NAMES = {"SERVICE_CHARGE": "Service Charge", "ROUND_OFF": "Round Off",
 
 
 def to_ps_schema(d):
-    """Our internal string schema -> the problem statement's JSON (ps.txt R1): numeric qty/prices/amounts and
+    """Our internal string schema -> the problem statement's JSON (requirement R1): numeric qty/prices/amounts and
     readable charge names ("Service Charge", "Discount"). Unparseable numbers become None, never a guess."""
     def num(x):
         v = parse_money(x)

@@ -3,7 +3,7 @@
 **Photograph a restaurant bill, fix what was misread, and split it exactly.**
 SplitSnap reads the items and charges from one photo with a Donut model we fine-tuned ourselves, then divides the bill among named people. Every tax, service charge, packaging fee, discount and rounding line is shared in proportion to what each person ordered, in exact paise, and every person gets a written account of how their amount was reached.
 
-Built for the Nalafaad Hackathon, Track 1 (see [`docs/problem_statement.txt`](docs/problem_statement.txt)). Everything in the extraction pipeline is open source and runs locally; no closed or paid API is called.
+Built for the Nalafaad Hackathon, Track 1: SplitSnap. Everything in the extraction pipeline is open source and runs locally; no closed or paid API is called.
 
 <p align="center">
   <img src="report/figs/ui_wide_2_check.png" width="49%" alt="Check screen: the photo beside the extracted fields">
