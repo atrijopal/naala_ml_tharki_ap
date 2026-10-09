@@ -1,0 +1,34 @@
+{
+ "items": [
+  {
+   "name": "Poha",
+   "qty": "1",
+   "unit_price": "55",
+   "total": "55"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "140",
+   "total": "140"
+  },
+  {
+   "name": "Masala Dosa",
+   "qty": "1",
+   "unit_price": "85",
+   "total": "85"
+  }
+ ],
+ "charges": [
+  {
+   "type": "VAT",
+   "amount": "39.2"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.2"
+  }
+ ],
+ "subtotal": "280",
+ "grand_total": "319"
+}

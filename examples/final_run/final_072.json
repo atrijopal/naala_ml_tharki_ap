@@ -1,0 +1,62 @@
+{
+ "items": [
+  {
+   "name": "Butter Roti",
+   "qty": "2",
+   "unit_price": "25",
+   "total": "50"
+  },
+  {
+   "name": "Gobi Manchurian",
+   "qty": "1",
+   "unit_price": "120",
+   "total": "120"
+  },
+  {
+   "name": "Mango Lassi",
+   "qty": "1",
+   "unit_price": "60",
+   "total": "60"
+  },
+  {
+   "name": "Paratha",
+   "qty": "1",
+   "unit_price": "65",
+   "total": "65"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "3",
+   "unit_price": "145",
+   "total": "435"
+  },
+  {
+   "name": "Chicken Biryani",
+   "qty": "1",
+   "unit_price": "230",
+   "total": "230"
+  },
+  {
+   "name": "Tandoori Roti",
+   "qty": "1",
+   "unit_price": "17",
+   "total": "17"
+  }
+ ],
+ "charges": [
+  {
+   "type": "PACKAGING",
+   "amount": "30"
+  },
+  {
+   "type": "GST",
+   "amount": "117.24"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.24"
+  }
+ ],
+ "subtotal": "977",
+ "grand_total": "1124"
+}

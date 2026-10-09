@@ -1,0 +1,32 @@
+{
+ "items": [
+  {
+   "name": "Tandoori Roti",
+   "qty": "2",
+   "unit_price": "22.5",
+   "total": "45"
+  },
+  {
+   "name": "Garlic Naan",
+   "qty": "1",
+   "unit_price": "60.5",
+   "total": "60.5"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "10.55"
+  },
+  {
+   "type": "GST",
+   "amount": "18.99"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.04"
+  }
+ ],
+ "subtotal": "105.5",
+ "grand_total": "135"
+}

@@ -1,0 +1,46 @@
+{
+ "items": [
+  {
+   "name": "Jeera Rice",
+   "qty": "3",
+   "unit_price": "160",
+   "total": "480"
+  },
+  {
+   "name": "Poha",
+   "qty": "1",
+   "unit_price": "30",
+   "total": "30"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "105",
+   "total": "105"
+  },
+  {
+   "name": "Paneer Butter Masala",
+   "qty": "2",
+   "unit_price": "235",
+   "total": "470"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "2",
+   "unit_price": "290",
+   "total": "580"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "99.9"
+  },
+  {
+   "type": "SGST",
+   "amount": "99.9"
+  }
+ ],
+ "subtotal": "1665",
+ "grand_total": "1864.8"
+}

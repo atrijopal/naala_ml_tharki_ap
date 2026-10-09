@@ -1,0 +1,46 @@
+{
+ "items": [
+  {
+   "name": "Tandoori Roti",
+   "qty": "2",
+   "unit_price": "22",
+   "total": "44"
+  },
+  {
+   "name": "Dal Tadka",
+   "qty": "1",
+   "unit_price": "135",
+   "total": "135"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "2",
+   "unit_price": "245",
+   "total": "490"
+  },
+  {
+   "name": "Jeera Rice",
+   "qty": "1",
+   "unit_price": "130.5",
+   "total": "130.5"
+  },
+  {
+   "name": "Veg Thali",
+   "qty": "1",
+   "unit_price": "180.5",
+   "total": "180.5"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "24.5"
+  },
+  {
+   "type": "SGST",
+   "amount": "24.5"
+  }
+ ],
+ "subtotal": "980",
+ "grand_total": "1029"
+}

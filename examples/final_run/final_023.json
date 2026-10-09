@@ -1,0 +1,48 @@
+{
+ "items": [
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "1",
+   "unit_price": "175",
+   "total": "175"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "4",
+   "unit_price": "90",
+   "total": "360"
+  },
+  {
+   "name": "Idli Sambar",
+   "qty": "1",
+   "unit_price": "80",
+   "total": "80"
+  },
+  {
+   "name": "Veg Sandwich",
+   "qty": "1",
+   "unit_price": "65",
+   "total": "65"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "34"
+  },
+  {
+   "type": "DISCOUNT",
+   "amount": "-50"
+  },
+  {
+   "type": "CGST",
+   "amount": "38"
+  },
+  {
+   "type": "SGST",
+   "amount": "38"
+  }
+ ],
+ "subtotal": "680",
+ "grand_total": "740"
+}

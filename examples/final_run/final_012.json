@@ -1,0 +1,56 @@
+{
+ "items": [
+  {
+   "name": "Butter Roti",
+   "qty": "1",
+   "unit_price": "25",
+   "total": "25"
+  },
+  {
+   "name": "Chicken Biryani",
+   "qty": "1",
+   "unit_price": "295",
+   "total": "295"
+  },
+  {
+   "name": "Fresh Lime Soda",
+   "qty": "1",
+   "unit_price": "65",
+   "total": "65"
+  },
+  {
+   "name": "Jeera Rice",
+   "qty": "2",
+   "unit_price": "105",
+   "total": "210"
+  },
+  {
+   "name": "Veg Biryani",
+   "qty": "4",
+   "unit_price": "245",
+   "total": "980"
+  },
+  {
+   "name": "Idli Sambar",
+   "qty": "2",
+   "unit_price": "75",
+   "total": "150"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "124"
+  },
+  {
+   "type": "SGST",
+   "amount": "124"
+  },
+  {
+   "type": "DISCOUNT",
+   "amount": "-345"
+  }
+ ],
+ "subtotal": "1725",
+ "grand_total": "1628"
+}

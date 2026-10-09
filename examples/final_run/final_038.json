@@ -1,0 +1,32 @@
+{
+ "items": [
+  {
+   "name": "Maggi",
+   "qty": "1",
+   "unit_price": "65",
+   "total": "65"
+  },
+  {
+   "name": "Masala Dosa",
+   "qty": "3",
+   "unit_price": "110",
+   "total": "330"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "40"
+  },
+  {
+   "type": "CGST",
+   "amount": "10"
+  },
+  {
+   "type": "SGST",
+   "amount": "10"
+  }
+ ],
+ "subtotal": "395",
+ "grand_total": "455"
+}

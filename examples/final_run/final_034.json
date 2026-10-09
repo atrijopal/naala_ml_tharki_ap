@@ -1,0 +1,52 @@
+{
+ "items": [
+  {
+   "name": "Idli Sambar",
+   "qty": "1",
+   "unit_price": "50",
+   "total": "50"
+  },
+  {
+   "name": "Veg Sandwich",
+   "qty": "3",
+   "unit_price": "55.5",
+   "total": "166.5"
+  },
+  {
+   "name": "Dal Tadka",
+   "qty": "1",
+   "unit_price": "200",
+   "total": "200"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "1",
+   "unit_price": "225",
+   "total": "225"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "145",
+   "total": "145"
+  },
+  {
+   "name": "Chicken Biryani",
+   "qty": "2",
+   "unit_price": "205.5",
+   "total": "411"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "71.85"
+  },
+  {
+   "type": "SGST",
+   "amount": "71.85"
+  }
+ ],
+ "subtotal": "1197.5",
+ "grand_total": "1341.2"
+}

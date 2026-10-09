@@ -1,0 +1,48 @@
+{
+ "items": [
+  {
+   "name": "Veg Biryani",
+   "qty": "1",
+   "unit_price": "195",
+   "total": "195"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "135",
+   "total": "135"
+  },
+  {
+   "name": "Paneer Butter Masala",
+   "qty": "1",
+   "unit_price": "205",
+   "total": "205"
+  },
+  {
+   "name": "Maggi",
+   "qty": "2",
+   "unit_price": "60",
+   "total": "120"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "65.5"
+  },
+  {
+   "type": "GST",
+   "amount": "75.6"
+  },
+  {
+   "type": "DISCOUNT",
+   "amount": "-25"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.1"
+  }
+ ],
+ "subtotal": "655",
+ "grand_total": "771"
+}

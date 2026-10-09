@@ -1,0 +1,19 @@
+{
+ "items": [
+  {
+   "name": "Tea",
+   "qty": "1",
+   "unit_price": "30",
+   "total": "30"
+  },
+  {
+   "name": "Paneer Butter Masala",
+   "qty": "1",
+   "unit_price": "215",
+   "total": "215"
+  }
+ ],
+ "charges": [],
+ "subtotal": "245",
+ "grand_total": "245"
+}

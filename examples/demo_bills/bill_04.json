@@ -1,0 +1,25 @@
+{
+ "items": [
+  {
+   "name": "Butter Roti",
+   "qty": "2",
+   "unit_price": "15",
+   "total": "30"
+  },
+  {
+   "name": "Dal Tadka",
+   "qty": "2",
+   "unit_price": "165",
+   "total": "330"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "2",
+   "unit_price": "340",
+   "total": "680"
+  }
+ ],
+ "charges": [],
+ "subtotal": "1040",
+ "grand_total": "1040"
+}

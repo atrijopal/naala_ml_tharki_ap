@@ -1,0 +1,54 @@
+{
+ "items": [
+  {
+   "name": "Maggi",
+   "qty": "3",
+   "unit_price": "65",
+   "total": "195"
+  },
+  {
+   "name": "Tandoori Roti",
+   "qty": "2",
+   "unit_price": "22",
+   "total": "44"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "160",
+   "total": "160"
+  },
+  {
+   "name": "Idli Sambar",
+   "qty": "2",
+   "unit_price": "60",
+   "total": "120"
+  },
+  {
+   "name": "Jeera Rice",
+   "qty": "2",
+   "unit_price": "150",
+   "total": "300"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "40.95"
+  },
+  {
+   "type": "CGST",
+   "amount": "73.71"
+  },
+  {
+   "type": "SGST",
+   "amount": "73.71"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.37"
+  }
+ ],
+ "subtotal": "819",
+ "grand_total": "1007"
+}

@@ -1,0 +1,30 @@
+{
+ "items": [
+  {
+   "name": "Butter Roti",
+   "qty": "1",
+   "unit_price": "35",
+   "total": "35"
+  },
+  {
+   "name": "Paratha",
+   "qty": "2",
+   "unit_price": "65",
+   "total": "130"
+  },
+  {
+   "name": "Mango Lassi",
+   "qty": "1",
+   "unit_price": "75",
+   "total": "75"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "24"
+  }
+ ],
+ "subtotal": "240",
+ "grand_total": "264"
+}

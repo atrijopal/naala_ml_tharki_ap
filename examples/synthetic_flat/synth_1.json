@@ -1,0 +1,54 @@
+{
+ "items": [
+  {
+   "name": "Gobi Manchurian",
+   "qty": "3",
+   "unit_price": "205",
+   "total": "615"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "1",
+   "unit_price": "145",
+   "total": "145"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "95",
+   "total": "95"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "1",
+   "unit_price": "330",
+   "total": "330"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "4",
+   "unit_price": "30",
+   "total": "120"
+  },
+  {
+   "name": "Veg Thali",
+   "qty": "1",
+   "unit_price": "155",
+   "total": "155"
+  },
+  {
+   "name": "Egg Curry",
+   "qty": "1",
+   "unit_price": "175",
+   "total": "175"
+  }
+ ],
+ "charges": [
+  {
+   "type": "DISCOUNT",
+   "amount": "-327"
+  }
+ ],
+ "subtotal": "1635",
+ "grand_total": "1308"
+}

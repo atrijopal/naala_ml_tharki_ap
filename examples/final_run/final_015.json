@@ -1,0 +1,40 @@
+{
+ "items": [
+  {
+   "name": "Mutton Curry",
+   "qty": "1",
+   "unit_price": "300",
+   "total": "300"
+  },
+  {
+   "name": "Veg Biryani",
+   "qty": "2",
+   "unit_price": "180",
+   "total": "360"
+  },
+  {
+   "name": "Dal Tadka",
+   "qty": "1",
+   "unit_price": "145",
+   "total": "145"
+  },
+  {
+   "name": "Paneer Butter Masala",
+   "qty": "1",
+   "unit_price": "245",
+   "total": "245"
+  }
+ ],
+ "charges": [
+  {
+   "type": "DISCOUNT",
+   "amount": "-50"
+  },
+  {
+   "type": "VAT",
+   "amount": "50"
+  }
+ ],
+ "subtotal": "1050",
+ "grand_total": "1050"
+}

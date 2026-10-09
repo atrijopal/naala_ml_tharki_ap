@@ -1,0 +1,6 @@
+# Tests, UI tests, benchmarks and the report. Not needed to run the app.
+-r requirements.txt
+selenium>=4.20                  # tests/e2e_ui.py and scripts/ui_shots.py drive headless Firefox
+kaggle>=2.2                     # scripts/kaggle_*.sh
+torchao>=0.18                   # only for the quantisation experiment in scripts/bench_quant.py
+# The report is LaTeX: build it with tectonic (https://tectonic-typesetting.github.io), no TeX Live install needed.

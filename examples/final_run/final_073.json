@@ -1,0 +1,62 @@
+{
+ "items": [
+  {
+   "name": "Masala Dosa",
+   "qty": "1",
+   "unit_price": "115",
+   "total": "115"
+  },
+  {
+   "name": "Samosa",
+   "qty": "2",
+   "unit_price": "40.5",
+   "total": "81"
+  },
+  {
+   "name": "Maggi",
+   "qty": "1",
+   "unit_price": "80",
+   "total": "80"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "3",
+   "unit_price": "150",
+   "total": "450"
+  },
+  {
+   "name": "Garlic Naan",
+   "qty": "1",
+   "unit_price": "45",
+   "total": "45"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "1",
+   "unit_price": "95",
+   "total": "95"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "1",
+   "unit_price": "30",
+   "total": "30"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "44.8"
+  },
+  {
+   "type": "CGST",
+   "amount": "80.64"
+  },
+  {
+   "type": "SGST",
+   "amount": "80.64"
+  }
+ ],
+ "subtotal": "896",
+ "grand_total": "1102.08"
+}

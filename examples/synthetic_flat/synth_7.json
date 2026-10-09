@@ -1,0 +1,34 @@
+{
+ "items": [
+  {
+   "name": "Garlic Naan",
+   "qty": "3",
+   "unit_price": "35",
+   "total": "105"
+  },
+  {
+   "name": "Dal Tadka",
+   "qty": "1",
+   "unit_price": "135",
+   "total": "135"
+  },
+  {
+   "name": "Maggi",
+   "qty": "1",
+   "unit_price": "65",
+   "total": "65"
+  }
+ ],
+ "charges": [
+  {
+   "type": "DISCOUNT",
+   "amount": "-15"
+  },
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "31"
+  }
+ ],
+ "subtotal": "305",
+ "grand_total": "321"
+}

@@ -1,0 +1,36 @@
+{
+ "items": [
+  {
+   "name": "Gobi Manchurian",
+   "qty": "1",
+   "unit_price": "135",
+   "total": "135"
+  },
+  {
+   "name": "Veg Thali",
+   "qty": "1",
+   "unit_price": "125",
+   "total": "125"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "13"
+  },
+  {
+   "type": "CGST",
+   "amount": "14.1"
+  },
+  {
+   "type": "DISCOUNT",
+   "amount": "-25"
+  },
+  {
+   "type": "SGST",
+   "amount": "14.1"
+  }
+ ],
+ "subtotal": "260",
+ "grand_total": "276.2"
+}

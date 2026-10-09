@@ -1,0 +1,52 @@
+\small
+\textbf{Where the time goes.} One bill at a time, greedy decoding, at most 512 tokens, on a laptop RTX 4050 (median of 20 images: scans, generated bills and phone-size photos). Preparation is CPU work (decode, resize); the encoder is one pass; the decoder writes the answer token by token and is the largest part, which is why long bills take longer.
+
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[xbar stacked,width=0.86\textwidth,height=2.5cm,bar width=11pt,symbolic y coords={fp32,fp16},ytick=data,xlabel={milliseconds per bill},xmin=0,xmax=560,legend style={at={(0.5,1.04)},anchor=south,legend columns=3},nodes near coords,every node near coord/.append style={font=\scriptsize,text=white},xmajorgrids]
+\addplot[fill=ash,draw=ink] coordinates {(55,fp32) (55,fp16)};
+\addplot[fill=ochre,draw=ink] coordinates {(198,fp32) (79,fp16)};
+\addplot[fill=brick,draw=ink] coordinates {(263,fp32) (135,fp16)};
+\legend{Preparation,Image encoder,Decoder}
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+
+\textbf{What we changed for inference.}
+\begin{table}[!ht]
+\centering\footnotesize
+\begin{tabular}{@{}p{4.6cm}p{9.2cm}l@{}}
+\toprule
+Change & Measured effect & Status\\
+\midrule
+Half precision (fp16) & median 538 to 285 ms (1.9$\times$ faster), p95 979 to 505 ms, GPU memory 1.43 to 0.72 GB, identical output on 20 of 20 images & in use\\
+Load and warm the model at start-up & first request 626 ms against about 245 ms afterwards, so the first user no longer waits an extra 380 ms & in use\\
+fp16 checkpoint file & 809 MB to 411 MB, same answers (20/20), same speed & in use\\
+Cheaper JPEG decode for large photos & 12-megapixel photo: request 426 to 261 ms ($-$39\%); no effect on small images; one field in about 120 changed in our tests & opt-in\\
+\texttt{torch.compile} on the encoder & 437 to 373 ms ($-$15\%), identical output on 4 of 4 bills, 30 s compile on first call & not enabled\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Tried and not adopted.} Compiling the decoder as well as the encoder (426 ms) and removing the unknown-token filter (288 against 285 ms) gave nothing. int8 weight-only quantisation (torchao) was slower (338 ms for the decoder, 367 ms for the whole model, against 264 ms for fp16) and changed the answers on most of 12 bills; FP8 was 2.7 to 3.4 times slower. The model is already only 0.72 GB in fp16, and at one bill at a time the extra conversion work costs more than it saves, so we kept fp16.
+
+\textbf{Training.} A 24-step benchmark on the T4 (batch 1, fp16) chose the configuration: dropping gradient checkpointing took a sample from 0.58 s to 0.46 s ($-$21\%) and still fits (7.2 GB); 8-bit AdamW saved memory but not time. The real run reached 0.42 s per sample. Dynamic target padding, a 512-token limit, fused AdamW, pinned memory, persistent loader workers and a 2,560-pixel cap on image size (some SROIE scans are 35 megapixels) are also in use; we did not time each of those on its own.
+
+\textbf{Serving capacity.} We sent concurrent uploads of unique photos to the running app (the model runs in a worker thread, one bill on the GPU at a time) while probing a light endpoint (``Validate'', the live bill check). Measured on the laptop GPU:
+\begin{center}\input{data/load_tabular.tex}\end{center}
+Throughput stays at about 2.8 bills per second however many people ask at once, and the wait grows with the queue (median 0.33 s alone, 2.83 s with eight at once), while the light endpoint stays under 14 ms, so editing and splitting are not held up by someone else's photo. Capacity therefore comes from adding GPUs. The estimate below is arithmetic on the measured latency, not a deployed test: 0.5 s of GPU time per bill (the T4 median was 0.455 s), a peak of three times the hourly average, and a target of 60\% GPU use.
+\begin{center}\footnotesize
+\begin{tabular}{@{}rrrp{6.2cm}@{}}
+\toprule
+Bills read per hour & Peak bills per s & T4 GPUs (estimate) & Note\\
+\midrule
+100 & 0.08 & 1 & idle most of the time\\
+1,000 & 0.83 & 1 & about 70\% of one GPU at the peak\\
+10,000 & 8.3 & 7 & \\
+100,000 & 83 & 70 & needs batching or a smaller model to be affordable\\
+\bottomrule
+\end{tabular}
+\end{center}
+A model copy needs about 0.72 GB of GPU memory, so memory is not the limit, and CPU preparation is 55 ms per bill, so a few cores per GPU are enough. Batching bills, larger GPUs and CPU-only serving are untested.
+\normalsize

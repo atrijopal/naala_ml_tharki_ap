@@ -1,0 +1,26 @@
+{
+ "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+ "torch": "2.11.0+cu128",
+ "n": 12,
+ "eager": {
+  "p50_ms": 260.5,
+  "mean_ms": 267.1,
+  "peak_gpu_gb": 0.72,
+  "identical": "12/12"
+ },
+ "dec_fp8w": {
+  "p50_ms": 871.8,
+  "mean_ms": 898.3,
+  "peak_gpu_gb": 0.96,
+  "identical": "11/12"
+ },
+ "dec_fp8dyn": {
+  "p50_ms": 707.9,
+  "mean_ms": 718.8,
+  "peak_gpu_gb": 0.66,
+  "identical": "11/12"
+ },
+ "all_fp8dyn": {
+  "error": "AssertionError: input_tensor must be 1x128 scaled"
+ }
+}

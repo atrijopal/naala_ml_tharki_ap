@@ -1,0 +1,64 @@
+{
+ "items": [
+  {
+   "name": "Paratha",
+   "qty": "1",
+   "unit_price": "65",
+   "total": "65"
+  },
+  {
+   "name": "Veg Biryani",
+   "qty": "1",
+   "unit_price": "155",
+   "total": "155"
+  },
+  {
+   "name": "Fresh Lime Soda",
+   "qty": "1",
+   "unit_price": "65",
+   "total": "65"
+  },
+  {
+   "name": "Veg Thali",
+   "qty": "1",
+   "unit_price": "185",
+   "total": "185"
+  },
+  {
+   "name": "Mango Lassi",
+   "qty": "1",
+   "unit_price": "90",
+   "total": "90"
+  },
+  {
+   "name": "Butter Roti",
+   "qty": "1",
+   "unit_price": "20",
+   "total": "20"
+  },
+  {
+   "name": "Gobi Manchurian",
+   "qty": "1",
+   "unit_price": "125",
+   "total": "125"
+  },
+  {
+   "name": "Jeera Rice",
+   "qty": "1",
+   "unit_price": "160",
+   "total": "160"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "51.9"
+  },
+  {
+   "type": "SGST",
+   "amount": "51.9"
+  }
+ ],
+ "subtotal": "865",
+ "grand_total": "968.8"
+}

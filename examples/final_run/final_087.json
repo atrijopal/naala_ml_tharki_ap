@@ -1,0 +1,61 @@
+{
+ "items": [
+  {
+   "name": "Veg Thali",
+   "qty": "2",
+   "unit_price": "140",
+   "total": "280"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "1",
+   "unit_price": "365",
+   "total": "365"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "2",
+   "unit_price": "115",
+   "total": "230"
+  },
+  {
+   "name": "Dal Tadka",
+   "qty": "1",
+   "unit_price": "130",
+   "total": "130"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "2",
+   "unit_price": "25",
+   "total": "50"
+  },
+  {
+   "name": "Paneer Butter Masala",
+   "qty": "1",
+   "unit_price": "225",
+   "total": "225"
+  },
+  {
+   "name": "Chicken Biryani",
+   "qty": "1",
+   "unit_price": "285",
+   "total": "285"
+  },
+  {
+   "name": "Garlic Naan",
+   "qty": "1",
+   "unit_price": "45",
+   "total": "45"
+  },
+  {
+   "name": "Veg Biryani",
+   "qty": "1",
+   "unit_price": "200",
+   "total": "200"
+  }
+ ],
+ "charges": [],
+ "subtotal": "1810",
+ "grand_total": "1810"
+}

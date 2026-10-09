@@ -1,0 +1,36 @@
+{
+ "items": [
+  {
+   "name": "Tandoori Roti",
+   "qty": "2",
+   "unit_price": "17",
+   "total": "34"
+  },
+  {
+   "name": "Masala Dosa",
+   "qty": "1",
+   "unit_price": "90",
+   "total": "90"
+  },
+  {
+   "name": "Dal Tadka",
+   "qty": "3",
+   "unit_price": "140",
+   "total": "420"
+  },
+  {
+   "name": "Jeera Rice",
+   "qty": "1",
+   "unit_price": "160",
+   "total": "160"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "70"
+  }
+ ],
+ "subtotal": "704",
+ "grand_total": "774"
+}

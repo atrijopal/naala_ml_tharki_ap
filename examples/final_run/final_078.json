@@ -1,0 +1,34 @@
+{
+ "items": [
+  {
+   "name": "Samosa",
+   "qty": "1",
+   "unit_price": "40",
+   "total": "40"
+  },
+  {
+   "name": "Veg Sandwich",
+   "qty": "1",
+   "unit_price": "55",
+   "total": "55"
+  },
+  {
+   "name": "Mango Lassi",
+   "qty": "1",
+   "unit_price": "115",
+   "total": "115"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "11"
+  },
+  {
+   "type": "GST",
+   "amount": "25"
+  }
+ ],
+ "subtotal": "210",
+ "grand_total": "246"
+}

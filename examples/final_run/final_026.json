@@ -1,0 +1,46 @@
+{
+ "items": [
+  {
+   "name": "Garlic Naan",
+   "qty": "1",
+   "unit_price": "45",
+   "total": "45"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "3",
+   "unit_price": "95",
+   "total": "285"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "1",
+   "unit_price": "210",
+   "total": "210"
+  },
+  {
+   "name": "Masala Dosa",
+   "qty": "1",
+   "unit_price": "75",
+   "total": "75"
+  },
+  {
+   "name": "Chicken Biryani",
+   "qty": "3",
+   "unit_price": "220",
+   "total": "660"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "114.75"
+  },
+  {
+   "type": "SGST",
+   "amount": "114.75"
+  }
+ ],
+ "subtotal": "1275",
+ "grand_total": "1504.5"
+}

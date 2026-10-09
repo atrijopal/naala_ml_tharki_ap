@@ -1,0 +1,64 @@
+{
+ "items": [
+  {
+   "name": "Mango Lassi",
+   "qty": "3",
+   "unit_price": "60.5",
+   "total": "181.5"
+  },
+  {
+   "name": "Dal Tadka",
+   "qty": "1",
+   "unit_price": "160",
+   "total": "160"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "155",
+   "total": "155"
+  },
+  {
+   "name": "Masala Dosa",
+   "qty": "3",
+   "unit_price": "100.5",
+   "total": "301.5"
+  },
+  {
+   "name": "Egg Curry",
+   "qty": "1",
+   "unit_price": "200",
+   "total": "200"
+  },
+  {
+   "name": "Gobi Manchurian",
+   "qty": "1",
+   "unit_price": "140.5",
+   "total": "140.5"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "1",
+   "unit_price": "120",
+   "total": "120"
+  },
+  {
+   "name": "Maggi",
+   "qty": "1",
+   "unit_price": "55",
+   "total": "55"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "78.81"
+  },
+  {
+   "type": "SGST",
+   "amount": "78.81"
+  }
+ ],
+ "subtotal": "1313.5",
+ "grand_total": "1471.12"
+}

@@ -1,0 +1,25 @@
+{
+ "items": [
+  {
+   "name": "Idli Sambar",
+   "qty": "3",
+   "unit_price": "75",
+   "total": "225"
+  },
+  {
+   "name": "Butter Roti",
+   "qty": "2",
+   "unit_price": "30",
+   "total": "60"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "1",
+   "unit_price": "115",
+   "total": "115"
+  }
+ ],
+ "charges": [],
+ "subtotal": "400",
+ "grand_total": "400"
+}

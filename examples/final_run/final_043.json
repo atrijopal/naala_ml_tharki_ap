@@ -1,0 +1,68 @@
+{
+ "items": [
+  {
+   "name": "Chole Bhature",
+   "qty": "2",
+   "unit_price": "125.5",
+   "total": "251"
+  },
+  {
+   "name": "Masala Dosa",
+   "qty": "1",
+   "unit_price": "125",
+   "total": "125"
+  },
+  {
+   "name": "Veg Thali",
+   "qty": "1",
+   "unit_price": "170",
+   "total": "170"
+  },
+  {
+   "name": "Poha",
+   "qty": "1",
+   "unit_price": "35",
+   "total": "35"
+  },
+  {
+   "name": "Tea",
+   "qty": "1",
+   "unit_price": "25",
+   "total": "25"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "1",
+   "unit_price": "230",
+   "total": "230"
+  },
+  {
+   "name": "Mango Lassi",
+   "qty": "1",
+   "unit_price": "85",
+   "total": "85"
+  },
+  {
+   "name": "Fresh Lime Soda",
+   "qty": "2",
+   "unit_price": "65",
+   "total": "130"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "105.1"
+  },
+  {
+   "type": "CGST",
+   "amount": "63.06"
+  },
+  {
+   "type": "SGST",
+   "amount": "63.06"
+  }
+ ],
+ "subtotal": "1051",
+ "grand_total": "1282.22"
+}

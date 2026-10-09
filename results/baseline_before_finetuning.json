@@ -1,0 +1,330 @@
+{
+ "B1_public_cord_model": {
+  "metrics": {
+   "cord": {
+    "n": 30,
+    "ted_acc": 0.9212,
+    "field_precision": 0.8817,
+    "field_recall": 0.9111,
+    "field_f1": 0.8962,
+    "item_f1": 0.8321,
+    "charge_f1": 0.9375,
+    "grand_total_acc": 1.0,
+    "subtotal_acc": 0.9333,
+    "pred_arith_consistent": 0.7667
+   },
+   "synth": {
+    "n": 30,
+    "ted_acc": 0.5148,
+    "field_precision": 0.5823,
+    "field_recall": 0.545,
+    "field_f1": 0.563,
+    "item_f1": 0.4968,
+    "charge_f1": 0.186,
+    "grand_total_acc": 0.6,
+    "subtotal_acc": 0.6333,
+    "pred_arith_consistent": 0.0
+   }
+  },
+  "n_parse_errors": 1,
+  "sec_per_bill_p50": 0.66,
+  "sec_per_bill_max": 5.26,
+  "example_errors": [
+   "InvalidOperation([<class 'decimal.InvalidOperation'>])"
+  ]
+ },
+ "B0_untrained_donut_base": {
+  "metrics": {
+   "cord": {
+    "n": 6,
+    "ted_acc": 0.2,
+    "field_precision": 0.0,
+    "field_recall": 0.0,
+    "field_f1": 0.0,
+    "item_f1": 0.0,
+    "charge_f1": 0.0,
+    "grand_total_acc": 0.0,
+    "subtotal_acc": 0.0,
+    "pred_arith_consistent": 0.0
+   },
+   "synth": {
+    "n": 6,
+    "ted_acc": 0.0695,
+    "field_precision": 0.0,
+    "field_recall": 0.0,
+    "field_f1": 0.0,
+    "item_f1": 0.0,
+    "charge_f1": 0.0,
+    "grand_total_acc": 0.0,
+    "subtotal_acc": 0.0,
+    "pred_arith_consistent": 0.0
+   }
+  },
+  "n_parse_errors": 0,
+  "sec_per_bill_p50": 0.2,
+  "sec_per_bill_max": 0.26,
+  "example_errors": []
+ },
+ "examples": [
+  {
+   "id": "cord_test_0008",
+   "gt": {
+    "items": [
+     {
+      "name": "[REG] BLACK SAKURA",
+      "qty": "1",
+      "unit_price": "45455",
+      "total": "45455"
+     }
+    ],
+    "charges": [
+     {
+      "type": "TAX",
+      "amount": "4545"
+     }
+    ],
+    "subtotal": "45455",
+    "grand_total": "50000"
+   },
+   "B1_pred": {
+    "items": [
+     {
+      "name": "[REG] BLACK SAKURA",
+      "qty": "1",
+      "unit_price": "45455",
+      "total": "45455"
+     }
+    ],
+    "charges": [
+     {
+      "type": "TAX",
+      "amount": "4545"
+     }
+    ],
+    "subtotal": "45455",
+    "grand_total": "50000"
+   }
+  },
+  {
+   "id": "cord_test_0007",
+   "gt": {
+    "items": [
+     {
+      "name": "Kupon 15",
+      "qty": "1",
+      "unit_price": "100000",
+      "total": "100000"
+     }
+    ],
+    "charges": [
+     {
+      "type": "TAX",
+      "amount": "10091"
+     }
+    ],
+    "subtotal": "100909",
+    "grand_total": "111000"
+   },
+   "B1_pred": {
+    "items": [
+     {
+      "name": "Kupon 15",
+      "qty": "1",
+      "unit_price": "100000",
+      "total": "100000"
+     },
+     {
+      "name": "ADD CHICKEN BOX",
+      "qty": "1",
+      "unit_price": "909",
+      "total": "909"
+     }
+    ],
+    "charges": [
+     {
+      "type": "TAX",
+      "amount": "10091"
+     }
+    ],
+    "subtotal": "100909",
+    "grand_total": "111000"
+   }
+  },
+  {
+   "id": "synth_test_00028",
+   "gt": {
+    "items": [
+     {
+      "name": "Paneer Butter Masala",
+      "qty": "1",
+      "unit_price": "245",
+      "total": "245"
+     },
+     {
+      "name": "Veg Biryani",
+      "qty": "2",
+      "unit_price": "160",
+      "total": "320"
+     },
+     {
+      "name": "Veg Thali",
+      "qty": "2",
+      "unit_price": "200",
+      "total": "400"
+     },
+     {
+      "name": "Samosa",
+      "qty": "3",
+      "unit_price": "15",
+      "total": "45"
+     },
+     {
+      "name": "Mutton Curry",
+      "qty": "1",
+      "unit_price": "310",
+      "total": "310"
+     },
+     {
+      "name": "Egg Curry",
+      "qty": "2",
+      "unit_price": "185",
+      "total": "370"
+     },
+     {
+      "name": "Paratha",
+      "qty": "2",
+      "unit_price": "70",
+      "total": "140"
+     },
+     {
+      "name": "Dal Tadka",
+      "qty": "1",
+      "unit_price": "165",
+      "total": "165"
+     }
+    ],
+    "charges": [
+     {
+      "type": "DISCOUNT",
+      "amount": "-25"
+     },
+     {
+      "type": "PACKAGING",
+      "amount": "30"
+     },
+     {
+      "type": "GST",
+      "amount": "354.6"
+     },
+     {
+      "type": "ROUND_OFF",
+      "amount": "0.4"
+     }
+    ],
+    "subtotal": "1995",
+    "grand_total": "2355"
+   },
+   "B1_pred": {
+    "items": [],
+    "charges": [],
+    "subtotal": "",
+    "grand_total": ""
+   }
+  },
+  {
+   "id": "synth_test_00018",
+   "gt": {
+    "items": [
+     {
+      "name": "Cold Coffee",
+      "qty": "2",
+      "unit_price": "160",
+      "total": "320"
+     },
+     {
+      "name": "Poha",
+      "qty": "2",
+      "unit_price": "60.5",
+      "total": "121"
+     },
+     {
+      "name": "Fresh Lime Soda",
+      "qty": "2",
+      "unit_price": "65",
+      "total": "130"
+     },
+     {
+      "name": "Paneer Butter Masala",
+      "qty": "1",
+      "unit_price": "200",
+      "total": "200"
+     }
+    ],
+    "charges": [
+     {
+      "type": "CGST",
+      "amount": "46.26"
+     },
+     {
+      "type": "SGST",
+      "amount": "46.26"
+     }
+    ],
+    "subtotal": "771",
+    "grand_total": "863.52"
+   },
+   "B1_pred": {
+    "items": [
+     {
+      "name": "ANNAPURNA MESS",
+      "qty": "6",
+      "unit_price": "110001",
+      "total": "1231"
+     },
+     {
+      "name": "GSTIN: 87GNKBF5130A120",
+      "qty": "1",
+      "unit_price": "1231",
+      "total": "1231"
+     },
+     {
+      "name": "Item",
+      "qty": "1",
+      "unit_price": "320",
+      "total": "320"
+     },
+     {
+      "name": "Poha",
+      "qty": "2",
+      "unit_price": "60.5",
+      "total": "121"
+     },
+     {
+      "name": "Fresh Lime Soda",
+      "qty": "2",
+      "unit_price": "65",
+      "total": "130"
+     },
+     {
+      "name": "Paneer Butter Masala",
+      "qty": "1",
+      "unit_price": "200",
+      "total": "200"
+     }
+    ],
+    "charges": [
+     {
+      "type": "TAX",
+      "amount": "863.52"
+     },
+     {
+      "type": "SERVICE_CHARGE",
+      "amount": "46"
+     }
+    ],
+    "subtotal": "771",
+    "grand_total": "863.52"
+   }
+  }
+ ]
+}

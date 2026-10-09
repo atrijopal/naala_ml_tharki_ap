@@ -1,0 +1,121 @@
+{
+ "n_bills": 20,
+ "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+ "fp32": {
+  "peak_gpu_gb": 1.43,
+  "n_timed": 17,
+  "tokens_per_bill_p50": 66,
+  "prep": {
+   "p50": 54.1,
+   "p95": 237.7,
+   "mean": 72.2
+  },
+  "enc": {
+   "p50": 197.8,
+   "p95": 200.4,
+   "mean": 198.0
+  },
+  "dec": {
+   "p50": 263.4,
+   "p95": 738.9,
+   "mean": 320.5
+  },
+  "parse": {
+   "p50": 0.2,
+   "p95": 0.8,
+   "mean": 0.2
+  },
+  "total": {
+   "p50": 518.9,
+   "p95": 977.9,
+   "mean": 593.4
+  },
+  "decode_ms_per_token": 3.92,
+  "accuracy": {
+   "sroie": {
+    "n": 12,
+    "company_em": 0.9167,
+    "date_em": 0.9167,
+    "address_em": 0.5,
+    "total_em": 0.8333,
+    "company_sim": 0.9979,
+    "address_sim": 0.8966,
+    "field_precision": 0.7917,
+    "field_recall": 0.7917,
+    "field_f1": 0.7917,
+    "score": 0.9111
+   },
+   "synth": {
+    "n": 8,
+    "ted_acc": 0.9985,
+    "field_precision": 0.9906,
+    "field_recall": 0.9906,
+    "field_f1": 0.9906,
+    "item_f1": 1.0,
+    "charge_f1": 0.9444,
+    "grand_total_acc": 1.0,
+    "subtotal_acc": 1.0,
+    "pred_arith_consistent": 1.0
+   }
+  }
+ },
+ "fp16": {
+  "peak_gpu_gb": 0.72,
+  "n_timed": 17,
+  "tokens_per_bill_p50": 66,
+  "prep": {
+   "p50": 54.7,
+   "p95": 236.9,
+   "mean": 72.1
+  },
+  "enc": {
+   "p50": 79.4,
+   "p95": 80.2,
+   "mean": 79.2
+  },
+  "dec": {
+   "p50": 135.0,
+   "p95": 383.0,
+   "mean": 165.7
+  },
+  "parse": {
+   "p50": 0.2,
+   "p95": 0.4,
+   "mean": 0.2
+  },
+  "total": {
+   "p50": 269.9,
+   "p95": 497.5,
+   "mean": 319.8
+  },
+  "decode_ms_per_token": 2.03,
+  "accuracy": {
+   "sroie": {
+    "n": 12,
+    "company_em": 0.9167,
+    "date_em": 0.9167,
+    "address_em": 0.5,
+    "total_em": 0.8333,
+    "company_sim": 0.9979,
+    "address_sim": 0.8966,
+    "field_precision": 0.7917,
+    "field_recall": 0.7917,
+    "field_f1": 0.7917,
+    "score": 0.9111
+   },
+   "synth": {
+    "n": 8,
+    "ted_acc": 0.9985,
+    "field_precision": 0.9906,
+    "field_recall": 0.9906,
+    "field_f1": 0.9906,
+    "item_f1": 1.0,
+    "charge_f1": 0.9444,
+    "grand_total_acc": 1.0,
+    "subtotal_acc": 1.0,
+    "pred_arith_consistent": 1.0
+   }
+  }
+ },
+ "fp16_vs_fp32_identical_outputs": "20/20"
+}

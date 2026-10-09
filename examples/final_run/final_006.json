@@ -1,0 +1,36 @@
+{
+ "items": [
+  {
+   "name": "Chole Bhature",
+   "qty": "1",
+   "unit_price": "130",
+   "total": "130"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "2",
+   "unit_price": "35",
+   "total": "70"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "20"
+  },
+  {
+   "type": "GST",
+   "amount": "32.4"
+  },
+  {
+   "type": "DISCOUNT",
+   "amount": "-20"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.4"
+  }
+ ],
+ "subtotal": "200",
+ "grand_total": "232"
+}

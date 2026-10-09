@@ -1,0 +1,68 @@
+{
+ "items": [
+  {
+   "name": "Egg Curry",
+   "qty": "3",
+   "unit_price": "180",
+   "total": "540"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "1",
+   "unit_price": "110",
+   "total": "110"
+  },
+  {
+   "name": "Maggi",
+   "qty": "1",
+   "unit_price": "40",
+   "total": "40"
+  },
+  {
+   "name": "Masala Dosa",
+   "qty": "1",
+   "unit_price": "90",
+   "total": "90"
+  },
+  {
+   "name": "Butter Roti",
+   "qty": "3",
+   "unit_price": "25",
+   "total": "75"
+  },
+  {
+   "name": "Idli Sambar",
+   "qty": "1",
+   "unit_price": "55",
+   "total": "55"
+  },
+  {
+   "name": "Paratha",
+   "qty": "1",
+   "unit_price": "40",
+   "total": "40"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "1",
+   "unit_price": "220",
+   "total": "220"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "117"
+  },
+  {
+   "type": "CGST",
+   "amount": "105.3"
+  },
+  {
+   "type": "SGST",
+   "amount": "105.3"
+  }
+ ],
+ "subtotal": "1170",
+ "grand_total": "1497.6"
+}

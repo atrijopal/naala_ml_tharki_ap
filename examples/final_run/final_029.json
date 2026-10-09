@@ -1,0 +1,36 @@
+{
+ "items": [
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "125",
+   "total": "125"
+  },
+  {
+   "name": "Mango Lassi",
+   "qty": "2",
+   "unit_price": "65",
+   "total": "130"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "25.5"
+  },
+  {
+   "type": "CGST",
+   "amount": "5.74"
+  },
+  {
+   "type": "SGST",
+   "amount": "5.74"
+  },
+  {
+   "type": "DISCOUNT",
+   "amount": "-25.5"
+  }
+ ],
+ "subtotal": "255",
+ "grand_total": "266.48"
+}

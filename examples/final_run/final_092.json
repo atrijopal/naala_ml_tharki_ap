@@ -1,0 +1,58 @@
+{
+ "items": [
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "90",
+   "total": "90"
+  },
+  {
+   "name": "Samosa",
+   "qty": "1",
+   "unit_price": "25",
+   "total": "25"
+  },
+  {
+   "name": "Maggi",
+   "qty": "1",
+   "unit_price": "50",
+   "total": "50"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "1",
+   "unit_price": "325",
+   "total": "325"
+  },
+  {
+   "name": "Dal Tadka",
+   "qty": "1",
+   "unit_price": "160",
+   "total": "160"
+  },
+  {
+   "name": "Paneer Butter Masala",
+   "qty": "1",
+   "unit_price": "260",
+   "total": "260"
+  },
+  {
+   "name": "Veg Biryani",
+   "qty": "2",
+   "unit_price": "280",
+   "total": "560"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "132"
+  },
+  {
+   "type": "SGST",
+   "amount": "132"
+  }
+ ],
+ "subtotal": "1470",
+ "grand_total": "1734"
+}

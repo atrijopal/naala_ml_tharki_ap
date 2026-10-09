@@ -1,0 +1,32 @@
+{
+ "items": [
+  {
+   "name": "Chicken Biryani",
+   "qty": "1",
+   "unit_price": "310",
+   "total": "310"
+  },
+  {
+   "name": "Fresh Lime Soda",
+   "qty": "2",
+   "unit_price": "55",
+   "total": "110"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "21"
+  },
+  {
+   "type": "CGST",
+   "amount": "38"
+  },
+  {
+   "type": "SGST",
+   "amount": "38"
+  }
+ ],
+ "subtotal": "420",
+ "grand_total": "517"
+}

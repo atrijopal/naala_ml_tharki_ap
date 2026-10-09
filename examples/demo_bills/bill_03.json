@@ -1,0 +1,30 @@
+{
+ "items": [
+  {
+   "name": "Poha",
+   "qty": "1",
+   "unit_price": "55",
+   "total": "55"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "1",
+   "unit_price": "90",
+   "total": "90"
+  },
+  {
+   "name": "Veg Biryani",
+   "qty": "1",
+   "unit_price": "255.5",
+   "total": "255.5"
+  }
+ ],
+ "charges": [
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.5"
+  }
+ ],
+ "subtotal": "400.5",
+ "grand_total": "400"
+}

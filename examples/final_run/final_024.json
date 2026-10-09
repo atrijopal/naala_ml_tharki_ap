@@ -1,0 +1,62 @@
+{
+ "items": [
+  {
+   "name": "Tea",
+   "qty": "1",
+   "unit_price": "15",
+   "total": "15"
+  },
+  {
+   "name": "Veg Sandwich",
+   "qty": "1",
+   "unit_price": "100",
+   "total": "100"
+  },
+  {
+   "name": "Veg Biryani",
+   "qty": "1",
+   "unit_price": "210",
+   "total": "210"
+  },
+  {
+   "name": "Dal Tadka",
+   "qty": "2",
+   "unit_price": "120.5",
+   "total": "241"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "1",
+   "unit_price": "145",
+   "total": "145"
+  },
+  {
+   "name": "Masala Dosa",
+   "qty": "1",
+   "unit_price": "60",
+   "total": "60"
+  },
+  {
+   "name": "Paratha",
+   "qty": "1",
+   "unit_price": "35",
+   "total": "35"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "72.54"
+  },
+  {
+   "type": "SGST",
+   "amount": "72.54"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.08"
+  }
+ ],
+ "subtotal": "806",
+ "grand_total": "951"
+}

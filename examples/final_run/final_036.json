@@ -1,0 +1,60 @@
+{
+ "items": [
+  {
+   "name": "Egg Curry",
+   "qty": "1",
+   "unit_price": "200",
+   "total": "200"
+  },
+  {
+   "name": "Dal Tadka",
+   "qty": "1",
+   "unit_price": "120",
+   "total": "120"
+  },
+  {
+   "name": "Samosa",
+   "qty": "2",
+   "unit_price": "40.5",
+   "total": "81"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "1",
+   "unit_price": "225",
+   "total": "225"
+  },
+  {
+   "name": "Tandoori Roti",
+   "qty": "2",
+   "unit_price": "17",
+   "total": "34"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "100",
+   "total": "100"
+  }
+ ],
+ "charges": [
+  {
+   "type": "DISCOUNT",
+   "amount": "-10"
+  },
+  {
+   "type": "CGST",
+   "amount": "18.75"
+  },
+  {
+   "type": "SGST",
+   "amount": "18.75"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "0.5"
+  }
+ ],
+ "subtotal": "760",
+ "grand_total": "788"
+}

@@ -1,0 +1,100 @@
+
+======== MODE=full  code from /kaggle/input/notebooks/atrijopal/splitsnap-full-a2/proj/splitsnap  [0.1 min elapsed] ========
+
+$ nvidia-smi --query-gpu=name,memory.total --format=csv,noheader; python -V; python -c "import torch,transformers;print('torch',torch.__version__,'transformers',transformers.__version__)"
+Tesla T4, 15360 MiB
+Tesla T4, 15360 MiB
+Python 3.13.15
+torch 2.11.0+cu128 transformers 5.16.1
+
+$ pip install -q "transformers>=4.44,<5" datasets accelerate sentencepiece zss nltk scikit-learn bitsandbytes
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.0/44.0 kB 497.2 kB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 52.2 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 47.6 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 32.1 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 89.1 MB/s eta 0:00:00
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+gradio 6.26.0 requires huggingface-hub<2.0,>=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.
+diffusers 0.40.0 requires huggingface-hub<2.0,>=1.23.0, but you have huggingface-hub 0.36.2 which is incompatible.
+
+$ python -c "import transformers,accelerate,datasets;print('transformers',transformers.__version__,'accelerate',accelerate.__version__,'datasets',datasets.__version__)"
+transformers 4.57.6 accelerate 1.14.0 datasets 4.8.5
+
+======== data  [0.9 min elapsed] ========
+
+$ python -m splitsnap.convert_cord
+Generating train split:   0%|          | 0/800 [00:00<?, ? examples/s]Generating train split:  25%|██▌       | 200/800 [00:03<00:11, 53.42 examples/s]Generating train split:  50%|█████     | 400/800 [00:05<00:05, 74.72 examples/s]Generating train split:  75%|███████▌  | 600/800 [00:07<00:02, 83.39 examples/s]Generating train split: 100%|██████████| 800/800 [00:09<00:00, 85.81 examples/s]Generating train split: 100%|██████████| 800/800 [00:10<00:00, 79.77 examples/s]
+Generating validation split:   0%|          | 0/100 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 100/100 [00:01<00:00, 91.79 examples/s]Generating validation split: 100%|██████████| 100/100 [00:01<00:00, 89.03 examples/s]
+Generating test split:   0%|          | 0/100 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 100/100 [00:01<00:00, 97.98 examples/s]Generating test split: 100%|██████████| 100/100 [00:01<00:00, 95.07 examples/s]
+CORD: 962 records, 32 skipped, 6 train outliers dropped, 143 fail the arithmetic check
+
+$ python -m splitsnap.synth --n 700 --out data/synth --seed 1000 --split train
+wrote 700 synthetic bills to data/synth (train)
+
+$ python -m splitsnap.synth --n 100 --out data/synth --seed 2000 --split val
+wrote 100 synthetic bills to data/synth (val)
+
+$ python -m splitsnap.synth --n 100 --out data/synth --seed 3000 --split test
+wrote 100 synthetic bills to data/synth (test)
+NO real bills attached (expected for bench/overfit). Real-bill TED cannot be computed -> best/ picks by overall TED.
+
+$ python -m splitsnap.convert_sroie --out data/sroie_manifest.jsonl --val_n 60
+SROIE: 972 records {'train': 565, 'val': 60, 'test': 347} from /kaggle/input/datasets/urbikn/sroie-datasetv2/SROIE2019 -> data/sroie_manifest.jsonl
+
+$ python -m splitsnap.build_manifest data/cord/manifest.jsonl data/synth/manifest_train.jsonl data/synth/manifest_val.jsonl data/synth/manifest_test.jsonl data/sroie_manifest.jsonl
+LEAKAGE FIX: dropped 8 images that also appear in a more protected split: sroie/train=7, sroie/val=1
+   dropped sroie_train_X51006329399
+   dropped sroie_train_X51006332575
+   dropped sroie_train_X51006328913
+   dropped sroie_train_X51007135247
+   dropped sroie_train_X51006008095
+   dropped sroie_train_X51005453729
+   dropped sroie_train_X51005568881
+   dropped sroie_train_X51009453804
+2826 records -> data/manifest.jsonl
+  cord   test  95
+  cord   train 769
+  cord   val   98
+  sroie  test  347
+  sroie  train 558
+  sroie  val   59
+  synth  test  100
+  synth  train 700
+  synth  val   100
+
+======== stage full  [4.5 min elapsed] ========
+
+======== resuming a previous stage: preflight skipped (the resume loss check guards this stage)  [4.9 min elapsed] ========
+
+$ python -m splitsnap.train --manifest data/manifest.jsonl --out /kaggle/working/runs/run1 --height 1280 --width 960 --bs 1 --accum 8 --lr 3e-5 --val_every 2 --repeat real=3 --workers 3 --max_length 512 --epochs 16 --val_n 60 --max_hours 6.5 --resume --chunk_epochs 8
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+train samples/epoch: 2027 | val: 60
+resumed at epoch 8
+`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+LOSS CHECK (step 0): our aligned CE 0.0286 | library loss 24.0267 (they differ if the library shifts the labels again)
+resume check: loss 0.048 before the pause -> 0.043 now
+{'epoch': 9, 'train_loss': 0.04251963949932744, 'epoch_sec': 814, 'peak_gb': 7.81, 'lr': 1.434320666791451e-05}
+The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{'epoch': 10, 'train_loss': 0.03070631624738395, 'epoch_sec': 818, 'peak_gb': 7.81, 'lr': 1.111564045298899e-05, 'val': {'cord': {'n': 25, 'ted_acc': 0.9633, 'field_precision': 0.947, 'field_recall': 0.9597, 'field_f1': 0.9533, 'item_f1': 0.991, 'charge_f1': 0.8571, 'grand_total_acc': 0.92, 'subtotal_acc': 0.96, 'pred_arith_consistent': 0.72}, 'synth': {'n': 10, 'ted_acc': 0.9927, 'field_precision': 0.9735, 'field_recall': 0.9735, 'field_f1': 0.9735, 'item_f1': 1.0, 'charge_f1': 1.0, 'grand_total_acc': 1.0, 'subtotal_acc': 1.0, 'pred_arith_consistent': 1.0}, 'all': {'n': 35, 'ted_acc': 0.9717, 'field_precision': 0.9603, 'field_recall': 0.9667, 'field_f1': 0.9635, 'item_f1': 0.9957, 'charge_f1': 0.9429, 'grand_total_acc': 0.9429, 'subtotal_acc': 0.9714, 'pred_arith_consistent': 0.8}, 'sroie': {'n': 25, 'company_em': 0.84, 'date_em': 0.96, 'address_em': 0.92, 'total_em': 0.8, 'company_sim': 0.9509, 'address_sim': 0.9583, 'field_precision': 0.9072, 'field_recall': 0.88, 'field_f1': 0.8934, 'score': 0.9173}}, 'new_best': True}
+{'epoch': 11, 'train_loss': 0.02651776735807324, 'epoch_sec': 826, 'peak_gb': 7.81, 'lr': 8.072183788879938e-06}
+{'epoch': 12, 'train_loss': 0.02229563520645119, 'epoch_sec': 823, 'peak_gb': 7.81, 'lr': 5.357089397967209e-06, 'val': {'cord': {'n': 25, 'ted_acc': 0.9582, 'field_precision': 0.9561, 'field_recall': 0.9497, 'field_f1': 0.9529, 'item_f1': 0.9636, 'charge_f1': 0.963, 'grand_total_acc': 0.96, 'subtotal_acc': 0.96, 'pred_arith_consistent': 0.8}, 'synth': {'n': 10, 'ted_acc': 0.995, 'field_precision': 0.9768, 'field_recall': 0.9768, 'field_f1': 0.9768, 'item_f1': 1.0, 'charge_f1': 1.0, 'grand_total_acc': 1.0, 'subtotal_acc': 1.0, 'pred_arith_consistent': 1.0}, 'all': {'n': 35, 'ted_acc': 0.9687, 'field_precision': 0.9666, 'field_recall': 0.9633, 'field_f1': 0.9649, 'item_f1': 0.9826, 'charge_f1': 0.9855, 'grand_total_acc': 0.9714, 'subtotal_acc': 0.9714, 'pred_arith_consistent': 0.8571}, 'sroie': {'n': 25, 'company_em': 0.8, 'date_em': 0.96, 'address_em': 0.88, 'total_em': 0.84, 'company_sim': 0.9484, 'address_sim': 0.958, 'field_precision': 0.8969, 'field_recall': 0.87, 'field_f1': 0.8832, 'score': 0.9266}}, 'new_best': True}
+{'epoch': 13, 'train_loss': 0.022827876749212776, 'epoch_sec': 824, 'peak_gb': 7.81, 'lr': 3.0990463994441804e-06}
+{'epoch': 14, 'train_loss': 0.01797808481074344, 'epoch_sec': 809, 'peak_gb': 7.81, 'lr': 1.4050807462770864e-06, 'val': {'cord': {'n': 25, 'ted_acc': 0.9628, 'field_precision': 0.9561, 'field_recall': 0.9497, 'field_f1': 0.9529, 'item_f1': 0.9818, 'charge_f1': 0.963, 'grand_total_acc': 0.96, 'subtotal_acc': 0.96, 'pred_arith_consistent': 0.8}, 'synth': {'n': 10, 'ted_acc': 0.9948, 'field_precision': 0.9768, 'field_recall': 0.9768, 'field_f1': 0.9768, 'item_f1': 1.0, 'charge_f1': 1.0, 'grand_total_acc': 1.0, 'subtotal_acc': 1.0, 'pred_arith_consistent': 1.0}, 'all': {'n': 35, 'ted_acc': 0.972, 'field_precision': 0.9666, 'field_recall': 0.9633, 'field_f1': 0.9649, 'item_f1': 0.9913, 'charge_f1': 0.9855, 'grand_total_acc': 0.9714, 'subtotal_acc': 0.9714, 'pred_arith_consistent': 0.8571}, 'sroie': {'n': 25, 'company_em': 0.76, 'date_em': 0.96, 'address_em': 0.8, 'total_em': 0.8, 'company_sim': 0.918, 'address_sim': 0.9172, 'field_precision': 0.8737, 'field_recall': 0.83, 'field_f1': 0.8513, 'score': 0.8988}}}
+{'epoch': 15, 'train_loss': 0.0214552124204104, 'epoch_sec': 820, 'peak_gb': 7.81, 'lr': 3.5548244553881447e-07}
+{'epoch': 16, 'train_loss': 0.020148634381287195, 'epoch_sec': 809, 'peak_gb': 7.81, 'lr': 0.0, 'val': {'cord': {'n': 25, 'ted_acc': 0.9628, 'field_precision': 0.9561, 'field_recall': 0.9497, 'field_f1': 0.9529, 'item_f1': 0.9818, 'charge_f1': 0.963, 'grand_total_acc': 0.96, 'subtotal_acc': 0.96, 'pred_arith_consistent': 0.8}, 'synth': {'n': 10, 'ted_acc': 0.9948, 'field_precision': 0.9768, 'field_recall': 0.9768, 'field_f1': 0.9768, 'item_f1': 1.0, 'charge_f1': 1.0, 'grand_total_acc': 1.0, 'subtotal_acc': 1.0, 'pred_arith_consistent': 1.0}, 'all': {'n': 35, 'ted_acc': 0.972, 'field_precision': 0.9666, 'field_recall': 0.9633, 'field_f1': 0.9649, 'item_f1': 0.9913, 'charge_f1': 0.9855, 'grand_total_acc': 0.9714, 'subtotal_acc': 0.9714, 'pred_arith_consistent': 0.8571}, 'sroie': {'n': 25, 'company_em': 0.8, 'date_em': 0.96, 'address_em': 0.84, 'total_em': 0.84, 'company_sim': 0.9484, 'address_sim': 0.9572, 'field_precision': 0.8866, 'field_recall': 0.86, 'field_f1': 0.8731, 'score': 0.9264}}, 'new_best': True}
+
+FINAL STATUS: {
+ "status": "completed",
+ "epochs": 16,
+ "best": 0.9446,
+ "elapsed_h": 1.89,
+ "time": "2026-10-09 14:47:07"
+}
+
+======== DONE  [118.7 min elapsed] ========
+/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 327043 bytes to __results__.html

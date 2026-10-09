@@ -1,0 +1,131 @@
+
+======== MODE=full  code from /kaggle/input/datasets/atrijopal/splitsnap-code  [0.1 min elapsed] ========
+
+$ nvidia-smi --query-gpu=name,memory.total --format=csv,noheader; python -V; python -c "import torch,transformers;print('torch',torch.__version__,'transformers',transformers.__version__)"
+Tesla T4, 15360 MiB
+Tesla T4, 15360 MiB
+Python 3.13.15
+torch 2.11.0+cu128 transformers 5.16.1
+
+$ pip install -q "transformers>=4.44,<5" datasets accelerate sentencepiece zss nltk scikit-learn bitsandbytes
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.0/44.0 kB 1.2 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 99.3 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 49.8 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 20.9 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 83.5 MB/s eta 0:00:00
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+gradio 6.26.0 requires huggingface-hub<2.0,>=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.
+diffusers 0.40.0 requires huggingface-hub<2.0,>=1.23.0, but you have huggingface-hub 0.36.2 which is incompatible.
+
+$ python -c "import transformers,accelerate,datasets;print('transformers',transformers.__version__,'accelerate',accelerate.__version__,'datasets',datasets.__version__)"
+transformers 4.57.6 accelerate 1.14.0 datasets 4.8.5
+
+======== data  [1.1 min elapsed] ========
+
+$ python -m splitsnap.convert_cord
+Generating train split:   0%|          | 0/800 [00:00<?, ? examples/s]Generating train split:  25%|██▌       | 200/800 [00:02<00:08, 70.55 examples/s]Generating train split:  50%|█████     | 400/800 [00:04<00:04, 88.59 examples/s]Generating train split:  75%|███████▌  | 600/800 [00:06<00:02, 90.42 examples/s]Generating train split: 100%|██████████| 800/800 [00:09<00:00, 89.78 examples/s]Generating train split: 100%|██████████| 800/800 [00:09<00:00, 87.35 examples/s]
+Generating validation split:   0%|          | 0/100 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 100/100 [00:01<00:00, 88.70 examples/s]Generating validation split: 100%|██████████| 100/100 [00:01<00:00, 86.11 examples/s]
+Generating test split:   0%|          | 0/100 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 100/100 [00:00<00:00, 102.09 examples/s]Generating test split: 100%|██████████| 100/100 [00:01<00:00, 98.76 examples/s] 
+CORD: 962 records, 32 skipped, 6 train outliers dropped, 143 fail the arithmetic check
+
+$ python -m splitsnap.synth --n 700 --out data/synth --seed 1000 --split train
+wrote 700 synthetic bills to data/synth (train)
+
+$ python -m splitsnap.synth --n 100 --out data/synth --seed 2000 --split val
+wrote 100 synthetic bills to data/synth (val)
+
+$ python -m splitsnap.synth --n 100 --out data/synth --seed 3000 --split test
+wrote 100 synthetic bills to data/synth (test)
+NO real bills attached (expected for bench/overfit). Real-bill TED cannot be computed -> best/ picks by overall TED.
+
+$ python -m splitsnap.convert_sroie --out data/sroie_manifest.jsonl --val_n 60
+SROIE: 972 records {'train': 565, 'val': 60, 'test': 347} from /kaggle/input/datasets/urbikn/sroie-datasetv2/SROIE2019 -> data/sroie_manifest.jsonl
+
+$ python -m splitsnap.build_manifest data/cord/manifest.jsonl data/synth/manifest_train.jsonl data/synth/manifest_val.jsonl data/synth/manifest_test.jsonl data/sroie_manifest.jsonl
+LEAKAGE FIX: dropped 8 images that also appear in a more protected split: sroie/train=7, sroie/val=1
+   dropped sroie_train_X51006329399
+   dropped sroie_train_X51006332575
+   dropped sroie_train_X51006328913
+   dropped sroie_train_X51007135247
+   dropped sroie_train_X51006008095
+   dropped sroie_train_X51005453729
+   dropped sroie_train_X51005568881
+   dropped sroie_train_X51009453804
+2826 records -> data/manifest.jsonl
+  cord   test  95
+  cord   train 769
+  cord   val   98
+  sroie  test  347
+  sroie  train 558
+  sroie  val   59
+  synth  test  100
+  synth  train 700
+  synth  val   100
+
+======== stage full  [4.8 min elapsed] ========
+
+======== overfit gate  [4.8 min elapsed] ========
+
+$ python -m splitsnap.train --manifest data/manifest.jsonl --out /kaggle/working/gate --height 1280 --width 960 --bs 1 --accum 2 --lr 5e-5 --val_every 15 --repeat real=3 --workers 3 --max_length 512 --epochs 15 --max_train 24 --val_n 24 --val_on_train --no_aug --no_save --abort_if_val_below 0.3
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
+sanity OK: (1, 3, 1280, 960) vocab 57564
+train samples/epoch: 24 | val: 24
+`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+LOSS CHECK (step 0): our aligned CE 7.1328 | library loss 12.3162 (they differ if the library shifts the labels again)
+{'epoch': 1, 'train_loss': 11.788089752197266, 'epoch_sec': 11, 'peak_gb': 7.57, 'lr': 3.3333333333333335e-05}
+{'epoch': 2, 'train_loss': 8.06982421875, 'epoch_sec': 9, 'peak_gb': 7.58, 'lr': 4.983095894354858e-05}
+{'epoch': 3, 'train_loss': 6.775505701700847, 'epoch_sec': 9, 'peak_gb': 7.58, 'lr': 4.849231551964771e-05}
+{'epoch': 4, 'train_loss': 5.866218566894531, 'epoch_sec': 9, 'peak_gb': 7.58, 'lr': 4.588719528532342e-05}
+{'epoch': 5, 'train_loss': 5.304646809895833, 'epoch_sec': 9, 'peak_gb': 7.58, 'lr': 4.215604094671835e-05}
+{'epoch': 6, 'train_loss': 4.855319341023763, 'epoch_sec': 9, 'peak_gb': 7.58, 'lr': 3.7500000000000003e-05}
+{'epoch': 7, 'train_loss': 4.238398551940918, 'epoch_sec': 9, 'peak_gb': 7.58, 'lr': 3.217008081777726e-05}
+{'epoch': 8, 'train_loss': 3.581404685974121, 'epoch_sec': 9, 'peak_gb': 7.58, 'lr': 2.6453620722761896e-05}
+{'epoch': 9, 'train_loss': 2.694997469584147, 'epoch_sec': 10, 'peak_gb': 7.58, 'lr': 2.0658795558326743e-05}
+{'epoch': 10, 'train_loss': 2.0155490239461265, 'epoch_sec': 9, 'peak_gb': 7.58, 'lr': 1.509800584902108e-05}
+{'epoch': 11, 'train_loss': 1.7726413408915203, 'epoch_sec': 9, 'peak_gb': 7.58, 'lr': 1.0071035207430352e-05}
+{'epoch': 12, 'train_loss': 1.6801503499348958, 'epoch_sec': 9, 'peak_gb': 7.58, 'lr': 5.848888922025553e-06}
+{'epoch': 13, 'train_loss': 1.6230295499165852, 'epoch_sec': 10, 'peak_gb': 7.58, 'lr': 2.659183991914696e-06}
+{'epoch': 14, 'train_loss': 1.5953779220581055, 'epoch_sec': 10, 'peak_gb': 7.58, 'lr': 6.738782355044049e-07}
+The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+validation failed (training continues): AttributeError("'list' object has no attribute 'get'")
+{'epoch': 15, 'train_loss': 1.578019142150879, 'epoch_sec': 10, 'peak_gb': 7.58, 'lr': 0.0, 'val_error': 'AttributeError("\'list\' object has no attribute \'get\'")', 'new_best': 'placeholder'}
+
+======== overfit gate PASSED -> full run  [8.0 min elapsed] ========
+
+$ python -m splitsnap.train --manifest data/manifest.jsonl --out /kaggle/working/runs/run1 --height 1280 --width 960 --bs 1 --accum 8 --lr 3e-5 --val_every 2 --repeat real=3 --workers 3 --max_length 512 --epochs 16 --val_n 60 --max_hours 6.5  --chunk_epochs 8
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
+sanity OK: (1, 3, 1280, 960) vocab 57564
+train samples/epoch: 2027 | val: 60
+`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+LOSS CHECK (step 0): our aligned CE 5.3210 | library loss 12.2076 (they differ if the library shifts the labels again)
+{'epoch': 1, 'train_loss': 7.054352664806364, 'epoch_sec': 839, 'peak_gb': 7.77, 'lr': 1.876847290640394e-05}
+The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+validation failed (training continues): AttributeError("'list' object has no attribute 'get'")
+{'epoch': 2, 'train_loss': 1.1771786449340158, 'epoch_sec': 859, 'peak_gb': 7.77, 'lr': 2.9942483002523738e-05, 'val_error': 'AttributeError("\'list\' object has no attribute \'get\'")', 'new_best': 'placeholder'}
+{'epoch': 3, 'train_loss': 0.2927275602606993, 'epoch_sec': 860, 'peak_gb': 7.77, 'lr': 2.9304354694474596e-05}
+{'epoch': 4, 'train_loss': 0.1536111102412355, 'epoch_sec': 853, 'peak_gb': 7.77, 'lr': 2.798823345460592e-05, 'val': {'cord': {'n': 25, 'ted_acc': 0.8203, 'field_precision': 0.7907, 'field_recall': 0.9128, 'field_f1': 0.8474, 'item_f1': 0.8595, 'charge_f1': 0.7586, 'grand_total_acc': 0.88, 'subtotal_acc': 0.88, 'pred_arith_consistent': 0.56}, 'synth': {'n': 10, 'ted_acc': 0.9818, 'field_precision': 0.9338, 'field_recall': 0.9338, 'field_f1': 0.9338, 'item_f1': 1.0, 'charge_f1': 0.5714, 'grand_total_acc': 1.0, 'subtotal_acc': 1.0, 'pred_arith_consistent': 1.0}, 'all': {'n': 35, 'ted_acc': 0.8664, 'field_precision': 0.8576, 'field_recall': 0.9233, 'field_f1': 0.8892, 'item_f1': 0.9295, 'charge_f1': 0.6479, 'grand_total_acc': 0.9143, 'subtotal_acc': 0.9143, 'pred_arith_consistent': 0.6857}, 'sroie': {'n': 25, 'company_em': 0.76, 'date_em': 0.96, 'address_em': 0.84, 'total_em': 0.8, 'company_sim': 0.926, 'address_sim': 0.9423, 'field_precision': 0.8571, 'field_recall': 0.84, 'field_f1': 0.8485, 'score': 0.9071}}, 'new_best': True}
+{'epoch': 5, 'train_loss': 0.10714226352445116, 'epoch_sec': 852, 'peak_gb': 7.77, 'lr': 2.6056500349180944e-05}
+{'epoch': 6, 'train_loss': 0.08285803246745113, 'epoch_sec': 849, 'peak_gb': 7.77, 'lr': 2.360071500599228e-05, 'val': {'cord': {'n': 25, 'ted_acc': 0.9401, 'field_precision': 0.931, 'field_recall': 0.906, 'field_f1': 0.9184, 'item_f1': 0.9541, 'charge_f1': 0.8462, 'grand_total_acc': 0.96, 'subtotal_acc': 0.92, 'pred_arith_consistent': 0.72}, 'synth': {'n': 10, 'ted_acc': 0.9731, 'field_precision': 0.9597, 'field_recall': 0.947, 'field_f1': 0.9533, 'item_f1': 0.8908, 'charge_f1': 0.9524, 'grand_total_acc': 1.0, 'subtotal_acc': 1.0, 'pred_arith_consistent': 0.9}, 'all': {'n': 35, 'ted_acc': 0.9495, 'field_precision': 0.9456, 'field_recall': 0.9267, 'field_f1': 0.936, 'item_f1': 0.9211, 'charge_f1': 0.9118, 'grand_total_acc': 0.9714, 'subtotal_acc': 0.9429, 'pred_arith_consistent': 0.7714}, 'sroie': {'n': 25, 'company_em': 0.84, 'date_em': 0.88, 'address_em': 0.84, 'total_em': 0.84, 'company_sim': 0.9501, 'address_sim': 0.9427, 'field_precision': 0.8763, 'field_recall': 0.85, 'field_f1': 0.8629, 'score': 0.9032}}, 'new_best': True}
+{'epoch': 7, 'train_loss': 0.06138054914055755, 'epoch_sec': 850, 'peak_gb': 7.77, 'lr': 2.0737275902308617e-05}
+{'epoch': 8, 'train_loss': 0.04772106484938679, 'epoch_sec': 861, 'peak_gb': 7.77, 'lr': 1.760190334949381e-05, 'val': {'cord': {'n': 25, 'ted_acc': 0.9411, 'field_precision': 0.9346, 'field_recall': 0.9597, 'field_f1': 0.947, 'item_f1': 0.9643, 'charge_f1': 0.8571, 'grand_total_acc': 0.92, 'subtotal_acc': 0.96, 'pred_arith_consistent': 0.68}, 'synth': {'n': 10, 'ted_acc': 0.994, 'field_precision': 0.9735, 'field_recall': 0.9735, 'field_f1': 0.9735, 'item_f1': 1.0, 'charge_f1': 1.0, 'grand_total_acc': 1.0, 'subtotal_acc': 1.0, 'pred_arith_consistent': 1.0}, 'all': {'n': 35, 'ted_acc': 0.9562, 'field_precision': 0.9539, 'field_recall': 0.9667, 'field_f1': 0.9603, 'item_f1': 0.9828, 'charge_f1': 0.9429, 'grand_total_acc': 0.9429, 'subtotal_acc': 0.9714, 'pred_arith_consistent': 0.7714}, 'sroie': {'n': 25, 'company_em': 0.84, 'date_em': 0.96, 'address_em': 0.88, 'total_em': 0.84, 'company_sim': 0.9509, 'address_sim': 0.9573, 'field_precision': 0.9072, 'field_recall': 0.88, 'field_f1': 0.8934, 'score': 0.927}}, 'new_best': True}
+chunk of 8 epochs done at epoch 8/16 - rerun with --resume
+
+FINAL STATUS: {
+ "status": "chunk_done",
+ "epoch": 8,
+ "epochs": 16,
+ "best": 0.93405,
+ "elapsed_h": 1.97,
+ "time": "2026-10-09 12:41:03"
+}
+stage finished (status chunk_done/time_budget): optimizer state KEPT for the next stage
+
+======== DONE  [126.2 min elapsed] ========
+/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 327043 bytes to __results__.html

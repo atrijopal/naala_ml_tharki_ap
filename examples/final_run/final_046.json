@@ -1,0 +1,62 @@
+{
+ "items": [
+  {
+   "name": "Tea",
+   "qty": "1",
+   "unit_price": "15",
+   "total": "15"
+  },
+  {
+   "name": "Gobi Manchurian",
+   "qty": "2",
+   "unit_price": "190",
+   "total": "380"
+  },
+  {
+   "name": "Idli Sambar",
+   "qty": "1",
+   "unit_price": "55",
+   "total": "55"
+  },
+  {
+   "name": "Butter Roti",
+   "qty": "1",
+   "unit_price": "35",
+   "total": "35"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "2",
+   "unit_price": "220",
+   "total": "440"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "1",
+   "unit_price": "125",
+   "total": "125"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "4",
+   "unit_price": "50",
+   "total": "200"
+  }
+ ],
+ "charges": [
+  {
+   "type": "DISCOUNT",
+   "amount": "-125"
+  },
+  {
+   "type": "CGST",
+   "amount": "68"
+  },
+  {
+   "type": "SGST",
+   "amount": "68"
+  }
+ ],
+ "subtotal": "1250",
+ "grand_total": "1261"
+}

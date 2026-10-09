@@ -1,0 +1,32 @@
+{
+ "items": [
+  {
+   "name": "Dal Tadka",
+   "qty": "1",
+   "unit_price": "190",
+   "total": "190"
+  },
+  {
+   "name": "Jeera Rice",
+   "qty": "1",
+   "unit_price": "145",
+   "total": "145"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "8.38"
+  },
+  {
+   "type": "SGST",
+   "amount": "8.38"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "0.24"
+  }
+ ],
+ "subtotal": "335",
+ "grand_total": "352"
+}

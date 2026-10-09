@@ -1,0 +1,66 @@
+{
+ "items": [
+  {
+   "name": "Mutton Curry",
+   "qty": "2",
+   "unit_price": "230",
+   "total": "460"
+  },
+  {
+   "name": "Poha",
+   "qty": "3",
+   "unit_price": "35",
+   "total": "105"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "1",
+   "unit_price": "220",
+   "total": "220"
+  },
+  {
+   "name": "Tea",
+   "qty": "1",
+   "unit_price": "20",
+   "total": "20"
+  },
+  {
+   "name": "Chicken Biryani",
+   "qty": "1",
+   "unit_price": "265",
+   "total": "265"
+  },
+  {
+   "name": "Tandoori Roti",
+   "qty": "2",
+   "unit_price": "27",
+   "total": "54"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "1",
+   "unit_price": "115",
+   "total": "115"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "124"
+  },
+  {
+   "type": "CGST",
+   "amount": "73"
+  },
+  {
+   "type": "SGST",
+   "amount": "73"
+  },
+  {
+   "type": "DISCOUNT",
+   "amount": "-20"
+  }
+ ],
+ "subtotal": "1239",
+ "grand_total": "1489"
+}

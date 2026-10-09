@@ -1,0 +1,82 @@
+{
+ "items": [
+  {
+   "name": "Masala Dosa",
+   "qty": "1",
+   "unit_price": "60.5",
+   "total": "60.5"
+  },
+  {
+   "name": "Veg Biryani",
+   "qty": "1",
+   "unit_price": "155",
+   "total": "155"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "2",
+   "unit_price": "90",
+   "total": "180"
+  },
+  {
+   "name": "Fresh Lime Soda",
+   "qty": "1",
+   "unit_price": "55",
+   "total": "55"
+  },
+  {
+   "name": "Tea",
+   "qty": "3",
+   "unit_price": "30",
+   "total": "90"
+  },
+  {
+   "name": "Paratha",
+   "qty": "1",
+   "unit_price": "60",
+   "total": "60"
+  },
+  {
+   "name": "Maggi",
+   "qty": "1",
+   "unit_price": "55",
+   "total": "55"
+  },
+  {
+   "name": "Egg Curry",
+   "qty": "1",
+   "unit_price": "170.5",
+   "total": "170.5"
+  },
+  {
+   "name": "Garlic Naan",
+   "qty": "1",
+   "unit_price": "30",
+   "total": "30"
+  }
+ ],
+ "charges": [
+  {
+   "type": "DISCOUNT",
+   "amount": "-85.6"
+  },
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "42.8"
+  },
+  {
+   "type": "CGST",
+   "amount": "69.34"
+  },
+  {
+   "type": "SGST",
+   "amount": "69.34"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "0.12"
+  }
+ ],
+ "subtotal": "856",
+ "grand_total": "952"
+}

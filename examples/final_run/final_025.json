@@ -1,0 +1,70 @@
+{
+ "items": [
+  {
+   "name": "Maggi",
+   "qty": "1",
+   "unit_price": "65",
+   "total": "65"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "2",
+   "unit_price": "240",
+   "total": "480"
+  },
+  {
+   "name": "Egg Curry",
+   "qty": "1",
+   "unit_price": "200",
+   "total": "200"
+  },
+  {
+   "name": "Jeera Rice",
+   "qty": "1",
+   "unit_price": "90",
+   "total": "90"
+  },
+  {
+   "name": "Tea",
+   "qty": "1",
+   "unit_price": "30",
+   "total": "30"
+  },
+  {
+   "name": "Garlic Naan",
+   "qty": "2",
+   "unit_price": "60",
+   "total": "120"
+  },
+  {
+   "name": "Veg Thali",
+   "qty": "2",
+   "unit_price": "115",
+   "total": "230"
+  },
+  {
+   "name": "Veg Sandwich",
+   "qty": "1",
+   "unit_price": "100",
+   "total": "100"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "1",
+   "unit_price": "375",
+   "total": "375"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "152"
+  },
+  {
+   "type": "SGST",
+   "amount": "152"
+  }
+ ],
+ "subtotal": "1690",
+ "grand_total": "1994"
+}

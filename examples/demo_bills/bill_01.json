@@ -1,0 +1,58 @@
+{
+ "items": [
+  {
+   "name": "Veg Sandwich",
+   "qty": "1",
+   "unit_price": "100",
+   "total": "100"
+  },
+  {
+   "name": "Idli Sambar",
+   "qty": "4",
+   "unit_price": "50",
+   "total": "200"
+  },
+  {
+   "name": "Poha",
+   "qty": "1",
+   "unit_price": "60",
+   "total": "60"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "1",
+   "unit_price": "220",
+   "total": "220"
+  },
+  {
+   "name": "Masala Dosa",
+   "qty": "1",
+   "unit_price": "80",
+   "total": "80"
+  },
+  {
+   "name": "Tandoori Roti",
+   "qty": "1",
+   "unit_price": "12",
+   "total": "12"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "90",
+   "total": "90"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "69"
+  },
+  {
+   "type": "SGST",
+   "amount": "69"
+  }
+ ],
+ "subtotal": "762",
+ "grand_total": "900"
+}

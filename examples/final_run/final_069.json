@@ -1,0 +1,60 @@
+{
+ "items": [
+  {
+   "name": "Jeera Rice",
+   "qty": "1",
+   "unit_price": "135.5",
+   "total": "135.5"
+  },
+  {
+   "name": "Tandoori Roti",
+   "qty": "1",
+   "unit_price": "22",
+   "total": "22"
+  },
+  {
+   "name": "Egg Curry",
+   "qty": "1",
+   "unit_price": "165",
+   "total": "165"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "1",
+   "unit_price": "360",
+   "total": "360"
+  },
+  {
+   "name": "Chicken Biryani",
+   "qty": "1",
+   "unit_price": "300",
+   "total": "300"
+  },
+  {
+   "name": "Paratha",
+   "qty": "1",
+   "unit_price": "35",
+   "total": "35"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "50.88"
+  },
+  {
+   "type": "CGST",
+   "amount": "91.58"
+  },
+  {
+   "type": "SGST",
+   "amount": "91.58"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "0.46"
+  }
+ ],
+ "subtotal": "1017.5",
+ "grand_total": "1252"
+}

@@ -1,0 +1,74 @@
+{
+ "items": [
+  {
+   "name": "Mango Lassi",
+   "qty": "3",
+   "unit_price": "115",
+   "total": "345"
+  },
+  {
+   "name": "Veg Thali",
+   "qty": "2",
+   "unit_price": "135",
+   "total": "270"
+  },
+  {
+   "name": "Maggi",
+   "qty": "1",
+   "unit_price": "45",
+   "total": "45"
+  },
+  {
+   "name": "Veg Sandwich",
+   "qty": "1",
+   "unit_price": "85",
+   "total": "85"
+  },
+  {
+   "name": "Poha",
+   "qty": "4",
+   "unit_price": "45",
+   "total": "180"
+  },
+  {
+   "name": "Tandoori Roti",
+   "qty": "2",
+   "unit_price": "17",
+   "total": "34"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "3",
+   "unit_price": "50",
+   "total": "150"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "1",
+   "unit_price": "105",
+   "total": "105"
+  },
+  {
+   "name": "Tea",
+   "qty": "1",
+   "unit_price": "10",
+   "total": "10"
+  }
+ ],
+ "charges": [
+  {
+   "type": "PACKAGING",
+   "amount": "20"
+  },
+  {
+   "type": "CGST",
+   "amount": "110"
+  },
+  {
+   "type": "SGST",
+   "amount": "110"
+  }
+ ],
+ "subtotal": "1224",
+ "grand_total": "1464"
+}

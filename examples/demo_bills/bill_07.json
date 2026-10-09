@@ -1,0 +1,62 @@
+{
+ "items": [
+  {
+   "name": "Jeera Rice",
+   "qty": "1",
+   "unit_price": "120",
+   "total": "120"
+  },
+  {
+   "name": "Mango Lassi",
+   "qty": "1",
+   "unit_price": "95",
+   "total": "95"
+  },
+  {
+   "name": "Maggi",
+   "qty": "1",
+   "unit_price": "40",
+   "total": "40"
+  },
+  {
+   "name": "Veg Biryani",
+   "qty": "2",
+   "unit_price": "230",
+   "total": "460"
+  },
+  {
+   "name": "Idli Sambar",
+   "qty": "1",
+   "unit_price": "55",
+   "total": "55"
+  },
+  {
+   "name": "Paratha",
+   "qty": "1",
+   "unit_price": "45",
+   "total": "45"
+  },
+  {
+   "name": "Masala Dosa",
+   "qty": "1",
+   "unit_price": "80",
+   "total": "80"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "53.7"
+  },
+  {
+   "type": "SGST",
+   "amount": "53.7"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.4"
+  }
+ ],
+ "subtotal": "895",
+ "grand_total": "1002"
+}

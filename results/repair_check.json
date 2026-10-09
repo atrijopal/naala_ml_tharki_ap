@@ -1,0 +1,10 @@
+{
+ "bills": 100,
+ "suggestions_made": 26,
+ "suggestions_that_fix_a_wrong_rate": 26,
+ "correct_rates_broken": 0,
+ "field_f1_before": 0.9879,
+ "field_f1_after": 0.9969,
+ "bills_with_all_rates_right_before": 80,
+ "bills_with_all_rates_right_after": 100
+}

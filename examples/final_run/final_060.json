@@ -1,0 +1,52 @@
+{
+ "items": [
+  {
+   "name": "Chole Bhature",
+   "qty": "1",
+   "unit_price": "135",
+   "total": "135"
+  },
+  {
+   "name": "Poha",
+   "qty": "1",
+   "unit_price": "55",
+   "total": "55"
+  },
+  {
+   "name": "Paneer Butter Masala",
+   "qty": "1",
+   "unit_price": "215",
+   "total": "215"
+  },
+  {
+   "name": "Maggi",
+   "qty": "2",
+   "unit_price": "40",
+   "total": "80"
+  },
+  {
+   "name": "Tea",
+   "qty": "2",
+   "unit_price": "15.5",
+   "total": "31"
+  },
+  {
+   "name": "Fresh Lime Soda",
+   "qty": "1",
+   "unit_price": "70",
+   "total": "70"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "29.3"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.3"
+  }
+ ],
+ "subtotal": "586",
+ "grand_total": "615"
+}

@@ -1,0 +1,61 @@
+{
+ "items": [
+  {
+   "name": "Masala Dosa",
+   "qty": "1",
+   "unit_price": "95",
+   "total": "95"
+  },
+  {
+   "name": "Tea",
+   "qty": "2",
+   "unit_price": "25",
+   "total": "50"
+  },
+  {
+   "name": "Tandoori Roti",
+   "qty": "1",
+   "unit_price": "27",
+   "total": "27"
+  },
+  {
+   "name": "Mango Lassi",
+   "qty": "1",
+   "unit_price": "100",
+   "total": "100"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "1",
+   "unit_price": "100",
+   "total": "100"
+  },
+  {
+   "name": "Paratha",
+   "qty": "1",
+   "unit_price": "45",
+   "total": "45"
+  },
+  {
+   "name": "Poha",
+   "qty": "3",
+   "unit_price": "45",
+   "total": "135"
+  },
+  {
+   "name": "Gobi Manchurian",
+   "qty": "3",
+   "unit_price": "140",
+   "total": "420"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "3",
+   "unit_price": "135",
+   "total": "405"
+  }
+ ],
+ "charges": [],
+ "subtotal": "1377",
+ "grand_total": "1377"
+}

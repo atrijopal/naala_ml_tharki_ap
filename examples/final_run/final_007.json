@@ -1,0 +1,34 @@
+{
+ "items": [
+  {
+   "name": "Masala Dosa",
+   "qty": "1",
+   "unit_price": "90",
+   "total": "90"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "1",
+   "unit_price": "140",
+   "total": "140"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "2",
+   "unit_price": "45.5",
+   "total": "91"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "8.03"
+  },
+  {
+   "type": "SGST",
+   "amount": "8.03"
+  }
+ ],
+ "subtotal": "321",
+ "grand_total": "337.06"
+}

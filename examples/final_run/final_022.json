@@ -1,0 +1,46 @@
+{
+ "items": [
+  {
+   "name": "Maggi",
+   "qty": "2",
+   "unit_price": "60",
+   "total": "120"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "1",
+   "unit_price": "45",
+   "total": "45"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "1",
+   "unit_price": "235",
+   "total": "235"
+  },
+  {
+   "name": "Tandoori Roti",
+   "qty": "2",
+   "unit_price": "12",
+   "total": "24"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "1",
+   "unit_price": "115",
+   "total": "115"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "49"
+  },
+  {
+   "type": "SGST",
+   "amount": "49"
+  }
+ ],
+ "subtotal": "539",
+ "grand_total": "637"
+}

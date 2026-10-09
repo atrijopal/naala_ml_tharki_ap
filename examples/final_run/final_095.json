@@ -1,0 +1,40 @@
+{
+ "items": [
+  {
+   "name": "Cold Coffee",
+   "qty": "4",
+   "unit_price": "145",
+   "total": "580"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "1",
+   "unit_price": "100",
+   "total": "100"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "1",
+   "unit_price": "50",
+   "total": "50"
+  },
+  {
+   "name": "Tea",
+   "qty": "3",
+   "unit_price": "15",
+   "total": "45"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "70"
+  },
+  {
+   "type": "SGST",
+   "amount": "70"
+  }
+ ],
+ "subtotal": "775",
+ "grand_total": "915"
+}

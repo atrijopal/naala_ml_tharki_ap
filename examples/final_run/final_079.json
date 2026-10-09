@@ -1,0 +1,58 @@
+{
+ "items": [
+  {
+   "name": "Veg Sandwich",
+   "qty": "1",
+   "unit_price": "60",
+   "total": "60"
+  },
+  {
+   "name": "Garlic Naan",
+   "qty": "4",
+   "unit_price": "55",
+   "total": "220"
+  },
+  {
+   "name": "Maggi",
+   "qty": "2",
+   "unit_price": "45",
+   "total": "90"
+  },
+  {
+   "name": "Chicken Biryani",
+   "qty": "1",
+   "unit_price": "270",
+   "total": "270"
+  },
+  {
+   "name": "Veg Thali",
+   "qty": "4",
+   "unit_price": "125",
+   "total": "500"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "1",
+   "unit_price": "210",
+   "total": "210"
+  },
+  {
+   "name": "Mango Lassi",
+   "qty": "3",
+   "unit_price": "95",
+   "total": "285"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "147.15"
+  },
+  {
+   "type": "SGST",
+   "amount": "147.15"
+  }
+ ],
+ "subtotal": "1635",
+ "grand_total": "1929.3"
+}

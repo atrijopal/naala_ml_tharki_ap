@@ -1,0 +1,70 @@
+{
+ "items": [
+  {
+   "name": "Paneer Butter Masala",
+   "qty": "3",
+   "unit_price": "235",
+   "total": "705"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "1",
+   "unit_price": "25.5",
+   "total": "25.5"
+  },
+  {
+   "name": "Tandoori Roti",
+   "qty": "1",
+   "unit_price": "12.5",
+   "total": "12.5"
+  },
+  {
+   "name": "Veg Biryani",
+   "qty": "3",
+   "unit_price": "205",
+   "total": "615"
+  },
+  {
+   "name": "Maggi",
+   "qty": "1",
+   "unit_price": "75",
+   "total": "75"
+  },
+  {
+   "name": "Chicken Biryani",
+   "qty": "1",
+   "unit_price": "180",
+   "total": "180"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "1",
+   "unit_price": "150",
+   "total": "150"
+  },
+  {
+   "name": "Butter Roti",
+   "qty": "2",
+   "unit_price": "20",
+   "total": "40"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "2",
+   "unit_price": "90.5",
+   "total": "181"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "99.2"
+  },
+  {
+   "type": "GST",
+   "amount": "357.12"
+  }
+ ],
+ "subtotal": "1984",
+ "grand_total": "2440.32"
+}

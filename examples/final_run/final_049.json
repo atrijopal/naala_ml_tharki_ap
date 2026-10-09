@@ -1,0 +1,64 @@
+{
+ "items": [
+  {
+   "name": "Garlic Naan",
+   "qty": "2",
+   "unit_price": "40",
+   "total": "80"
+  },
+  {
+   "name": "Idli Sambar",
+   "qty": "1",
+   "unit_price": "40",
+   "total": "40"
+  },
+  {
+   "name": "Veg Sandwich",
+   "qty": "2",
+   "unit_price": "80",
+   "total": "160"
+  },
+  {
+   "name": "Egg Curry",
+   "qty": "4",
+   "unit_price": "185",
+   "total": "740"
+  },
+  {
+   "name": "Butter Roti",
+   "qty": "1",
+   "unit_price": "20",
+   "total": "20"
+  },
+  {
+   "name": "Mango Lassi",
+   "qty": "1",
+   "unit_price": "115.5",
+   "total": "115.5"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "1",
+   "unit_price": "50",
+   "total": "50"
+  },
+  {
+   "name": "Maggi",
+   "qty": "2",
+   "unit_price": "60",
+   "total": "120"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "33.14"
+  },
+  {
+   "type": "SGST",
+   "amount": "33.14"
+  }
+ ],
+ "subtotal": "1325.5",
+ "grand_total": "1391.78"
+}

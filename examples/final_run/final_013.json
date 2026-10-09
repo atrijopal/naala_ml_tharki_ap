@@ -1,0 +1,54 @@
+{
+ "items": [
+  {
+   "name": "Chole Bhature",
+   "qty": "2",
+   "unit_price": "130",
+   "total": "260"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "1",
+   "unit_price": "235",
+   "total": "235"
+  },
+  {
+   "name": "Paneer Butter Masala",
+   "qty": "2",
+   "unit_price": "190",
+   "total": "380"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "1",
+   "unit_price": "320",
+   "total": "320"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "3",
+   "unit_price": "145",
+   "total": "435"
+  },
+  {
+   "name": "Butter Roti",
+   "qty": "1",
+   "unit_price": "25",
+   "total": "25"
+  },
+  {
+   "name": "Maggi",
+   "qty": "1",
+   "unit_price": "55",
+   "total": "55"
+  }
+ ],
+ "charges": [
+  {
+   "type": "GST",
+   "amount": "205"
+  }
+ ],
+ "subtotal": "1710",
+ "grand_total": "1915"
+}

@@ -1,0 +1,78 @@
+{
+ "items": [
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "145",
+   "total": "145"
+  },
+  {
+   "name": "Veg Sandwich",
+   "qty": "2",
+   "unit_price": "55",
+   "total": "110"
+  },
+  {
+   "name": "Paratha",
+   "qty": "2",
+   "unit_price": "35",
+   "total": "70"
+  },
+  {
+   "name": "Mango Lassi",
+   "qty": "3",
+   "unit_price": "115",
+   "total": "345"
+  },
+  {
+   "name": "Fresh Lime Soda",
+   "qty": "1",
+   "unit_price": "80",
+   "total": "80"
+  },
+  {
+   "name": "Maggi",
+   "qty": "2",
+   "unit_price": "60",
+   "total": "120"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "1",
+   "unit_price": "210",
+   "total": "210"
+  },
+  {
+   "name": "Garlic Naan",
+   "qty": "1",
+   "unit_price": "40.5",
+   "total": "40.5"
+  },
+  {
+   "name": "Gobi Manchurian",
+   "qty": "2",
+   "unit_price": "205",
+   "total": "410"
+  }
+ ],
+ "charges": [
+  {
+   "type": "PACKAGING",
+   "amount": "30"
+  },
+  {
+   "type": "CGST",
+   "amount": "91.83"
+  },
+  {
+   "type": "SGST",
+   "amount": "91.83"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.16"
+  }
+ ],
+ "subtotal": "1530.5",
+ "grand_total": "1744"
+}

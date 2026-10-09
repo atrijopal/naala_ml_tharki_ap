@@ -1,0 +1,30 @@
+{
+ "items": [
+  {
+   "name": "Mutton Curry",
+   "qty": "1",
+   "unit_price": "380",
+   "total": "380"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "155",
+   "total": "155"
+  },
+  {
+   "name": "Paratha",
+   "qty": "2",
+   "unit_price": "35",
+   "total": "70"
+  }
+ ],
+ "charges": [
+  {
+   "type": "DISCOUNT",
+   "amount": "-90.75"
+  }
+ ],
+ "subtotal": "605",
+ "grand_total": "514.25"
+}

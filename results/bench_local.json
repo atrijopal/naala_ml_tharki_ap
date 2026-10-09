@@ -1,0 +1,96 @@
+{
+ "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+ "torch": "2.11.0+cu128",
+ "n_images": 20,
+ "n_phone_size": 4,
+ "load_to_gpu_s": 0.5,
+ "first_request_ms": 625.7,
+ "later_requests_ms": [
+  265.0,
+  237.5,
+  242.3
+ ],
+ "prep_12mp_current_ms": {
+  "p50": 168.1,
+  "p95": 176.2,
+  "mean": 168.9
+ },
+ "prep_12mp_fast_ms": {
+  "p50": 16.1,
+  "p95": 24.1,
+  "mean": 16.6
+ },
+ "model_input_mean_abs_diff_normalised_units": 0.0022,
+ "baseline_fp16": {
+  "all": {
+   "p50": 284.7,
+   "p95": 505.0,
+   "mean": 326.6
+  },
+  "phone_size": {
+   "p50": 425.8,
+   "p95": 462.1,
+   "mean": 430.6
+  }
+ },
+ "fast_prep": {
+  "all": {
+   "p50": 264.7,
+   "p95": 502.3,
+   "mean": 291.1
+  },
+  "phone_size": {
+   "p50": 260.7,
+   "p95": 296.3,
+   "mean": 261.2
+  },
+  "identical_outputs": "19/20"
+ },
+ "no_unk_filter": {
+  "all": {
+   "p50": 287.7,
+   "p95": 502.1,
+   "mean": 327.5
+  },
+  "phone_size": {
+   "p50": 439.3,
+   "p95": 469.9,
+   "mean": 441.1
+  },
+  "identical_outputs": "20/20"
+ },
+ "fast_prep+no_unk_filter": {
+  "all": {
+   "p50": 269.3,
+   "p95": 509.0,
+   "mean": 293.2
+  },
+  "phone_size": {
+   "p50": 252.8,
+   "p95": 300.0,
+   "mean": 262.3
+  },
+  "identical_outputs": "19/20"
+ },
+ "fp32": {
+  "all": {
+   "p50": 537.7,
+   "p95": 979.1,
+   "mean": 598.6
+  },
+  "peak_gpu_gb": 1.43,
+  "identical_to_fp16": "20/20"
+ },
+ "fp16_peak_gpu_gb": 0.72,
+ "fp16_checkpoint": {
+  "size_mb": 411,
+  "fp32_checkpoint_size_mb": 815,
+  "load_to_gpu_s": 0.53,
+  "identical_outputs": "20/20",
+  "all": {
+   "p50": 282.4,
+   "p95": 503.1,
+   "mean": 322.3
+  }
+ }
+}

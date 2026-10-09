@@ -1,0 +1,46 @@
+{
+ "items": [
+  {
+   "name": "Chole Bhature",
+   "qty": "2",
+   "unit_price": "80",
+   "total": "160"
+  },
+  {
+   "name": "Paratha",
+   "qty": "1",
+   "unit_price": "60",
+   "total": "60"
+  },
+  {
+   "name": "Gobi Manchurian",
+   "qty": "1",
+   "unit_price": "180",
+   "total": "180"
+  },
+  {
+   "name": "Idli Sambar",
+   "qty": "2",
+   "unit_price": "85",
+   "total": "170"
+  },
+  {
+   "name": "Masala Dosa",
+   "qty": "1",
+   "unit_price": "130",
+   "total": "130"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "18"
+  },
+  {
+   "type": "SGST",
+   "amount": "18"
+  }
+ ],
+ "subtotal": "700",
+ "grand_total": "736"
+}

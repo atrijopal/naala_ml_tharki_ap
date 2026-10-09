@@ -1,0 +1,19 @@
+{
+ "items": [
+  {
+   "name": "Tea",
+   "qty": "1",
+   "unit_price": "10",
+   "total": "10"
+  },
+  {
+   "name": "Poha",
+   "qty": "3",
+   "unit_price": "35",
+   "total": "105"
+  }
+ ],
+ "charges": [],
+ "subtotal": "115",
+ "grand_total": "115"
+}

@@ -1,0 +1,61 @@
+{
+ "items": [
+  {
+   "name": "Tea",
+   "qty": "1",
+   "unit_price": "30",
+   "total": "30"
+  },
+  {
+   "name": "Jeera Rice",
+   "qty": "2",
+   "unit_price": "125",
+   "total": "250"
+  },
+  {
+   "name": "Masala Dosa",
+   "qty": "1",
+   "unit_price": "140",
+   "total": "140"
+  },
+  {
+   "name": "Tandoori Roti",
+   "qty": "1",
+   "unit_price": "17",
+   "total": "17"
+  },
+  {
+   "name": "Idli Sambar",
+   "qty": "1",
+   "unit_price": "60",
+   "total": "60"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "2",
+   "unit_price": "100",
+   "total": "200"
+  },
+  {
+   "name": "Garlic Naan",
+   "qty": "1",
+   "unit_price": "60",
+   "total": "60"
+  },
+  {
+   "name": "Egg Curry",
+   "qty": "2",
+   "unit_price": "130",
+   "total": "260"
+  },
+  {
+   "name": "Gobi Manchurian",
+   "qty": "1",
+   "unit_price": "220",
+   "total": "220"
+  }
+ ],
+ "charges": [],
+ "subtotal": "1237",
+ "grand_total": "1237"
+}

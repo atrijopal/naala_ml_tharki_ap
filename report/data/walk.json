@@ -1,0 +1,31 @@
+[
+ {
+  "image": "examples/final_run/final_001.jpg",
+  "fixes": [
+   "Mutton Curry: unit price read 310, corrected to 305"
+  ],
+  "finals": {
+   "Riya": 23247,
+   "Aman": 49465,
+   "Sara": 48630
+  }
+ },
+ {
+  "image": "examples/final_run/final_016.jpg",
+  "fixes": [],
+  "finals": {
+   "Riya": 20037,
+   "Aman": 21633,
+   "Sara": 13030
+  }
+ },
+ {
+  "image": "examples/final_run/final_017.jpg",
+  "fixes": [],
+  "finals": {
+   "Riya": 61233,
+   "Aman": 55147,
+   "Sara": 38226
+  }
+ }
+]

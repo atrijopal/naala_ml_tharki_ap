@@ -1,0 +1,157 @@
+{
+  "assignments_share_units": {
+    "0": {
+      "Riya": 1,
+      "Aman": 1,
+      "Sara": 1
+    },
+    "1": {
+      "Riya": 2,
+      "Aman": 1
+    },
+    "2": {
+      "Sara": 1
+    },
+    "3": {
+      "Riya": 1
+    },
+    "4": {
+      "Aman": 1
+    },
+    "5": {
+      "Aman": 1,
+      "Sara": 1
+    }
+  },
+  "result": {
+    "people": {
+      "Riya": {
+        "items": [
+          {
+            "idx": 0,
+            "name": "Poha",
+            "units": 1,
+            "total_units": 3,
+            "amount": 2000
+          },
+          {
+            "idx": 1,
+            "name": "Mutton Curry",
+            "units": 2,
+            "total_units": 3,
+            "amount": 42667
+          },
+          {
+            "idx": 3,
+            "name": "Paratha",
+            "units": 1,
+            "total_units": 1,
+            "amount": 11000
+          }
+        ],
+        "pre_tax": 55667,
+        "charges": [
+          {
+            "type": "SERVICE_CHARGE",
+            "amount": 2783
+          },
+          {
+            "type": "GST",
+            "amount": 2783
+          }
+        ],
+        "charge_total": 5566,
+        "final": 61233,
+        "manual": false
+      },
+      "Aman": {
+        "items": [
+          {
+            "idx": 0,
+            "name": "Poha",
+            "units": 1,
+            "total_units": 3,
+            "amount": 2000
+          },
+          {
+            "idx": 1,
+            "name": "Mutton Curry",
+            "units": 1,
+            "total_units": 3,
+            "amount": 21333
+          },
+          {
+            "idx": 4,
+            "name": "Chicken Biryani",
+            "units": 1,
+            "total_units": 1,
+            "amount": 20050
+          },
+          {
+            "idx": 5,
+            "name": "Idli Sambar",
+            "units": 1,
+            "total_units": 2,
+            "amount": 6750
+          }
+        ],
+        "pre_tax": 50133,
+        "charges": [
+          {
+            "type": "SERVICE_CHARGE",
+            "amount": 2507
+          },
+          {
+            "type": "GST",
+            "amount": 2507
+          }
+        ],
+        "charge_total": 5014,
+        "final": 55147,
+        "manual": false
+      },
+      "Sara": {
+        "items": [
+          {
+            "idx": 0,
+            "name": "Poha",
+            "units": 1,
+            "total_units": 3,
+            "amount": 2000
+          },
+          {
+            "idx": 2,
+            "name": "Paneer Butter Masala",
+            "units": 1,
+            "total_units": 1,
+            "amount": 26000
+          },
+          {
+            "idx": 5,
+            "name": "Idli Sambar",
+            "units": 1,
+            "total_units": 2,
+            "amount": 6750
+          }
+        ],
+        "pre_tax": 34750,
+        "charges": [
+          {
+            "type": "SERVICE_CHARGE",
+            "amount": 1738
+          },
+          {
+            "type": "GST",
+            "amount": 1738
+          }
+        ],
+        "charge_total": 3476,
+        "final": 38226,
+        "manual": false
+      }
+    },
+    "computed_total": 154606,
+    "printed_total": 154606,
+    "diff_vs_printed": 0
+  }
+}

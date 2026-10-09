@@ -1,0 +1,39 @@
+# --- model weights and large data (see README: where to get the checkpoint) ---
+/ckpt/
+/runs/
+/data/
+/out/
+/build/
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# --- datasets we must not redistribute (CORD / SROIE images) ---
+examples/sroie/
+examples/augmentation_by_profile/sroie_*
+examples/overview.jpg
+examples/cord/
+
+# --- local working notes and planning files (not part of the deliverable) ---
+CLAUDE.md
+change.md
+SplitSnap_Donut_Kaggle_Guide.md
+
+# --- build and cache files ---
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+report/report_template.html
+report/report.html
+report/report.pdf
+report/optimisation.html
+report/curves.svg
+nohup.out
+*.log.tmp

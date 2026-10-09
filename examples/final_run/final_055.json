@@ -1,0 +1,46 @@
+{
+ "items": [
+  {
+   "name": "Veg Thali",
+   "qty": "3",
+   "unit_price": "190",
+   "total": "570"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "2",
+   "unit_price": "145",
+   "total": "290"
+  },
+  {
+   "name": "Jeera Rice",
+   "qty": "1",
+   "unit_price": "155",
+   "total": "155"
+  },
+  {
+   "name": "Samosa",
+   "qty": "2",
+   "unit_price": "20",
+   "total": "40"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "1",
+   "unit_price": "175",
+   "total": "175"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "111"
+  },
+  {
+   "type": "SGST",
+   "amount": "111"
+  }
+ ],
+ "subtotal": "1230",
+ "grand_total": "1452"
+}

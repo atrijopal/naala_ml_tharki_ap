@@ -1,0 +1,163 @@
+{
+  "assignments_share_units": {
+    "0": {
+      "Riya": 1,
+      "Aman": 1,
+      "Sara": 1
+    },
+    "1": {
+      "Riya": 2,
+      "Aman": 1
+    },
+    "2": {
+      "Aman": 1,
+      "Sara": 1
+    }
+  },
+  "result": {
+    "people": {
+      "Riya": {
+        "items": [
+          {
+            "idx": 0,
+            "name": "Fresh Lime Soda",
+            "units": 1,
+            "total_units": 3,
+            "amount": 2850
+          },
+          {
+            "idx": 1,
+            "name": "Dal Tadka",
+            "units": 2,
+            "total_units": 3,
+            "amount": 17333
+          }
+        ],
+        "pre_tax": 20183,
+        "charges": [
+          {
+            "type": "DISCOUNT",
+            "amount": -3027
+          },
+          {
+            "type": "SERVICE_CHARGE",
+            "amount": 2018
+          },
+          {
+            "type": "CGST",
+            "amount": 429
+          },
+          {
+            "type": "SGST",
+            "amount": 429
+          },
+          {
+            "type": "ROUND_OFF",
+            "amount": 5
+          }
+        ],
+        "charge_total": -146,
+        "final": 20037,
+        "manual": false
+      },
+      "Aman": {
+        "items": [
+          {
+            "idx": 0,
+            "name": "Fresh Lime Soda",
+            "units": 1,
+            "total_units": 3,
+            "amount": 2850
+          },
+          {
+            "idx": 1,
+            "name": "Dal Tadka",
+            "units": 1,
+            "total_units": 3,
+            "amount": 8667
+          },
+          {
+            "idx": 2,
+            "name": "Veg Biryani",
+            "units": 1,
+            "total_units": 2,
+            "amount": 10275
+          }
+        ],
+        "pre_tax": 21792,
+        "charges": [
+          {
+            "type": "DISCOUNT",
+            "amount": -3269
+          },
+          {
+            "type": "SERVICE_CHARGE",
+            "amount": 2179
+          },
+          {
+            "type": "CGST",
+            "amount": 463
+          },
+          {
+            "type": "SGST",
+            "amount": 463
+          },
+          {
+            "type": "ROUND_OFF",
+            "amount": 5
+          }
+        ],
+        "charge_total": -159,
+        "final": 21633,
+        "manual": false
+      },
+      "Sara": {
+        "items": [
+          {
+            "idx": 0,
+            "name": "Fresh Lime Soda",
+            "units": 1,
+            "total_units": 3,
+            "amount": 2850
+          },
+          {
+            "idx": 2,
+            "name": "Veg Biryani",
+            "units": 1,
+            "total_units": 2,
+            "amount": 10275
+          }
+        ],
+        "pre_tax": 13125,
+        "charges": [
+          {
+            "type": "DISCOUNT",
+            "amount": -1969
+          },
+          {
+            "type": "SERVICE_CHARGE",
+            "amount": 1313
+          },
+          {
+            "type": "CGST",
+            "amount": 279
+          },
+          {
+            "type": "SGST",
+            "amount": 279
+          },
+          {
+            "type": "ROUND_OFF",
+            "amount": 3
+          }
+        ],
+        "charge_total": -95,
+        "final": 13030,
+        "manual": false
+      }
+    },
+    "computed_total": 54700,
+    "printed_total": 54700,
+    "diff_vs_printed": 0
+  }
+}

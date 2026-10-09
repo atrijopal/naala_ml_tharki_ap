@@ -1,0 +1,78 @@
+{
+ "items": [
+  {
+   "name": "Mutton Curry",
+   "qty": "1",
+   "unit_price": "365",
+   "total": "365"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "1",
+   "unit_price": "145.5",
+   "total": "145.5"
+  },
+  {
+   "name": "Egg Curry",
+   "qty": "1",
+   "unit_price": "175",
+   "total": "175"
+  },
+  {
+   "name": "Paneer Butter Masala",
+   "qty": "1",
+   "unit_price": "235",
+   "total": "235"
+  },
+  {
+   "name": "Veg Biryani",
+   "qty": "1",
+   "unit_price": "155",
+   "total": "155"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "4",
+   "unit_price": "20",
+   "total": "80"
+  },
+  {
+   "name": "Gobi Manchurian",
+   "qty": "2",
+   "unit_price": "175",
+   "total": "350"
+  },
+  {
+   "name": "Tandoori Roti",
+   "qty": "1",
+   "unit_price": "17.5",
+   "total": "17.5"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "135",
+   "total": "135"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "165.8"
+  },
+  {
+   "type": "CGST",
+   "amount": "149.22"
+  },
+  {
+   "type": "SGST",
+   "amount": "149.22"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.24"
+  }
+ ],
+ "subtotal": "1658",
+ "grand_total": "2122"
+}

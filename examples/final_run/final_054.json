@@ -1,0 +1,54 @@
+{
+ "items": [
+  {
+   "name": "Chicken Biryani",
+   "qty": "1",
+   "unit_price": "270",
+   "total": "270"
+  },
+  {
+   "name": "Veg Sandwich",
+   "qty": "2",
+   "unit_price": "55",
+   "total": "110"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "1",
+   "unit_price": "45",
+   "total": "45"
+  },
+  {
+   "name": "Veg Thali",
+   "qty": "1",
+   "unit_price": "160",
+   "total": "160"
+  },
+  {
+   "name": "Paneer Butter Masala",
+   "qty": "2",
+   "unit_price": "210",
+   "total": "420"
+  },
+  {
+   "name": "Samosa",
+   "qty": "1",
+   "unit_price": "30",
+   "total": "30"
+  },
+  {
+   "name": "Dal Tadka",
+   "qty": "2",
+   "unit_price": "130",
+   "total": "260"
+  }
+ ],
+ "charges": [
+  {
+   "type": "VAT",
+   "amount": "181.3"
+  }
+ ],
+ "subtotal": "1295",
+ "grand_total": "1476.3"
+}

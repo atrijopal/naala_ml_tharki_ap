@@ -1,0 +1,28 @@
+{
+ "items": [
+  {
+   "name": "Dal Tadka",
+   "qty": "1",
+   "unit_price": "155",
+   "total": "155"
+  },
+  {
+   "name": "Paneer Butter Masala",
+   "qty": "2",
+   "unit_price": "205",
+   "total": "410"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "28"
+  },
+  {
+   "type": "GST",
+   "amount": "102"
+  }
+ ],
+ "subtotal": "565",
+ "grand_total": "695"
+}

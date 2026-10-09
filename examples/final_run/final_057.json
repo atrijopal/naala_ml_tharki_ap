@@ -1,0 +1,34 @@
+{
+ "items": [
+  {
+   "name": "Dal Tadka",
+   "qty": "1",
+   "unit_price": "130",
+   "total": "130"
+  },
+  {
+   "name": "Paratha",
+   "qty": "1",
+   "unit_price": "60",
+   "total": "60"
+  },
+  {
+   "name": "Garlic Naan",
+   "qty": "2",
+   "unit_price": "40",
+   "total": "80"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "7"
+  },
+  {
+   "type": "SGST",
+   "amount": "7"
+  }
+ ],
+ "subtotal": "270",
+ "grand_total": "284"
+}

@@ -1,0 +1,43 @@
+{
+ "items": [
+  {
+   "name": "Fresh Lime Soda",
+   "qty": "1",
+   "unit_price": "60",
+   "total": "60"
+  },
+  {
+   "name": "Garlic Naan",
+   "qty": "1",
+   "unit_price": "35",
+   "total": "35"
+  },
+  {
+   "name": "Paneer Butter Masala",
+   "qty": "1",
+   "unit_price": "250.5",
+   "total": "250.5"
+  },
+  {
+   "name": "Maggi",
+   "qty": "1",
+   "unit_price": "70.5",
+   "total": "70.5"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "145",
+   "total": "145"
+  },
+  {
+   "name": "Jeera Rice",
+   "qty": "3",
+   "unit_price": "90",
+   "total": "270"
+  }
+ ],
+ "charges": [],
+ "subtotal": "831",
+ "grand_total": "831"
+}

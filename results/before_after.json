@@ -1,0 +1,466 @@
+{
+ "n": 30,
+ "bills": [
+  "final_001.jpg",
+  "final_002.jpg",
+  "final_003.jpg",
+  "final_004.jpg",
+  "final_005.jpg",
+  "final_006.jpg",
+  "final_007.jpg",
+  "final_008.jpg",
+  "final_009.jpg",
+  "final_010.jpg",
+  "final_011.jpg",
+  "final_012.jpg",
+  "final_013.jpg",
+  "final_014.jpg",
+  "final_015.jpg",
+  "final_016.jpg",
+  "final_017.jpg",
+  "final_018.jpg",
+  "final_019.jpg",
+  "final_020.jpg",
+  "final_021.jpg",
+  "final_022.jpg",
+  "final_023.jpg",
+  "final_024.jpg",
+  "final_025.jpg",
+  "final_026.jpg",
+  "final_027.jpg",
+  "final_028.jpg",
+  "final_029.jpg",
+  "final_030.jpg"
+ ],
+ "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+ "before": {
+  "n": 30.0,
+  "ted_acc": 0.065,
+  "field_precision": 0.0,
+  "field_recall": 0.0,
+  "field_f1": 0.0,
+  "item_f1": 0.0,
+  "charge_f1": 0.0,
+  "grand_total_acc": 0.0,
+  "subtotal_acc": 0.0,
+  "pred_arith_consistent": 0.0,
+  "median_s_per_bill": 0.129
+ },
+ "after": {
+  "n": 30.0,
+  "ted_acc": 0.9977,
+  "field_precision": 0.9884,
+  "field_recall": 0.9884,
+  "field_f1": 0.9884,
+  "item_f1": 1.0,
+  "charge_f1": 0.9643,
+  "grand_total_acc": 1.0,
+  "subtotal_acc": 1.0,
+  "pred_arith_consistent": 1.0,
+  "median_s_per_bill": 0.351
+ },
+ "examples": {
+  "gt": [
+   {
+    "items": [
+     {
+      "name": "Dal Tadka",
+      "qty": "2",
+      "unit_price": "165.5",
+      "total": "331"
+     },
+     {
+      "name": "Egg Curry",
+      "qty": "1",
+      "unit_price": "115",
+      "total": "115"
+     },
+     {
+      "name": "Veg Sandwich",
+      "qty": "1",
+      "unit_price": "70",
+      "total": "70"
+     },
+     {
+      "name": "Filter Coffee",
+      "qty": "1",
+      "unit_price": "45",
+      "total": "45"
+     },
+     {
+      "name": "Samosa",
+      "qty": "1",
+      "unit_price": "40",
+      "total": "40"
+     },
+     {
+      "name": "Mutton Curry",
+      "qty": "2",
+      "unit_price": "305",
+      "total": "610"
+     }
+    ],
+    "charges": [
+     {
+      "type": "DISCOUNT",
+      "amount": "-181.65"
+     },
+     {
+      "type": "SERVICE_CHARGE",
+      "amount": "60.55"
+     },
+     {
+      "type": "CGST",
+      "amount": "61.76"
+     },
+     {
+      "type": "SGST",
+      "amount": "61.76"
+     }
+    ],
+    "subtotal": "1211",
+    "grand_total": "1213.42"
+   },
+   {
+    "items": [
+     {
+      "name": "Egg Curry",
+      "qty": "3",
+      "unit_price": "180",
+      "total": "540"
+     },
+     {
+      "name": "Chole Bhature",
+      "qty": "1",
+      "unit_price": "110",
+      "total": "110"
+     },
+     {
+      "name": "Maggi",
+      "qty": "1",
+      "unit_price": "40",
+      "total": "40"
+     },
+     {
+      "name": "Masala Dosa",
+      "qty": "1",
+      "unit_price": "90",
+      "total": "90"
+     },
+     {
+      "name": "Butter Roti",
+      "qty": "3",
+      "unit_price": "25",
+      "total": "75"
+     },
+     {
+      "name": "Idli Sambar",
+      "qty": "1",
+      "unit_price": "55",
+      "total": "55"
+     },
+     {
+      "name": "Paratha",
+      "qty": "1",
+      "unit_price": "40",
+      "total": "40"
+     },
+     {
+      "name": "Chicken Fried Rice",
+      "qty": "1",
+      "unit_price": "220",
+      "total": "220"
+     }
+    ],
+    "charges": [
+     {
+      "type": "SERVICE_CHARGE",
+      "amount": "117"
+     },
+     {
+      "type": "CGST",
+      "amount": "105.3"
+     },
+     {
+      "type": "SGST",
+      "amount": "105.3"
+     }
+    ],
+    "subtotal": "1170",
+    "grand_total": "1497.6"
+   },
+   {
+    "items": [
+     {
+      "name": "Tea",
+      "qty": "1",
+      "unit_price": "30",
+      "total": "30"
+     },
+     {
+      "name": "Jeera Rice",
+      "qty": "2",
+      "unit_price": "125",
+      "total": "250"
+     },
+     {
+      "name": "Masala Dosa",
+      "qty": "1",
+      "unit_price": "140",
+      "total": "140"
+     },
+     {
+      "name": "Tandoori Roti",
+      "qty": "1",
+      "unit_price": "17",
+      "total": "17"
+     },
+     {
+      "name": "Idli Sambar",
+      "qty": "1",
+      "unit_price": "60",
+      "total": "60"
+     },
+     {
+      "name": "Cold Coffee",
+      "qty": "2",
+      "unit_price": "100",
+      "total": "200"
+     },
+     {
+      "name": "Garlic Naan",
+      "qty": "1",
+      "unit_price": "60",
+      "total": "60"
+     },
+     {
+      "name": "Egg Curry",
+      "qty": "2",
+      "unit_price": "130",
+      "total": "260"
+     },
+     {
+      "name": "Gobi Manchurian",
+      "qty": "1",
+      "unit_price": "220",
+      "total": "220"
+     }
+    ],
+    "charges": [],
+    "subtotal": "1237",
+    "grand_total": "1237"
+   }
+  ],
+  "before": [
+   {
+    "items": [],
+    "charges": [],
+    "subtotal": "",
+    "grand_total": ""
+   },
+   {
+    "items": [],
+    "charges": [],
+    "subtotal": "",
+    "grand_total": ""
+   },
+   {
+    "items": [],
+    "charges": [],
+    "subtotal": "",
+    "grand_total": ""
+   }
+  ],
+  "after": [
+   {
+    "items": [
+     {
+      "name": "Dal Tadka",
+      "qty": "2",
+      "unit_price": "165.5",
+      "total": "331"
+     },
+     {
+      "name": "Egg Curry",
+      "qty": "1",
+      "unit_price": "115",
+      "total": "115"
+     },
+     {
+      "name": "Veg Sandwich",
+      "qty": "1",
+      "unit_price": "70",
+      "total": "70"
+     },
+     {
+      "name": "Filter Coffee",
+      "qty": "1",
+      "unit_price": "45",
+      "total": "45"
+     },
+     {
+      "name": "Samosa",
+      "qty": "1",
+      "unit_price": "40",
+      "total": "40"
+     },
+     {
+      "name": "Mutton Curry",
+      "qty": "2",
+      "unit_price": "310",
+      "total": "610"
+     }
+    ],
+    "charges": [
+     {
+      "type": "DISCOUNT",
+      "amount": "-181.65"
+     },
+     {
+      "type": "SERVICE_CHARGE",
+      "amount": "60.55"
+     },
+     {
+      "type": "CGST",
+      "amount": "61.76"
+     },
+     {
+      "type": "SGST",
+      "amount": "61.76"
+     }
+    ],
+    "subtotal": "1211",
+    "grand_total": "1213.42"
+   },
+   {
+    "items": [
+     {
+      "name": "Egg Curry",
+      "qty": "3",
+      "unit_price": "180",
+      "total": "540"
+     },
+     {
+      "name": "Chole Bhature",
+      "qty": "1",
+      "unit_price": "110",
+      "total": "110"
+     },
+     {
+      "name": "Maggi",
+      "qty": "1",
+      "unit_price": "40",
+      "total": "40"
+     },
+     {
+      "name": "Masala Dosa",
+      "qty": "1",
+      "unit_price": "90",
+      "total": "90"
+     },
+     {
+      "name": "Butter Roti",
+      "qty": "3",
+      "unit_price": "25",
+      "total": "75"
+     },
+     {
+      "name": "Idli Sambar",
+      "qty": "1",
+      "unit_price": "55",
+      "total": "55"
+     },
+     {
+      "name": "Paratha",
+      "qty": "1",
+      "unit_price": "40",
+      "total": "40"
+     },
+     {
+      "name": "Chicken Fried Rice",
+      "qty": "1",
+      "unit_price": "220",
+      "total": "220"
+     }
+    ],
+    "charges": [
+     {
+      "type": "SERVICE_CHARGE",
+      "amount": "117"
+     },
+     {
+      "type": "CGST",
+      "amount": "105.3"
+     },
+     {
+      "type": "SGST",
+      "amount": "105.3"
+     }
+    ],
+    "subtotal": "1170",
+    "grand_total": "1497.6"
+   },
+   {
+    "items": [
+     {
+      "name": "Tea",
+      "qty": "1",
+      "unit_price": "30",
+      "total": "30"
+     },
+     {
+      "name": "Jeera Rice",
+      "qty": "2",
+      "unit_price": "125",
+      "total": "250"
+     },
+     {
+      "name": "Masala Dosa",
+      "qty": "1",
+      "unit_price": "140",
+      "total": "140"
+     },
+     {
+      "name": "Tandoori Roti",
+      "qty": "1",
+      "unit_price": "17",
+      "total": "17"
+     },
+     {
+      "name": "Idli Sambar",
+      "qty": "1",
+      "unit_price": "60",
+      "total": "60"
+     },
+     {
+      "name": "Cold Coffee",
+      "qty": "2",
+      "unit_price": "100",
+      "total": "200"
+     },
+     {
+      "name": "Garlic Naan",
+      "qty": "1",
+      "unit_price": "60",
+      "total": "60"
+     },
+     {
+      "name": "Egg Curry",
+      "qty": "2",
+      "unit_price": "130",
+      "total": "260"
+     },
+     {
+      "name": "Gobi Manchurian",
+      "qty": "1",
+      "unit_price": "220",
+      "total": "220"
+     }
+    ],
+    "charges": [],
+    "subtotal": "1237",
+    "grand_total": "1237"
+   }
+  ]
+ }
+}

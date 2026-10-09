@@ -1,0 +1,7 @@
+Bill: Items ₹1405.50, Taxes ₹70.28, Service Charge ₹70.28, Total ₹1546.06
+
+Riya: Poha (1/3 share, ₹20.00) + Mutton Curry (2/3 share, ₹426.67) + Paratha (full, ₹110.00) = ₹556.67 pre-tax subtotal. Riya's pre-tax subtotal is 39.6% of the ₹1405.50 of items on the bill, so Riya carries 39.6% of each tax, service charge, discount and rounding line. Charges and discounts are shared in proportion to each person's pre-tax subtotal, not equally: Service Charge ₹27.83, GST ₹27.83; net ₹55.66 (+10.0% of Riya's subtotal). Final: ₹612.33.
+
+Aman: Poha (1/3 share, ₹20.00) + Mutton Curry (1/3 share, ₹213.33) + Chicken Biryani (full, ₹200.50) + Idli Sambar (1/2 share, ₹67.50) = ₹501.33 pre-tax subtotal. Aman's pre-tax subtotal is 35.7% of the ₹1405.50 of items on the bill, so Aman carries 35.7% of each tax, service charge, discount and rounding line. Charges and discounts are shared in proportion to each person's pre-tax subtotal, not equally: Service Charge ₹25.07, GST ₹25.07; net ₹50.14 (+10.0% of Aman's subtotal). Final: ₹551.47.
+
+Sara: Poha (1/3 share, ₹20.00) + Paneer Butter Masala (full, ₹260.00) + Idli Sambar (1/2 share, ₹67.50) = ₹347.50 pre-tax subtotal. Sara's pre-tax subtotal is 24.7% of the ₹1405.50 of items on the bill, so Sara carries 24.7% of each tax, service charge, discount and rounding line. Charges and discounts are shared in proportion to each person's pre-tax subtotal, not equally: Service Charge ₹17.38, GST ₹17.38; net ₹34.76 (+10.0% of Sara's subtotal). Final: ₹382.26.

@@ -1,0 +1,42 @@
+{
+ "items": [
+  {
+   "name": "Garlic Naan",
+   "qty": "1",
+   "unit_price": "35",
+   "total": "35"
+  },
+  {
+   "name": "Samosa",
+   "qty": "1",
+   "unit_price": "30.5",
+   "total": "30.5"
+  },
+  {
+   "name": "Paratha",
+   "qty": "1",
+   "unit_price": "55",
+   "total": "55"
+  }
+ ],
+ "charges": [
+  {
+   "type": "PACKAGING",
+   "amount": "20"
+  },
+  {
+   "type": "DISCOUNT",
+   "amount": "-24.1"
+  },
+  {
+   "type": "CGST",
+   "amount": "5.78"
+  },
+  {
+   "type": "SGST",
+   "amount": "5.78"
+  }
+ ],
+ "subtotal": "120.5",
+ "grand_total": "127.96"
+}

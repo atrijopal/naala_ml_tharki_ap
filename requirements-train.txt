@@ -1,0 +1,5 @@
+# Training and data preparation. Training is run on a Kaggle T4 (see kaggle/run_kaggle.py); these are the extras it installs.
+-r requirements.txt
+accelerate>=0.30
+datasets>=2.19
+bitsandbytes>=0.43              # optional: 8-bit AdamW (off by default)

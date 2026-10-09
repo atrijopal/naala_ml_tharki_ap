@@ -1,0 +1,44 @@
+{
+ "items": [
+  {
+   "name": "Fresh Lime Soda",
+   "qty": "1",
+   "unit_price": "85",
+   "total": "85"
+  },
+  {
+   "name": "Masala Dosa",
+   "qty": "2",
+   "unit_price": "120",
+   "total": "240"
+  },
+  {
+   "name": "Samosa",
+   "qty": "1",
+   "unit_price": "30",
+   "total": "30"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "2",
+   "unit_price": "45",
+   "total": "90"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "10.57"
+  },
+  {
+   "type": "DISCOUNT",
+   "amount": "-22.25"
+  },
+  {
+   "type": "SGST",
+   "amount": "10.57"
+  }
+ ],
+ "subtotal": "445",
+ "grand_total": "443.89"
+}

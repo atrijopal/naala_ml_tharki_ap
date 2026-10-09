@@ -1,0 +1,64 @@
+{
+ "items": [
+  {
+   "name": "Paratha",
+   "qty": "3",
+   "unit_price": "70",
+   "total": "210"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "125",
+   "total": "125"
+  },
+  {
+   "name": "Garlic Naan",
+   "qty": "1",
+   "unit_price": "35.5",
+   "total": "35.5"
+  },
+  {
+   "name": "Veg Biryani",
+   "qty": "3",
+   "unit_price": "185.5",
+   "total": "556.5"
+  },
+  {
+   "name": "Chicken Biryani",
+   "qty": "2",
+   "unit_price": "260.5",
+   "total": "521"
+  },
+  {
+   "name": "Samosa",
+   "qty": "3",
+   "unit_price": "25",
+   "total": "75"
+  },
+  {
+   "name": "Gobi Manchurian",
+   "qty": "1",
+   "unit_price": "190.5",
+   "total": "190.5"
+  },
+  {
+   "name": "Paneer Butter Masala",
+   "qty": "1",
+   "unit_price": "250",
+   "total": "250"
+  }
+ ],
+ "charges": [
+  {
+   "type": "DISCOUNT",
+   "amount": "-25"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.5"
+  }
+ ],
+ "subtotal": "1963.5",
+ "grand_total": "1938"
+}

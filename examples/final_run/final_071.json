@@ -1,0 +1,68 @@
+{
+ "items": [
+  {
+   "name": "Veg Thali",
+   "qty": "1",
+   "unit_price": "180",
+   "total": "180"
+  },
+  {
+   "name": "Maggi",
+   "qty": "1",
+   "unit_price": "55",
+   "total": "55"
+  },
+  {
+   "name": "Idli Sambar",
+   "qty": "4",
+   "unit_price": "40.5",
+   "total": "162"
+  },
+  {
+   "name": "Jeera Rice",
+   "qty": "1",
+   "unit_price": "120",
+   "total": "120"
+  },
+  {
+   "name": "Garlic Naan",
+   "qty": "1",
+   "unit_price": "55.5",
+   "total": "55.5"
+  },
+  {
+   "name": "Paratha",
+   "qty": "1",
+   "unit_price": "60",
+   "total": "60"
+  },
+  {
+   "name": "Butter Roti",
+   "qty": "2",
+   "unit_price": "35",
+   "total": "70"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "1",
+   "unit_price": "115",
+   "total": "115"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "20.44"
+  },
+  {
+   "type": "SGST",
+   "amount": "20.44"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.38"
+  }
+ ],
+ "subtotal": "817.5",
+ "grand_total": "858"
+}

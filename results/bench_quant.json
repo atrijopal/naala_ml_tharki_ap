@@ -1,0 +1,23 @@
+{
+ "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+ "torch": "2.11.0+cu128",
+ "n": 12,
+ "eager": {
+  "p50_ms": 264.4,
+  "mean_ms": 267.6,
+  "peak_gpu_gb": 0.72,
+  "identical": "12/12"
+ },
+ "dec_int8": {
+  "p50_ms": 337.9,
+  "mean_ms": 371.4,
+  "peak_gpu_gb": 0.71,
+  "identical": "3/12"
+ },
+ "all_int8": {
+  "p50_ms": 367.2,
+  "mean_ms": 397.1,
+  "peak_gpu_gb": 0.68,
+  "identical": "2/12"
+ }
+}

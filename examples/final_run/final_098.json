@@ -1,0 +1,34 @@
+{
+ "items": [
+  {
+   "name": "Jeera Rice",
+   "qty": "3",
+   "unit_price": "155",
+   "total": "465"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "120",
+   "total": "120"
+  },
+  {
+   "name": "Gobi Manchurian",
+   "qty": "1",
+   "unit_price": "205",
+   "total": "205"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "71"
+  },
+  {
+   "type": "SGST",
+   "amount": "71"
+  }
+ ],
+ "subtotal": "790",
+ "grand_total": "932"
+}

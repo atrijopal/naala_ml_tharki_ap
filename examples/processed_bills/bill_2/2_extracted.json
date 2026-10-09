@@ -1,0 +1,59 @@
+{
+  "model_output": {
+    "items": [
+      {
+        "name": "Fresh Lime Soda",
+        "qty": "1",
+        "unit_price": "85.5",
+        "total": "85.5"
+      },
+      {
+        "name": "Dal Tadka",
+        "qty": "2",
+        "unit_price": "130",
+        "total": "260"
+      },
+      {
+        "name": "Veg Biryani",
+        "qty": "1",
+        "unit_price": "205.5",
+        "total": "205.5"
+      }
+    ],
+    "charges": [
+      {
+        "type": "DISCOUNT",
+        "amount": "-82.65"
+      },
+      {
+        "type": "SERVICE_CHARGE",
+        "amount": "55.10"
+      },
+      {
+        "type": "CGST",
+        "amount": "11.71"
+      },
+      {
+        "type": "SGST",
+        "amount": "11.71"
+      },
+      {
+        "type": "ROUND_OFF",
+        "amount": "0.13"
+      }
+    ],
+    "subtotal": "551",
+    "grand_total": "547"
+  },
+  "low_confidence_fields_highlighted_in_the_app": [
+    "items[1].unit_price",
+    "charges[0].type",
+    "charges[0].amount",
+    "charges[1].type",
+    "charges[1].amount",
+    "charges[2].type",
+    "charges[3].type",
+    "charges[4].type"
+  ],
+  "arithmetic_issues_reported": []
+}

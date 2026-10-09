@@ -1,0 +1,44 @@
+{
+ "items": [
+  {
+   "name": "Fresh Lime Soda",
+   "qty": "2",
+   "unit_price": "40",
+   "total": "80"
+  },
+  {
+   "name": "Dal Tadka",
+   "qty": "1",
+   "unit_price": "160",
+   "total": "160"
+  },
+  {
+   "name": "Garlic Naan",
+   "qty": "2",
+   "unit_price": "40",
+   "total": "80"
+  },
+  {
+   "name": "Maggi",
+   "qty": "2",
+   "unit_price": "50.5",
+   "total": "101"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "42.1"
+  },
+  {
+   "type": "VAT",
+   "amount": "21.05"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.15"
+  }
+ ],
+ "subtotal": "421",
+ "grand_total": "484"
+}

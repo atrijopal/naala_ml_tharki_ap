@@ -1,0 +1,32 @@
+{
+ "items": [
+  {
+   "name": "Jeera Rice",
+   "qty": "2",
+   "unit_price": "105",
+   "total": "210"
+  },
+  {
+   "name": "Gobi Manchurian",
+   "qty": "1",
+   "unit_price": "215",
+   "total": "215"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "21"
+  },
+  {
+   "type": "CGST",
+   "amount": "26"
+  },
+  {
+   "type": "SGST",
+   "amount": "26"
+  }
+ ],
+ "subtotal": "425",
+ "grand_total": "498"
+}

@@ -1,0 +1,46 @@
+{
+ "items": [
+  {
+   "name": "Tea",
+   "qty": "1",
+   "unit_price": "15.5",
+   "total": "15.5"
+  },
+  {
+   "name": "Chicken Biryani",
+   "qty": "1",
+   "unit_price": "250",
+   "total": "250"
+  },
+  {
+   "name": "Mango Lassi",
+   "qty": "1",
+   "unit_price": "115",
+   "total": "115"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "2",
+   "unit_price": "30.5",
+   "total": "61"
+  },
+  {
+   "name": "Veg Sandwich",
+   "qty": "1",
+   "unit_price": "55",
+   "total": "55"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "49.65"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.15"
+  }
+ ],
+ "subtotal": "496.5",
+ "grand_total": "546"
+}

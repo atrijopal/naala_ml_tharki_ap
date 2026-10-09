@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F3EEE3">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" href="/static/icon.svg" type="image/svg+xml">
+<link rel="manifest" href="/static/manifest.webmanifest">
+<title>SplitSnap</title>
+<link rel="stylesheet" href="/static/fonts.css">
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<header class="top">
+  <div class="shell head"><span class="wordmark">SplitSnap</span><span class="where" id="where" aria-live="polite"></span></div>
+  <nav class="shell steps" id="steps" aria-label="Steps"></nav>
+</header>
+<div class="shell page">
+  <aside id="slip" aria-label="The bill so far"></aside>
+  <main id="main" tabindex="-1"></main>
+</div>
+<footer class="bar" id="bar" hidden><div class="shell bar-in" id="bar-in"></div></footer>
+<noscript><p class="shell">SplitSnap needs JavaScript to run.</p></noscript>
+<script src="/static/app.js"></script>
+</body>
+</html>

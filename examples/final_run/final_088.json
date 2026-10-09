@@ -1,0 +1,36 @@
+{
+ "items": [
+  {
+   "name": "Idli Sambar",
+   "qty": "2",
+   "unit_price": "70",
+   "total": "140"
+  },
+  {
+   "name": "Poha",
+   "qty": "1",
+   "unit_price": "60",
+   "total": "60"
+  },
+  {
+   "name": "Veg Sandwich",
+   "qty": "1",
+   "unit_price": "75",
+   "total": "75"
+  },
+  {
+   "name": "Egg Curry",
+   "qty": "1",
+   "unit_price": "140.5",
+   "total": "140.5"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "20.78"
+  }
+ ],
+ "subtotal": "415.5",
+ "grand_total": "436.28"
+}

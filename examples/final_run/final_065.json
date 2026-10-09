@@ -1,0 +1,40 @@
+{
+ "items": [
+  {
+   "name": "Tandoori Roti",
+   "qty": "1",
+   "unit_price": "12",
+   "total": "12"
+  },
+  {
+   "name": "Mango Lassi",
+   "qty": "1",
+   "unit_price": "75",
+   "total": "75"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "8.7"
+  },
+  {
+   "type": "PACKAGING",
+   "amount": "20"
+  },
+  {
+   "type": "CGST",
+   "amount": "5.22"
+  },
+  {
+   "type": "SGST",
+   "amount": "5.22"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.14"
+  }
+ ],
+ "subtotal": "87",
+ "grand_total": "126"
+}

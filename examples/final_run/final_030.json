@@ -1,0 +1,38 @@
+{
+ "items": [
+  {
+   "name": "Chole Bhature",
+   "qty": "1",
+   "unit_price": "110",
+   "total": "110"
+  },
+  {
+   "name": "Poha",
+   "qty": "2",
+   "unit_price": "35",
+   "total": "70"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "3",
+   "unit_price": "25",
+   "total": "75"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "25.5"
+  },
+  {
+   "type": "CGST",
+   "amount": "22.95"
+  },
+  {
+   "type": "SGST",
+   "amount": "22.95"
+  }
+ ],
+ "subtotal": "255",
+ "grand_total": "326.4"
+}

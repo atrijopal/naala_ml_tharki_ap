@@ -1,0 +1,60 @@
+{
+ "items": [
+  {
+   "name": "Idli Sambar",
+   "qty": "1",
+   "unit_price": "80",
+   "total": "80"
+  },
+  {
+   "name": "Butter Roti",
+   "qty": "3",
+   "unit_price": "35",
+   "total": "105"
+  },
+  {
+   "name": "Dal Tadka",
+   "qty": "1",
+   "unit_price": "185",
+   "total": "185"
+  },
+  {
+   "name": "Masala Dosa",
+   "qty": "1",
+   "unit_price": "70",
+   "total": "70"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "1",
+   "unit_price": "25",
+   "total": "25"
+  },
+  {
+   "name": "Maggi",
+   "qty": "1",
+   "unit_price": "75",
+   "total": "75"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "2",
+   "unit_price": "160",
+   "total": "320"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "4",
+   "unit_price": "315",
+   "total": "1260"
+  }
+ ],
+ "charges": [
+  {
+   "type": "GST",
+   "amount": "254"
+  }
+ ],
+ "subtotal": "2120",
+ "grand_total": "2374"
+}

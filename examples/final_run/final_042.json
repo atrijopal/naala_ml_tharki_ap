@@ -1,0 +1,54 @@
+{
+ "items": [
+  {
+   "name": "Samosa",
+   "qty": "1",
+   "unit_price": "20",
+   "total": "20"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "1",
+   "unit_price": "100",
+   "total": "100"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "2",
+   "unit_price": "210",
+   "total": "420"
+  },
+  {
+   "name": "Egg Curry",
+   "qty": "1",
+   "unit_price": "200",
+   "total": "200"
+  },
+  {
+   "name": "Gobi Manchurian",
+   "qty": "1",
+   "unit_price": "135.5",
+   "total": "135.5"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "43.78"
+  },
+  {
+   "type": "DISCOUNT",
+   "amount": "-100"
+  },
+  {
+   "type": "GST",
+   "amount": "38.78"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.06"
+  }
+ ],
+ "subtotal": "875.5",
+ "grand_total": "858"
+}

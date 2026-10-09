@@ -1,0 +1,42 @@
+{
+ "items": [
+  {
+   "name": "Egg Curry",
+   "qty": "2",
+   "unit_price": "155",
+   "total": "310"
+  },
+  {
+   "name": "Idli Sambar",
+   "qty": "2",
+   "unit_price": "50",
+   "total": "100"
+  },
+  {
+   "name": "Jeera Rice",
+   "qty": "1",
+   "unit_price": "145",
+   "total": "145"
+  }
+ ],
+ "charges": [
+  {
+   "type": "DISCOUNT",
+   "amount": "-30"
+  },
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "55.5"
+  },
+  {
+   "type": "CGST",
+   "amount": "47.25"
+  },
+  {
+   "type": "SGST",
+   "amount": "47.25"
+  }
+ ],
+ "subtotal": "555",
+ "grand_total": "675"
+}

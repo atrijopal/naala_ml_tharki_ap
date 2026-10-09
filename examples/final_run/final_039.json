@@ -1,0 +1,46 @@
+{
+ "items": [
+  {
+   "name": "Butter Roti",
+   "qty": "3",
+   "unit_price": "20",
+   "total": "60"
+  },
+  {
+   "name": "Veg Thali",
+   "qty": "1",
+   "unit_price": "105",
+   "total": "105"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "2",
+   "unit_price": "300",
+   "total": "600"
+  },
+  {
+   "name": "Gobi Manchurian",
+   "qty": "1",
+   "unit_price": "155",
+   "total": "155"
+  },
+  {
+   "name": "Paratha",
+   "qty": "2",
+   "unit_price": "55",
+   "total": "110"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "26"
+  },
+  {
+   "type": "SGST",
+   "amount": "26"
+  }
+ ],
+ "subtotal": "1030",
+ "grand_total": "1082"
+}

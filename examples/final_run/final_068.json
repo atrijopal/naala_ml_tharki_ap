@@ -1,0 +1,30 @@
+{
+ "items": [
+  {
+   "name": "Tea",
+   "qty": "1",
+   "unit_price": "15.5",
+   "total": "15.5"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "1",
+   "unit_price": "170",
+   "total": "170"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "1",
+   "unit_price": "355",
+   "total": "355"
+  }
+ ],
+ "charges": [
+  {
+   "type": "VAT",
+   "amount": "75.67"
+  }
+ ],
+ "subtotal": "540.5",
+ "grand_total": "616.17"
+}

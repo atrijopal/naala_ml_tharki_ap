@@ -1,0 +1,25 @@
+{
+ "items": [
+  {
+   "name": "Tandoori Roti",
+   "qty": "2",
+   "unit_price": "17.5",
+   "total": "35"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "2",
+   "unit_price": "165",
+   "total": "330"
+  },
+  {
+   "name": "Poha",
+   "qty": "4",
+   "unit_price": "60",
+   "total": "240"
+  }
+ ],
+ "charges": [],
+ "subtotal": "605",
+ "grand_total": "605"
+}

@@ -1,0 +1,58 @@
+{
+ "items": [
+  {
+   "name": "Samosa",
+   "qty": "1",
+   "unit_price": "25",
+   "total": "25"
+  },
+  {
+   "name": "Maggi",
+   "qty": "1",
+   "unit_price": "50",
+   "total": "50"
+  },
+  {
+   "name": "Fresh Lime Soda",
+   "qty": "3",
+   "unit_price": "55",
+   "total": "165"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "2",
+   "unit_price": "270.5",
+   "total": "541"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "80",
+   "total": "80"
+  },
+  {
+   "name": "Masala Dosa",
+   "qty": "2",
+   "unit_price": "125",
+   "total": "250"
+  },
+  {
+   "name": "Gobi Manchurian",
+   "qty": "1",
+   "unit_price": "175.5",
+   "total": "175.5"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "32.16"
+  },
+  {
+   "type": "SGST",
+   "amount": "32.16"
+  }
+ ],
+ "subtotal": "1286.5",
+ "grand_total": "1350.82"
+}

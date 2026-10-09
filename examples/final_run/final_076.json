@@ -1,0 +1,50 @@
+{
+ "items": [
+  {
+   "name": "Veg Thali",
+   "qty": "1",
+   "unit_price": "160",
+   "total": "160"
+  },
+  {
+   "name": "Tea",
+   "qty": "2",
+   "unit_price": "10",
+   "total": "20"
+  },
+  {
+   "name": "Maggi",
+   "qty": "1",
+   "unit_price": "75",
+   "total": "75"
+  },
+  {
+   "name": "Poha",
+   "qty": "1",
+   "unit_price": "60",
+   "total": "60"
+  },
+  {
+   "name": "Mutton Curry",
+   "qty": "2",
+   "unit_price": "270",
+   "total": "540"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "61.56"
+  },
+  {
+   "type": "SGST",
+   "amount": "61.56"
+  },
+  {
+   "type": "DISCOUNT",
+   "amount": "-171"
+  }
+ ],
+ "subtotal": "855",
+ "grand_total": "807.12"
+}

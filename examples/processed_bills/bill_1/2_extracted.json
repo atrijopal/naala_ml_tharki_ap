@@ -1,0 +1,74 @@
+{
+  "model_output": {
+    "items": [
+      {
+        "name": "Dal Tadka",
+        "qty": "2",
+        "unit_price": "165.5",
+        "total": "331"
+      },
+      {
+        "name": "Egg Curry",
+        "qty": "1",
+        "unit_price": "115",
+        "total": "115"
+      },
+      {
+        "name": "Veg Sandwich",
+        "qty": "1",
+        "unit_price": "70",
+        "total": "70"
+      },
+      {
+        "name": "Filter Coffee",
+        "qty": "1",
+        "unit_price": "45",
+        "total": "45"
+      },
+      {
+        "name": "Samosa",
+        "qty": "1",
+        "unit_price": "40",
+        "total": "40"
+      },
+      {
+        "name": "Mutton Curry",
+        "qty": "2",
+        "unit_price": "310",
+        "total": "610"
+      }
+    ],
+    "charges": [
+      {
+        "type": "DISCOUNT",
+        "amount": "-181.65"
+      },
+      {
+        "type": "SERVICE_CHARGE",
+        "amount": "60.55"
+      },
+      {
+        "type": "CGST",
+        "amount": "61.76"
+      },
+      {
+        "type": "SGST",
+        "amount": "61.76"
+      }
+    ],
+    "subtotal": "1211",
+    "grand_total": "1213.42"
+  },
+  "low_confidence_fields_highlighted_in_the_app": [
+    "items[0].unit_price",
+    "items[5].unit_price",
+    "charges[0].amount"
+  ],
+  "arithmetic_issues_reported": [
+    {
+      "path": "items[5].total",
+      "severity": "warn",
+      "message": "qty x unit_price = 620 but line total is 610"
+    }
+  ]
+}

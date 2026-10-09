@@ -1,0 +1,38 @@
+{
+ "items": [
+  {
+   "name": "Fresh Lime Soda",
+   "qty": "3",
+   "unit_price": "40",
+   "total": "120"
+  },
+  {
+   "name": "Mango Lassi",
+   "qty": "3",
+   "unit_price": "120.5",
+   "total": "361.5"
+  },
+  {
+   "name": "Gobi Manchurian",
+   "qty": "2",
+   "unit_price": "150",
+   "total": "300"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "19.54"
+  },
+  {
+   "type": "SGST",
+   "amount": "19.54"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "0.42"
+  }
+ ],
+ "subtotal": "781.5",
+ "grand_total": "821"
+}

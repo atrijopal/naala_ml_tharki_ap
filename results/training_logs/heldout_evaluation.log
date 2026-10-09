@@ -1,0 +1,145 @@
+
+======== MODE=eval  code from /kaggle/input/datasets/atrijopal/splitsnap-code  [0.1 min elapsed] ========
+
+$ nvidia-smi --query-gpu=name,memory.total --format=csv,noheader; python -V; python -c "import torch,transformers;print('torch',torch.__version__,'transformers',transformers.__version__)"
+Tesla T4, 15360 MiB
+Tesla T4, 15360 MiB
+Python 3.13.15
+torch 2.11.0+cu128 transformers 5.16.1
+
+$ pip install -q "transformers>=4.44,<5" datasets accelerate sentencepiece zss nltk scikit-learn bitsandbytes
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.0/44.0 kB 2.6 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 100.1 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 50.2 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 29.9 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 97.1 MB/s eta 0:00:00
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+gradio 6.26.0 requires huggingface-hub<2.0,>=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.
+diffusers 0.40.0 requires huggingface-hub<2.0,>=1.23.0, but you have huggingface-hub 0.36.2 which is incompatible.
+
+$ python -c "import transformers,accelerate,datasets;print('transformers',transformers.__version__,'accelerate',accelerate.__version__,'datasets',datasets.__version__)"
+transformers 4.57.6 accelerate 1.14.0 datasets 4.8.5
+
+======== data  [0.8 min elapsed] ========
+
+$ python -m splitsnap.convert_cord
+Generating train split:   0%|          | 0/800 [00:00<?, ? examples/s]Generating train split:  25%|██▌       | 200/800 [00:02<00:07, 84.46 examples/s]Generating train split:  50%|█████     | 400/800 [00:04<00:04, 95.95 examples/s]Generating train split:  75%|███████▌  | 600/800 [00:06<00:02, 95.30 examples/s]Generating train split: 100%|██████████| 800/800 [00:08<00:00, 93.18 examples/s]Generating train split: 100%|██████████| 800/800 [00:08<00:00, 92.57 examples/s]
+Generating validation split:   0%|          | 0/100 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 100/100 [00:02<00:00, 49.49 examples/s]Generating validation split: 100%|██████████| 100/100 [00:02<00:00, 48.71 examples/s]
+Generating test split:   0%|          | 0/100 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 100/100 [00:00<00:00, 105.81 examples/s]Generating test split: 100%|██████████| 100/100 [00:00<00:00, 102.42 examples/s]
+CORD: 962 records, 32 skipped, 6 train outliers dropped, 143 fail the arithmetic check
+
+$ python -m splitsnap.synth --n 100 --out data/synth --seed 2000 --split val
+wrote 100 synthetic bills to data/synth (val)
+
+$ python -m splitsnap.synth --n 100 --out data/synth --seed 3000 --split test
+wrote 100 synthetic bills to data/synth (test)
+NO real bills attached (expected for bench/overfit). Real-bill TED cannot be computed -> best/ picks by overall TED.
+
+$ python -m splitsnap.convert_sroie --out data/sroie_manifest.jsonl --val_n 60
+SROIE: 972 records {'train': 565, 'val': 60, 'test': 347} from /kaggle/input/datasets/urbikn/sroie-datasetv2/SROIE2019 -> data/sroie_manifest.jsonl
+
+$ python -m splitsnap.build_manifest data/cord/manifest.jsonl data/synth/manifest_val.jsonl data/synth/manifest_test.jsonl data/sroie_manifest.jsonl
+LEAKAGE FIX: dropped 8 images that also appear in a more protected split: sroie/train=7, sroie/val=1
+   dropped sroie_train_X51006329399
+   dropped sroie_train_X51006332575
+   dropped sroie_train_X51006328913
+   dropped sroie_train_X51007135247
+   dropped sroie_train_X51006008095
+   dropped sroie_train_X51005453729
+   dropped sroie_train_X51005568881
+   dropped sroie_train_X51009453804
+2126 records -> data/manifest.jsonl
+  cord   test  95
+  cord   train 769
+  cord   val   98
+  sroie  test  347
+  sroie  train 558
+  sroie  val   59
+  synth  test  100
+  synth  val   100
+
+======== stage eval  [3.4 min elapsed] ========
+checkpoint: /kaggle/input/notebooks/atrijopal/splitsnap-full-b2/runs/run1/best
+
+$ python -m splitsnap.evaluate --ckpt /kaggle/input/notebooks/atrijopal/splitsnap-full-b2/runs/run1/best --manifest data/manifest.jsonl --split test --max_length 512 --out /kaggle/working/eval_test.json
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{
+ "cord": {
+  "n": 95,
+  "ted_acc": 0.9304,
+  "field_precision": 0.8958,
+  "field_recall": 0.893,
+  "field_f1": 0.8944,
+  "item_f1": 0.8758,
+  "charge_f1": 0.8,
+  "grand_total_acc": 0.9474,
+  "subtotal_acc": 0.9474,
+  "pred_arith_consistent": 0.7158
+ },
+ "synth": {
+  "n": 100,
+  "ted_acc": 0.9971,
+  "field_precision": 0.9847,
+  "field_recall": 0.9847,
+  "field_f1": 0.9847,
+  "item_f1": 0.9966,
+  "charge_f1": 0.9721,
+  "grand_total_acc": 0.98,
+  "subtotal_acc": 1.0,
+  "pred_arith_consistent": 0.99
+ },
+ "sroie": {
+  "n": 347,
+  "company_em": 0.853,
+  "date_em": 0.951,
+  "address_em": 0.7839,
+  "total_em": 0.8732,
+  "company_sim": 0.9486,
+  "address_sim": 0.9557,
+  "field_precision": 0.8786,
+  "field_recall": 0.8653,
+  "field_f1": 0.8719,
+  "score": 0.9321
+ }
+}
+LATENCY {"n": 542, "p50": 0.455, "p95": 1.374, "max": 3.063, "device": "cuda", "fp16": true}
+
+$ python -m splitsnap.evaluate --ckpt /kaggle/input/notebooks/atrijopal/splitsnap-full-b2/runs/run1/best --manifest data/manifest.jsonl --split val --sources cord,synth --conf --max_length 512 --out /kaggle/working/eval_val_conf.json
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{
+ "cord": {
+  "n": 98,
+  "ted_acc": 0.9577,
+  "field_precision": 0.9311,
+  "field_recall": 0.9374,
+  "field_f1": 0.9342,
+  "item_f1": 0.9339,
+  "charge_f1": 0.8929,
+  "grand_total_acc": 0.9796,
+  "subtotal_acc": 0.9592,
+  "pred_arith_consistent": 0.8163
+ },
+ "synth": {
+  "n": 100,
+  "ted_acc": 0.9975,
+  "field_precision": 0.9887,
+  "field_recall": 0.9887,
+  "field_f1": 0.9887,
+  "item_f1": 1.0,
+  "charge_f1": 0.9916,
+  "grand_total_acc": 1.0,
+  "subtotal_acc": 1.0,
+  "pred_arith_consistent": 1.0
+ }
+}
+LATENCY {"n": 198, "p50": 0.579, "p95": 0.949, "max": 1.339, "device": "cuda", "fp16": true}
+
+======== DONE  [12.8 min elapsed] ========
+/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 330135 bytes to __results__.html

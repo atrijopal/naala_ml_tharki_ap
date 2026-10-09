@@ -1,0 +1,78 @@
+{
+ "items": [
+  {
+   "name": "Masala Dosa",
+   "qty": "2",
+   "unit_price": "100",
+   "total": "200"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "1",
+   "unit_price": "70",
+   "total": "70"
+  },
+  {
+   "name": "Egg Curry",
+   "qty": "2",
+   "unit_price": "125",
+   "total": "250"
+  },
+  {
+   "name": "Butter Roti",
+   "qty": "1",
+   "unit_price": "35",
+   "total": "35"
+  },
+  {
+   "name": "Maggi",
+   "qty": "2",
+   "unit_price": "45",
+   "total": "90"
+  },
+  {
+   "name": "Garlic Naan",
+   "qty": "1",
+   "unit_price": "30.5",
+   "total": "30.5"
+  },
+  {
+   "name": "Samosa",
+   "qty": "1",
+   "unit_price": "15",
+   "total": "15"
+  },
+  {
+   "name": "Gobi Manchurian",
+   "qty": "2",
+   "unit_price": "180",
+   "total": "360"
+  },
+  {
+   "name": "Chicken Biryani",
+   "qty": "1",
+   "unit_price": "250",
+   "total": "250"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "111.19"
+  },
+  {
+   "type": "DISCOUNT",
+   "amount": "-65.03"
+  },
+  {
+   "type": "SGST",
+   "amount": "111.19"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "0.15"
+  }
+ ],
+ "subtotal": "1300.5",
+ "grand_total": "1458"
+}

@@ -1,0 +1,74 @@
+[
+ {
+  "tilt_deg": 0,
+  "mode": "as is",
+  "median_estimated_skew": 0.0,
+  "field_f1": 0.9879,
+  "item_f1": 1.0,
+  "charge_f1": 0.9646,
+  "grand_total_acc": 1.0
+ },
+ {
+  "tilt_deg": 0,
+  "mode": "deskew",
+  "median_estimated_skew": 0.0,
+  "field_f1": 0.9851,
+  "item_f1": 0.9963,
+  "charge_f1": 0.9606,
+  "grand_total_acc": 0.99
+ },
+ {
+  "tilt_deg": 4,
+  "mode": "as is",
+  "median_estimated_skew": -4.0,
+  "field_f1": 0.9837,
+  "item_f1": 0.9927,
+  "charge_f1": 0.9665,
+  "grand_total_acc": 0.99
+ },
+ {
+  "tilt_deg": 4,
+  "mode": "deskew",
+  "median_estimated_skew": -4.0,
+  "field_f1": 0.9872,
+  "item_f1": 1.0,
+  "charge_f1": 0.9685,
+  "grand_total_acc": 1.0
+ },
+ {
+  "tilt_deg": 8,
+  "mode": "as is",
+  "median_estimated_skew": -8.0,
+  "field_f1": 0.9775,
+  "item_f1": 0.9624,
+  "charge_f1": 0.9428,
+  "grand_total_acc": 1.0
+ },
+ {
+  "tilt_deg": 8,
+  "mode": "deskew",
+  "median_estimated_skew": -8.0,
+  "field_f1": 0.9851,
+  "item_f1": 0.989,
+  "charge_f1": 0.9646,
+  "grand_total_acc": 1.0
+ },
+ {
+  "tilt_deg": 15,
+  "mode": "as is",
+  "median_estimated_skew": -10.0,
+  "field_f1": 0.9114,
+  "item_f1": 0.7163,
+  "charge_f1": 0.7485,
+  "grand_total_acc": 0.98
+ },
+ {
+  "tilt_deg": 15,
+  "mode": "deskew",
+  "median_estimated_skew": -10.0,
+  "field_f1": 0.9705,
+  "item_f1": 0.9311,
+  "charge_f1": 0.9069,
+  "grand_total_acc": 0.99
+ }
+]

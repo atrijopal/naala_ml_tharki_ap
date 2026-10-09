@@ -1,0 +1,42 @@
+{
+ "items": [
+  {
+   "name": "Paratha",
+   "qty": "1",
+   "unit_price": "70.5",
+   "total": "70.5"
+  },
+  {
+   "name": "Veg Thali",
+   "qty": "1",
+   "unit_price": "200",
+   "total": "200"
+  },
+  {
+   "name": "Samosa",
+   "qty": "2",
+   "unit_price": "25",
+   "total": "50"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "24.35"
+  },
+  {
+   "type": "DISCOUNT",
+   "amount": "-50"
+  },
+  {
+   "type": "SGST",
+   "amount": "24.35"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.2"
+  }
+ ],
+ "subtotal": "320.5",
+ "grand_total": "319"
+}

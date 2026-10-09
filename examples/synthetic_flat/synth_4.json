@@ -1,0 +1,62 @@
+{
+ "items": [
+  {
+   "name": "Idli Sambar",
+   "qty": "1",
+   "unit_price": "70",
+   "total": "70"
+  },
+  {
+   "name": "Tandoori Roti",
+   "qty": "3",
+   "unit_price": "17",
+   "total": "51"
+  },
+  {
+   "name": "Tea",
+   "qty": "1",
+   "unit_price": "10.5",
+   "total": "10.5"
+  },
+  {
+   "name": "Fresh Lime Soda",
+   "qty": "1",
+   "unit_price": "75",
+   "total": "75"
+  },
+  {
+   "name": "Butter Roti",
+   "qty": "1",
+   "unit_price": "20",
+   "total": "20"
+  },
+  {
+   "name": "Paneer Butter Masala",
+   "qty": "1",
+   "unit_price": "180",
+   "total": "180"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "4",
+   "unit_price": "20",
+   "total": "80"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "48.65"
+  },
+  {
+   "type": "GST",
+   "amount": "58.38"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "0.47"
+  }
+ ],
+ "subtotal": "486.5",
+ "grand_total": "594"
+}

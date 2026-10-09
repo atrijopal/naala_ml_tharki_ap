@@ -1,0 +1,78 @@
+{
+ "items": [
+  {
+   "name": "Veg Thali",
+   "qty": "2",
+   "unit_price": "125.5",
+   "total": "251"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "1",
+   "unit_price": "115.5",
+   "total": "115.5"
+  },
+  {
+   "name": "Tea",
+   "qty": "1",
+   "unit_price": "15",
+   "total": "15"
+  },
+  {
+   "name": "Chicken Biryani",
+   "qty": "1",
+   "unit_price": "180",
+   "total": "180"
+  },
+  {
+   "name": "Tandoori Roti",
+   "qty": "3",
+   "unit_price": "27.5",
+   "total": "82.5"
+  },
+  {
+   "name": "Poha",
+   "qty": "1",
+   "unit_price": "45",
+   "total": "45"
+  },
+  {
+   "name": "Fresh Lime Soda",
+   "qty": "4",
+   "unit_price": "50",
+   "total": "200"
+  },
+  {
+   "name": "Veg Biryani",
+   "qty": "4",
+   "unit_price": "165",
+   "total": "660"
+  },
+  {
+   "name": "Samosa",
+   "qty": "1",
+   "unit_price": "40",
+   "total": "40"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "85.81"
+  },
+  {
+   "type": "SGST",
+   "amount": "85.81"
+  },
+  {
+   "type": "DISCOUNT",
+   "amount": "-158.9"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "0.28"
+  }
+ ],
+ "subtotal": "1589",
+ "grand_total": "1602"
+}

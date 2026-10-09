@@ -1,0 +1,55 @@
+{
+ "items": [
+  {
+   "name": "Tandoori Roti",
+   "qty": "1",
+   "unit_price": "17",
+   "total": "17"
+  },
+  {
+   "name": "Poha",
+   "qty": "1",
+   "unit_price": "60",
+   "total": "60"
+  },
+  {
+   "name": "Egg Curry",
+   "qty": "2",
+   "unit_price": "155",
+   "total": "310"
+  },
+  {
+   "name": "Jeera Rice",
+   "qty": "1",
+   "unit_price": "90",
+   "total": "90"
+  },
+  {
+   "name": "Paneer Butter Masala",
+   "qty": "4",
+   "unit_price": "180",
+   "total": "720"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "2",
+   "unit_price": "35",
+   "total": "70"
+  },
+  {
+   "name": "Tea",
+   "qty": "1",
+   "unit_price": "10",
+   "total": "10"
+  },
+  {
+   "name": "Veg Thali",
+   "qty": "4",
+   "unit_price": "125",
+   "total": "500"
+  }
+ ],
+ "charges": [],
+ "subtotal": "1777",
+ "grand_total": "1777"
+}

@@ -1,0 +1,44 @@
+{
+ "items": [
+  {
+   "name": "Veg Biryani",
+   "qty": "1",
+   "unit_price": "275",
+   "total": "275"
+  },
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "2",
+   "unit_price": "240",
+   "total": "480"
+  },
+  {
+   "name": "Maggi",
+   "qty": "3",
+   "unit_price": "40",
+   "total": "120"
+  },
+  {
+   "name": "Masala Dosa",
+   "qty": "1",
+   "unit_price": "115",
+   "total": "115"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "49.5"
+  },
+  {
+   "type": "CGST",
+   "amount": "89.1"
+  },
+  {
+   "type": "SGST",
+   "amount": "89.1"
+  }
+ ],
+ "subtotal": "990",
+ "grand_total": "1217.7"
+}

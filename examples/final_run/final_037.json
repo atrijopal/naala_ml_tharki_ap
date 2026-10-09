@@ -1,0 +1,46 @@
+{
+ "items": [
+  {
+   "name": "Tandoori Roti",
+   "qty": "1",
+   "unit_price": "27",
+   "total": "27"
+  },
+  {
+   "name": "Masala Dosa",
+   "qty": "2",
+   "unit_price": "115",
+   "total": "230"
+  },
+  {
+   "name": "Chicken Biryani",
+   "qty": "2",
+   "unit_price": "215",
+   "total": "430"
+  },
+  {
+   "name": "Mango Lassi",
+   "qty": "1",
+   "unit_price": "80",
+   "total": "80"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "2",
+   "unit_price": "95",
+   "total": "190"
+  }
+ ],
+ "charges": [
+  {
+   "type": "VAT",
+   "amount": "42.85"
+  },
+  {
+   "type": "DISCOUNT",
+   "amount": "-100"
+  }
+ ],
+ "subtotal": "957",
+ "grand_total": "899.85"
+}

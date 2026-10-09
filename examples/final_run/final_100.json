@@ -1,0 +1,68 @@
+{
+ "items": [
+  {
+   "name": "Veg Thali",
+   "qty": "1",
+   "unit_price": "100",
+   "total": "100"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "3",
+   "unit_price": "40",
+   "total": "120"
+  },
+  {
+   "name": "Maggi",
+   "qty": "3",
+   "unit_price": "45",
+   "total": "135"
+  },
+  {
+   "name": "Veg Biryani",
+   "qty": "4",
+   "unit_price": "175",
+   "total": "700"
+  },
+  {
+   "name": "Egg Curry",
+   "qty": "2",
+   "unit_price": "145",
+   "total": "290"
+  },
+  {
+   "name": "Chole Bhature",
+   "qty": "2",
+   "unit_price": "95",
+   "total": "190"
+  },
+  {
+   "name": "Fresh Lime Soda",
+   "qty": "2",
+   "unit_price": "45",
+   "total": "90"
+  },
+  {
+   "name": "Paneer Butter Masala",
+   "qty": "1",
+   "unit_price": "180",
+   "total": "180"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "90.25"
+  },
+  {
+   "type": "CGST",
+   "amount": "45.13"
+  },
+  {
+   "type": "SGST",
+   "amount": "45.13"
+  }
+ ],
+ "subtotal": "1805",
+ "grand_total": "1985.51"
+}

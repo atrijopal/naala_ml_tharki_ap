@@ -1,0 +1,42 @@
+{
+ "items": [
+  {
+   "name": "Mutton Curry",
+   "qty": "2",
+   "unit_price": "330",
+   "total": "660"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "3",
+   "unit_price": "80",
+   "total": "240"
+  },
+  {
+   "name": "Filter Coffee",
+   "qty": "2",
+   "unit_price": "20",
+   "total": "40"
+  },
+  {
+   "name": "Garlic Naan",
+   "qty": "1",
+   "unit_price": "35",
+   "total": "35"
+  },
+  {
+   "name": "Veg Sandwich",
+   "qty": "2",
+   "unit_price": "75",
+   "total": "150"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "56"
+  }
+ ],
+ "subtotal": "1125",
+ "grand_total": "1181"
+}

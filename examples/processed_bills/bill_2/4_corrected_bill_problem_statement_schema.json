@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "name": "Fresh Lime Soda",
+      "qty": 1,
+      "unit_price": 85.5,
+      "total": 85.5
+    },
+    {
+      "name": "Dal Tadka",
+      "qty": 2,
+      "unit_price": 130,
+      "total": 260
+    },
+    {
+      "name": "Veg Biryani",
+      "qty": 1,
+      "unit_price": 205.5,
+      "total": 205.5
+    }
+  ],
+  "charges": [
+    {
+      "type": "Discount",
+      "amount": -82.65
+    },
+    {
+      "type": "Service Charge",
+      "amount": 55.1
+    },
+    {
+      "type": "CGST",
+      "amount": 11.71
+    },
+    {
+      "type": "SGST",
+      "amount": 11.71
+    },
+    {
+      "type": "Round Off",
+      "amount": 0.13
+    }
+  ],
+  "subtotal": 551,
+  "grand_total": 547
+}

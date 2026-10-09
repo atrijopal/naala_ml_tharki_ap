@@ -1,0 +1,560 @@
+{
+ "summary": {
+  "scans": 8,
+  "main_task_nonempty": {
+   "none": 0,
+   "clahe": 0,
+   "shadow": 0,
+   "sharpen": 0,
+   "denoise": 0,
+   "deskew": 0,
+   "shadow+clahe": 0
+  },
+  "main_task_total_matches": {
+   "none": 0,
+   "clahe": 0,
+   "shadow": 0,
+   "sharpen": 0,
+   "denoise": 0,
+   "deskew": 0,
+   "shadow+clahe": 0
+  },
+  "first_nonempty_in_order": 0,
+  "aux_task_fields_exact": {
+   "company": 7,
+   "date": 8,
+   "address": 4,
+   "total": 7
+  }
+ },
+ "rows": [
+  {
+   "scan": "sroie_test_X00016469670.jpg",
+   "label_total": "193",
+   "main_task": {
+    "none": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "clahe": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "shadow": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "sharpen": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "denoise": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "deskew": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "shadow+clahe": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    }
+   },
+   "aux_task": {
+    "company": {
+     "read": "OJC MARKETING SDN BHD",
+     "exact": true
+    },
+    "date": {
+     "read": "15/01/2019",
+     "exact": true
+    },
+    "address": {
+     "read": "NO 2 & 4, JALAN BAYU 4, BANDAR SERI ALAM, 81750 MASAI, JOHOR",
+     "exact": false
+    },
+    "total": {
+     "read": "193",
+     "exact": true
+    }
+   }
+  },
+  {
+   "scan": "sroie_test_X51005200931.jpg",
+   "label_total": "436.2",
+   "main_task": {
+    "none": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "clahe": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "shadow": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "sharpen": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "denoise": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "deskew": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "shadow+clahe": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    }
+   },
+   "aux_task": {
+    "company": {
+     "read": "PERNIAGAAN ZHENG HUI",
+     "exact": true
+    },
+    "date": {
+     "read": "09/02/2018",
+     "exact": true
+    },
+    "address": {
+     "read": "NO.59 JALAN PERMAS 9/5 BANDAR BARU PERMAS JAYA 81750 JOHOR BAHRU",
+     "exact": true
+    },
+    "total": {
+     "read": "436.2",
+     "exact": true
+    }
+   }
+  },
+  {
+   "scan": "sroie_test_X51005230605.jpg",
+   "label_total": "4.9",
+   "main_task": {
+    "none": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "clahe": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "shadow": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "sharpen": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "denoise": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "deskew": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "shadow+clahe": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    }
+   },
+   "aux_task": {
+    "company": {
+     "read": "PETRON BKT LANJAN SB",
+     "exact": true
+    },
+    "date": {
+     "read": "01/02/2018",
+     "exact": true
+    },
+    "address": {
+     "read": "ALSERKAM ENTERPRISE",
+     "exact": false
+    },
+    "total": {
+     "read": "5",
+     "exact": false
+    }
+   }
+  },
+  {
+   "scan": "sroie_test_X51005230616.jpg",
+   "label_total": "38.9",
+   "main_task": {
+    "none": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "clahe": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "shadow": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "sharpen": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "denoise": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "deskew": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "shadow+clahe": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    }
+   },
+   "aux_task": {
+    "company": {
+     "read": "GERBANG ALAF RESTAURANTS SDN BHD",
+     "exact": true
+    },
+    "date": {
+     "read": "18/01/2018",
+     "exact": true
+    },
+    "address": {
+     "read": "LEVEL 6, BANGUNAN TH, DAMANSARA UPTOWN3 NO.3, JALAN SS21/39,47400 PETALING JAYA SELANGOR",
+     "exact": true
+    },
+    "total": {
+     "read": "38.9",
+     "exact": true
+    }
+   }
+  },
+  {
+   "scan": "sroie_train_X51006328913.jpg",
+   "label_total": "165",
+   "main_task": {
+    "none": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "clahe": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "shadow": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "sharpen": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "denoise": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "deskew": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "shadow+clahe": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    }
+   },
+   "aux_task": {
+    "company": {
+     "read": "BEMED (SP) SDN. BHD.",
+     "exact": true
+    },
+    "date": {
+     "read": "02/JAN/2017",
+     "exact": true
+    },
+    "address": {
+     "read": "NO.49, JALAN DINAR G U3/G, SUBANG PERDANA, 40150 SHAH ALAM, SELANGOR D.E.",
+     "exact": true
+    },
+    "total": {
+     "read": "165",
+     "exact": true
+    }
+   }
+  },
+  {
+   "scan": "sroie_train_X51006329399.jpg",
+   "label_total": "12.15",
+   "main_task": {
+    "none": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "clahe": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "shadow": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "sharpen": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "denoise": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "deskew": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "shadow+clahe": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    }
+   },
+   "aux_task": {
+    "company": {
+     "read": "LIVE9 PHARMACY SDN BHD",
+     "exact": false
+    },
+    "date": {
+     "read": "31/03/2017",
+     "exact": true
+    },
+    "address": {
+     "read": "69, JALAN NOVA U5/X, SEKSYEN U5 SUBANG BE",
+     "exact": false
+    },
+    "total": {
+     "read": "12.15",
+     "exact": true
+    }
+   }
+  },
+  {
+   "scan": "sroie_train_X51006332575.jpg",
+   "label_total": "62",
+   "main_task": {
+    "none": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "clahe": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "shadow": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "sharpen": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "denoise": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "deskew": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "shadow+clahe": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    }
+   },
+   "aux_task": {
+    "company": {
+     "read": "TANJONGMAS BOOK CENTRE (PJ) SDN BHD",
+     "exact": true
+    },
+    "date": {
+     "read": "17/03/2017",
+     "exact": true
+    },
+    "address": {
+     "read": "LOT F15, GIANT BANDAR PUTERI JALAN PUTERI 1/1, BDR PUTERI 47100 PUCHONG, SELANGOR",
+     "exact": true
+    },
+    "total": {
+     "read": "62",
+     "exact": true
+    }
+   }
+  },
+  {
+   "scan": "sroie_train_X51007135247.jpg",
+   "label_total": "37.45",
+   "main_task": {
+    "none": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "clahe": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "shadow": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "sharpen": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "denoise": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "deskew": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    },
+    "shadow+clahe": {
+     "items": 0,
+     "charges": 0,
+     "grand_total": "",
+     "total_matches_label": false
+    }
+   },
+   "aux_task": {
+    "company": {
+     "read": "99 SPEED MART S/B",
+     "exact": true
+    },
+    "date": {
+     "read": "07-02-17",
+     "exact": true
+    },
+    "address": {
+     "read": "LOT P.T. 2811, JALAN ANGSA, TAMAN BERKELEY 41150 KLANG, SELANGOR 1299-SUBANG PERMAI",
+     "exact": false
+    },
+    "total": {
+     "read": "37.45",
+     "exact": true
+    }
+   }
+  }
+ ]
+}

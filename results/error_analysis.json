@@ -1,0 +1,154 @@
+{
+ "bills": 100,
+ "bills_with_any_error": 21,
+ "error_counts": {
+  "item name misread": 0,
+  "quantity misread": 0,
+  "unit price misread": 26,
+  "line total misread": 0,
+  "item missed": 0,
+  "item added": 0,
+  "charge type wrong": 1,
+  "charge amount wrong": 0,
+  "charge missed": 0,
+  "charge added": 0,
+  "subtotal wrong": 0,
+  "grand total wrong": 0
+ },
+ "errors_total": 27,
+ "examples": [
+  {
+   "bill": "final_001.jpg",
+   "issues": [
+    "unit price misread: read '310', label '305' (Mutton Curry)"
+   ],
+   "flagged_fields": [
+    "items[0].unit_price",
+    "items[5].unit_price",
+    "charges[0].amount"
+   ]
+  },
+  {
+   "bill": "final_018.jpg",
+   "issues": [
+    "unit price misread: read '60', label '30' (Samosa)"
+   ],
+   "flagged_fields": [
+    "items[0].unit_price",
+    "items[4].unit_price"
+   ]
+  },
+  {
+   "bill": "final_020.jpg",
+   "issues": [
+    "unit price misread: read '280', label '290' (Mutton Curry)",
+    "unit price misread: read '165.5', label '160.5' (Cold Coffee)"
+   ],
+   "flagged_fields": [
+    "items[0].unit_price",
+    "items[1].unit_price",
+    "charges[0].amount",
+    "charges[1].amount"
+   ]
+  },
+  {
+   "bill": "final_023.jpg",
+   "issues": [
+    "unit price misread: read '115', label '90' (Cold Coffee)"
+   ],
+   "flagged_fields": [
+    "items[1].unit_price",
+    "charges[1].amount"
+   ]
+  },
+  {
+   "bill": "final_027.jpg",
+   "issues": [
+    "unit price misread: read '115', label '80' (Veg Sandwich)"
+   ],
+   "flagged_fields": [
+    "items[1].unit_price",
+    "items[3].unit_price",
+    "charges[1].type",
+    "grand_total"
+   ]
+  },
+  {
+   "bill": "final_028.jpg",
+   "issues": [
+    "unit price misread: read '260', label '255' (Mutton Curry)"
+   ],
+   "flagged_fields": [
+    "items[2].unit_price",
+    "items[3].unit_price"
+   ]
+  },
+  {
+   "bill": "final_034.jpg",
+   "issues": [
+    "unit price misread: read '77.5', label '55.5' (Veg Sandwich)"
+   ],
+   "flagged_fields": [
+    "items[1].unit_price",
+    "items[5].unit_price"
+   ]
+  },
+  {
+   "bill": "final_040.jpg",
+   "issues": [
+    "unit price misread: read '125', label '125.5' (Veg Thali)",
+    "unit price misread: read '22.5', label '27.5' (Tandoori Roti)",
+    "unit price misread: read '220', label '165' (Veg Biryani)"
+   ],
+   "flagged_fields": [
+    "items[0].unit_price",
+    "items[0].total",
+    "items[4].unit_price",
+    "items[6].unit_price",
+    "items[7].unit_price"
+   ]
+  },
+  {
+   "bill": "final_043.jpg",
+   "issues": [
+    "unit price misread: read '125', label '125.5' (Chole Bhature)"
+   ],
+   "flagged_fields": [
+    "items[0].unit_price",
+    "items[7].unit_price"
+   ]
+  },
+  {
+   "bill": "final_044.jpg",
+   "issues": [
+    "unit price misread: read '280', label '290' (Mutton Curry)"
+   ],
+   "flagged_fields": [
+    "items[0].unit_price",
+    "items[4].unit_price",
+    "charges[1].amount"
+   ]
+  },
+  {
+   "bill": "final_048.jpg",
+   "issues": [
+    "unit price misread: read '360', label '315' (Mutton Curry)"
+   ],
+   "flagged_fields": [
+    "items[1].unit_price",
+    "items[7].unit_price"
+   ]
+  },
+  {
+   "bill": "final_051.jpg",
+   "issues": [
+    "unit price misread: read '55', label '55.5' (Veg Sandwich)"
+   ],
+   "flagged_fields": [
+    "items[0].unit_price",
+    "items[6].unit_price",
+    "charges[1].amount"
+   ]
+  }
+ ]
+}

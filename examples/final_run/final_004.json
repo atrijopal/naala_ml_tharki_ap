@@ -1,0 +1,40 @@
+{
+ "items": [
+  {
+   "name": "Dal Tadka",
+   "qty": "1",
+   "unit_price": "155",
+   "total": "155"
+  },
+  {
+   "name": "Veg Sandwich",
+   "qty": "2",
+   "unit_price": "65",
+   "total": "130"
+  },
+  {
+   "name": "Egg Curry",
+   "qty": "1",
+   "unit_price": "115",
+   "total": "115"
+  },
+  {
+   "name": "Fresh Lime Soda",
+   "qty": "1",
+   "unit_price": "50",
+   "total": "50"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "40.5"
+  },
+  {
+   "type": "SGST",
+   "amount": "40.5"
+  }
+ ],
+ "subtotal": "450",
+ "grand_total": "531"
+}

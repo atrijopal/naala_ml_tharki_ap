@@ -1,0 +1,46 @@
+{
+ "items": [
+  {
+   "name": "Chicken Fried Rice",
+   "qty": "2",
+   "unit_price": "145",
+   "total": "290"
+  },
+  {
+   "name": "Butter Roti",
+   "qty": "1",
+   "unit_price": "15",
+   "total": "15"
+  },
+  {
+   "name": "Dal Tadka",
+   "qty": "1",
+   "unit_price": "130",
+   "total": "130"
+  },
+  {
+   "name": "Idli Sambar",
+   "qty": "4",
+   "unit_price": "55",
+   "total": "220"
+  },
+  {
+   "name": "Cold Coffee",
+   "qty": "1",
+   "unit_price": "95",
+   "total": "95"
+  }
+ ],
+ "charges": [
+  {
+   "type": "CGST",
+   "amount": "45"
+  },
+  {
+   "type": "SGST",
+   "amount": "45"
+  }
+ ],
+ "subtotal": "750",
+ "grand_total": "840"
+}

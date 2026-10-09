@@ -1,0 +1,36 @@
+{
+ "items": [
+  {
+   "name": "Dal Tadka",
+   "qty": "3",
+   "unit_price": "140.5",
+   "total": "421.5"
+  },
+  {
+   "name": "Poha",
+   "qty": "1",
+   "unit_price": "30",
+   "total": "30"
+  }
+ ],
+ "charges": [
+  {
+   "type": "SERVICE_CHARGE",
+   "amount": "45.15"
+  },
+  {
+   "type": "CGST",
+   "amount": "11.29"
+  },
+  {
+   "type": "SGST",
+   "amount": "11.29"
+  },
+  {
+   "type": "ROUND_OFF",
+   "amount": "-0.23"
+  }
+ ],
+ "subtotal": "451.5",
+ "grand_total": "519"
+}

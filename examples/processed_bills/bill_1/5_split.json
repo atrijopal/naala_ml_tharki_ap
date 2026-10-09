@@ -1,0 +1,181 @@
+{
+  "assignments_share_units": {
+    "0": {
+      "Riya": 1,
+      "Aman": 1,
+      "Sara": 1
+    },
+    "1": {
+      "Riya": 2,
+      "Aman": 1
+    },
+    "2": {
+      "Sara": 1
+    },
+    "3": {
+      "Riya": 1
+    },
+    "4": {
+      "Aman": 1
+    },
+    "5": {
+      "Aman": 1,
+      "Sara": 1
+    }
+  },
+  "result": {
+    "people": {
+      "Riya": {
+        "items": [
+          {
+            "idx": 0,
+            "name": "Dal Tadka",
+            "units": 1,
+            "total_units": 3,
+            "amount": 11034
+          },
+          {
+            "idx": 1,
+            "name": "Egg Curry",
+            "units": 2,
+            "total_units": 3,
+            "amount": 7667
+          },
+          {
+            "idx": 3,
+            "name": "Filter Coffee",
+            "units": 1,
+            "total_units": 1,
+            "amount": 4500
+          }
+        ],
+        "pre_tax": 23201,
+        "charges": [
+          {
+            "type": "DISCOUNT",
+            "amount": -3480
+          },
+          {
+            "type": "SERVICE_CHARGE",
+            "amount": 1160
+          },
+          {
+            "type": "CGST",
+            "amount": 1183
+          },
+          {
+            "type": "SGST",
+            "amount": 1183
+          }
+        ],
+        "charge_total": 46,
+        "final": 23247,
+        "manual": false
+      },
+      "Aman": {
+        "items": [
+          {
+            "idx": 0,
+            "name": "Dal Tadka",
+            "units": 1,
+            "total_units": 3,
+            "amount": 11033
+          },
+          {
+            "idx": 1,
+            "name": "Egg Curry",
+            "units": 1,
+            "total_units": 3,
+            "amount": 3833
+          },
+          {
+            "idx": 4,
+            "name": "Samosa",
+            "units": 1,
+            "total_units": 1,
+            "amount": 4000
+          },
+          {
+            "idx": 5,
+            "name": "Mutton Curry",
+            "units": 1,
+            "total_units": 2,
+            "amount": 30500
+          }
+        ],
+        "pre_tax": 49366,
+        "charges": [
+          {
+            "type": "DISCOUNT",
+            "amount": -7405
+          },
+          {
+            "type": "SERVICE_CHARGE",
+            "amount": 2468
+          },
+          {
+            "type": "CGST",
+            "amount": 2518
+          },
+          {
+            "type": "SGST",
+            "amount": 2518
+          }
+        ],
+        "charge_total": 99,
+        "final": 49465,
+        "manual": false
+      },
+      "Sara": {
+        "items": [
+          {
+            "idx": 0,
+            "name": "Dal Tadka",
+            "units": 1,
+            "total_units": 3,
+            "amount": 11033
+          },
+          {
+            "idx": 2,
+            "name": "Veg Sandwich",
+            "units": 1,
+            "total_units": 1,
+            "amount": 7000
+          },
+          {
+            "idx": 5,
+            "name": "Mutton Curry",
+            "units": 1,
+            "total_units": 2,
+            "amount": 30500
+          }
+        ],
+        "pre_tax": 48533,
+        "charges": [
+          {
+            "type": "DISCOUNT",
+            "amount": -7280
+          },
+          {
+            "type": "SERVICE_CHARGE",
+            "amount": 2427
+          },
+          {
+            "type": "CGST",
+            "amount": 2475
+          },
+          {
+            "type": "SGST",
+            "amount": 2475
+          }
+        ],
+        "charge_total": 97,
+        "final": 48630,
+        "manual": false
+      }
+    },
+    "computed_total": 121342,
+    "printed_total": 121342,
+    "diff_vs_printed": 0
+  }
+}

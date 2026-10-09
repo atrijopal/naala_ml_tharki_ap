@@ -1,0 +1,53 @@
+{
+ "url": "http://localhost:8765",
+ "levels": [
+  {
+   "clients": 1,
+   "requests": 5,
+   "errors": 0,
+   "wall_s": 1.76,
+   "bills_per_s": 2.85,
+   "latency_p50_s": 0.33,
+   "latency_p95_s": 0.47,
+   "latency_max_s": 0.47,
+   "validate_probe_max_ms": 2.5,
+   "validate_probe_median_ms": 1.2
+  },
+  {
+   "clients": 2,
+   "requests": 10,
+   "errors": 0,
+   "wall_s": 3.59,
+   "bills_per_s": 2.78,
+   "latency_p50_s": 0.71,
+   "latency_p95_s": 0.85,
+   "latency_max_s": 0.85,
+   "validate_probe_max_ms": 3.0,
+   "validate_probe_median_ms": 1.3
+  },
+  {
+   "clients": 4,
+   "requests": 20,
+   "errors": 0,
+   "wall_s": 7.16,
+   "bills_per_s": 2.79,
+   "latency_p50_s": 1.43,
+   "latency_p95_s": 1.83,
+   "latency_max_s": 1.83,
+   "validate_probe_max_ms": 2.1,
+   "validate_probe_median_ms": 1.3
+  },
+  {
+   "clients": 8,
+   "requests": 40,
+   "errors": 0,
+   "wall_s": 14.27,
+   "bills_per_s": 2.8,
+   "latency_p50_s": 2.83,
+   "latency_p95_s": 3.52,
+   "latency_max_s": 3.64,
+   "validate_probe_max_ms": 13.9,
+   "validate_probe_median_ms": 1.3
+  }
+ ]
+}
