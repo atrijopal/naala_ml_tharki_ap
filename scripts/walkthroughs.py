@@ -70,4 +70,5 @@ for k, f in enumerate(files, 1):
            f"\\textit{{{esc(expl)}}}}}\\end{{minipage}}\n\\par\\vspace{{5pt}}\n")
     out.append(tex); rec.append({"image": img, "fixes": fixes, "finals": {p: R[p]["final"] for p in PEOPLE}})
     print(os.path.basename(img), "fixes:", fixes, "finals:", {p: R[p]["final"] for p in PEOPLE})
-open("report/data/walk.tex", "w").write("\n".join(out[:2]))   # the report shows two; examples/processed_bills has all three; json.dump(rec, open("report/data/walk.json", "w"), indent=1)
+open("report/data/walk.tex", "w").write("\n".join(out[:2]))   # the report shows two; examples/processed_bills has all three
+open("report/data/walk_third.tex", "w").write("\n".join(out[2:]))   # the third one goes in the appendix; json.dump(rec, open("report/data/walk.json", "w"), indent=1)

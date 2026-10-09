@@ -1,0 +1,107 @@
+\newcommand{\tabin}[1]{\begin{center}{\footnotesize\setlength{\tabcolsep}{3pt}\input{#1}}\end{center}}
+
+\section{Robustness study in detail}\label{app:rob}
+\textbf{Setup.} The 100 generated bills of \texttt{examples/final\_run} (made after training with seeds no earlier step used) were degraded after rendering, in ten conditions, and read by the fine-tuned model with per-field confidences. Blur is a Gaussian blur of the given radius; tilt rotates the page by the given angle on a grey background; fading blends the print towards white until the given share of its contrast is left. ``Highlighted'' is the share of fields whose confidence is below the calibrated threshold (0.9884); ``errors caught'' is the share of wrong fields that are highlighted; ``unflagged right'' is the share of correct fields among those not highlighted; ``missed-error bills'' are bills holding a wrong field that is not highlighted; ``retake prompt'' is the share of bills for which the app's photo-quality check would ask for a new photo. These are degraded renders of generated bills and say nothing certain about real photographs.
+
+\tabin{data/app_deg_acc.tex}
+\tabin{data/app_deg_conf.tex}
+
+\textbf{Reading the tables.} Blur and fading hardly change the reading until blur is heavy; at 3 px the field F1 is 0.943 and only 84\% of grand totals are right, but 96\% of the wrong fields are highlighted. At 5 px reading fails (F1 0.082) and 97\% of fields are highlighted, so the screen tells the user there is little to trust. Tilt is harder for the model and for its confidence: at 15 degrees one bill in three holds a wrong field that is not highlighted. The retake prompt is over-cautious on these bills (13\% on clean ones, 95\% at 1.5 px of blur, 100\% when the print is faded to a quarter of its contrast although the model still reads those bills at F1 0.984) and does not react to tilt. It is a prompt only (``Use it anyway'' continues), and its thresholds come from CORD and SROIE photos; we did not retune them on generated bills.
+
+\subsection*{Straightening tilted photos}
+Because tilt hurt most, we tested a deskew filter (the page angle is estimated from the text lines and undone) on the same bills tilted by 0, 4, 8 and 15 degrees. The estimator searches up to 10 degrees, so the 15-degree bills are corrected only partly. It helps clearly from 8 degrees up and costs 0.3 points of field F1 on untilted bills, so the app applies it only to photos tilted by 6 degrees or more (setting \texttt{AUTO\_DESKEW\_DEG}); the angle estimate takes about 30 ms per photo.
+
+\tabin{data/app_deskew.tex}
+\input{data/app_deskew_labels.tex}
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[ybar,width=0.62\textwidth,height=4.2cm,bar width=11pt,xtick=data,xticklabels/.expanded={\deskewlabels},xlabel={tilt of the bill},ylabel={field F1},ymin=0.88,ymax=1.0,ymajorgrids,legend style={at={(0.5,1.03)},anchor=south,legend columns=2},enlarge x limits=0.2]
+\addplot[fill=ash,draw=ink] table[x=x,y=y]{data/app_deskew_asis.dat};
+\addplot[fill=brick,draw=ink] table[x=x,y=y]{data/app_deskew_fix.dat};
+\legend{read as is,straightened first}
+\end{axis}
+\end{tikzpicture}
+\caption{Field F1 on 100 tilted generated bills, with and without straightening.}
+\end{figure}
+
+\section{Mistakes on clean bills}\label{app:err}
+On the 100 unseen generated bills read without any degradation, 21 bills contain at least one wrong field and there are 27 wrong fields in all (Table~\ref{tab:errs}). Twenty-six are a misread unit price whose line total is right; one is a wrong charge type. A unit price is redundant (quantity times price must equal the line total), which is why the correction screen can catch it and why the one-tap suggestion of Table~\ref{tab:repair} works: it proposes the line total divided by the quantity, and on these bills it fixed all 26 wrong prices and changed no correct one. The suggestion is only offered when the division gives a whole number of paise, it is never applied silently, and it has only been measured on generated bills.
+
+\begin{table}[!ht]\centering\footnotesize
+\input{data/app_err_counts.tex}
+\caption{Wrong fields by kind, 100 unseen generated bills.}\label{tab:errs}
+\end{table}
+\begin{table}[!ht]\centering\footnotesize
+\input{data/app_repair.tex}
+\caption{The one-tap rate suggestion, measured on the same bills.}\label{tab:repair}
+\end{table}
+
+\textbf{Examples.} Table~\ref{tab:exs} lists the first misreads from the bills we saved. The error analysis kept the details of 12 bills; in those, \input{data/app_err_summary.tex} misread unit prices were among the fields the app highlights for review, so the user is pointed at the mistake before splitting.
+
+\begin{table}[!ht]\centering\footnotesize
+\input{data/app_err_examples.tex}
+\caption{Misread unit prices (first nine of the saved examples).}\label{tab:exs}
+\end{table}
+
+\section{Real receipt scans: where the main task fails}\label{app:sroie}
+SROIE labels give only the shop, date, address and total, so the main task (items and charges) was trained on CORD and generated bills but never on SROIE-style images. We ran the fine-tuned model on 8 real SROIE scans kept locally (4 test, 4 training scans). With the main task it returned no items on any of them (Table~\ref{tab:sroie}); with each of six image enhancements applied first, it still returned none (Table~\ref{tab:sroievar}). The raw text shows why: the model begins the main-task answer and then writes the four SROIE fields, with a mismatched closing tag, instead of items:
+
+\begin{center}\begin{minipage}{0.95\textwidth}\scriptsize\begin{verbatim}
+<s_splitsnap><s_items><s_name> OJOC MARKETING SDN BHD</s_company>
+<s_date> 15/01/2019</s_date>
+<s_address> NO 2 & 4, JALAN BAYU 4, BANDAR SERI ALAM, 81750 MASAI, JOHOR</s_address>
+<s_total> 193</s_total></s>
+\end{verbatim}\end{minipage}\end{center}
+(main-task output for the first scan, read from \texttt{generate\_raw} in \texttt{splitsnap/infer.py}; not saved to a results file). The auxiliary SROIE task reads the same scans well (last four columns of Table~\ref{tab:sroie}: date 8 of 8, company 7, total 7, address 4 exact). The app uses that reading as a fallback: when the main task finds no items it shows the shop name and total and offers to enter the items by hand with the total filled in. A fix that reads the items needs the main task trained on real receipt-style images.
+
+\begin{table}[!ht]\centering\footnotesize\setlength{\tabcolsep}{4pt}
+\input{data/app_sroie_rows.tex}
+\caption{Eight real SROIE scans: main-task items and auxiliary-task exact matches.}\label{tab:sroie}
+\end{table}
+\begin{table}[!ht]\centering\footnotesize
+\input{data/app_sroie_variants.tex}
+\caption{Scans for which the main task returned any item, by enhancement applied before reading.}\label{tab:sroievar}
+\end{table}
+
+\section{Confidence calibration in detail}\label{app:cal}
+The confidence of a field is computed from the probabilities of the tokens that wrote it, in three ways (Table~\ref{tab:agg}); the minimum token probability separates wrong from right fields best and is the one used. Raw scores are already well calibrated; isotonic regression, fitted in two folds split by bill, lowers the expected calibration error further. The data are 4,107 predicted fields from 198 validation bills (CORD and generated; 97.4\% of the fields are correct); SROIE fields carry no confidence. Table~\ref{tab:trade} shows what each choice of highlighted share would buy, and Table~\ref{tab:types} the quality by field type.
+
+\begin{table}[!ht]\centering\footnotesize\setlength{\tabcolsep}{3.5pt}
+\input{data/app_calib_agg.tex}
+\caption{Three ways to score a field. ECE is expected calibration error.}\label{tab:agg}
+\end{table}
+\begin{table}[!ht]\centering\footnotesize
+\input{data/app_calib_trade.tex}
+\caption{Trade-off for the highlighting threshold (minimum-token score).}\label{tab:trade}
+\end{table}
+\begin{table}[!ht]\centering\footnotesize
+\input{data/app_calib_types.tex}
+\caption{Confidence quality by field type. Quantity is the field the score can least separate.}\label{tab:types}
+\end{table}
+
+\section{The third processed sample bill}\label{app:bill3}
+The main text shows two of the three processed sample bills; this is the third. All three, with every intermediate file (photo, extracted JSON, corrections, corrected bill in the problem statement's schema, split and explanation), are in \texttt{examples/processed\_bills/}.
+
+\input{data/walk_third.tex}
+
+\section{Reproducing every number}\label{app:repro}
+{\footnotesize
+\begin{tabular}{@{}p{4.6cm}p{6.6cm}p{4.6cm}@{}}
+\toprule
+Result & Command & Output\\
+\midrule
+Training, held-out test scores & \texttt{kaggle/run\_kaggle.py} modes \texttt{full}, \texttt{eval} (see README) & \texttt{results/training\_logs/}\\
+Before and after fine-tuning & \texttt{scripts/before\_after.py} & \texttt{results/before\_after.json}\\
+Degradation study & \texttt{scripts/degradation\_study.py} & \texttt{results/degradation.json}\\
+Straightening & \texttt{scripts/deskew\_check.py} & \texttt{results/deskew\_check.json}\\
+Error breakdown & \texttt{scripts/error\_analysis.py} & \texttt{results/error\_analysis.json}\\
+Rate suggestion & \texttt{scripts/repair\_check.py} & \texttt{results/repair\_check.json}\\
+SROIE scans & \texttt{scripts/sroie\_scan\_check.py} & \texttt{results/sroie\_scan\_check.json}\\
+Confidence calibration & \texttt{splitsnap/calibrate.py} & \texttt{results/calibration.json}\\
+Latency, compile, quantisation & \texttt{scripts/bench\_*.py} & \texttt{results/bench\_*.json}\\
+Concurrent load & \texttt{scripts/load\_test.py} & \texttt{results/load\_test.json}\\
+Sample bills & \texttt{scripts/make\_sample\_bills.py} & \texttt{examples/processed\_bills/}\\
+This report & \texttt{make report} & \texttt{report/SplitSnap\_Model\_Report.pdf}\\
+\bottomrule
+\end{tabular}}

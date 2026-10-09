@@ -1,0 +1,16 @@
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Condition & Wrong fields & Highlighted & Errors caught & Unflagged right & AUROC & Missed-error bills & Retake prompt \\
+\midrule
+Clean & 27 of 2888 & 5.5\% & 93\% & 99.9\% & 0.948 & 2\% & 13\% \\
+Blur 1.5 px & 29 of 2888 & 5.5\% & 93\% & 99.9\% & 0.947 & 2\% & 95\% \\
+Blur 3 px & 155 of 2881 & 24.7\% & 96\% & 99.7\% & 0.954 & 5\% & 100\% \\
+Blur 5 px & 1238 of 1416 & 97.5\% & 99\% & 77.8\% & 0.810 & 7\% & 100\% \\
+Tilt 4$^\circ$ & 38 of 2886 & 5.4\% & 92\% & 99.9\% & 0.937 & 3\% & 5\% \\
+Tilt 8$^\circ$ & 54 of 2882 & 7.4\% & 76\% & 99.5\% & 0.875 & 8\% & 5\% \\
+Tilt 15$^\circ$ & 228 of 2847 & 16.6\% & 68\% & 96.9\% & 0.859 & 34\% & 5\% \\
+Faded to 60\% contrast & 27 of 2888 & 5.6\% & 93\% & 99.9\% & 0.949 & 2\% & 33\% \\
+Faded to 40\% contrast & 32 of 2888 & 5.9\% & 94\% & 99.9\% & 0.956 & 2\% & 68\% \\
+Faded to 25\% contrast & 39 of 2888 & 6.5\% & 90\% & 99.9\% & 0.955 & 3\% & 100\% \\
+\bottomrule
+\end{tabular}

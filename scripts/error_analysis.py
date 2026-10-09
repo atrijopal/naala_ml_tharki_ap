@@ -19,26 +19,27 @@ examples, bills_with_error = [], 0
 for f in sorted(glob.glob(a.folder + "/*.jpg"))[: a.n]:
     g = json.load(open(f[:-4] + ".json")); im = Image.open(f).convert("RGB")
     with torch.inference_mode(): pred, fields = generate_json(model, processor, im, "cuda", 512, with_conf=True)
-    p = ensure_schema(pred); issues = []
+    p = ensure_schema(pred); issues = []; low = {fl["path"] for fl in fields if fl["p_min"] < THR}
     for i in range(min(len(p["items"]), len(g["items"]))):
         x, y = p["items"][i], g["items"][i]
         for fld, cat in (("name", "item name misread"), ("qty", "quantity misread"), ("unit_price", "unit price misread"), ("total", "line total misread")):
             bad = nm(x[fld]) != nm(y[fld]) if fld == "name" else num(x[fld]) != num(y[fld])
-            if bad: cats[cat] += 1; issues.append(f"{cat}: read {x[fld]!r}, label {y[fld]!r} ({y['name']})")
+            if bad: cats[cat] += 1; issues.append({"text": f"{cat}: read {x[fld]!r}, label {y[fld]!r} ({y['name']})", "kind": cat, "item": y["name"], "read": str(x[fld]), "label": str(y[fld]), "path": f"items[{i}].{fld}", "flagged": f"items[{i}].{fld}" in low})
     d = len(p["items"]) - len(g["items"])
-    if d < 0: cats["item missed"] += -d; issues.append(f"{-d} item(s) missed")
-    if d > 0: cats["item added"] += d; issues.append(f"{d} item(s) added")
+    if d < 0: cats["item missed"] += -d; issues.append({"text": f"{-d} item(s) missed", "kind": "item missed", "path": "items", "flagged": False})
+    if d > 0: cats["item added"] += d; issues.append({"text": f"{d} item(s) added", "kind": "item added", "path": "items", "flagged": False})
     pc, gc = sorted((c["type"], num(c["amount"])) for c in p["charges"]), sorted((c["type"], num(c["amount"])) for c in g["charges"])
     pt, gt_ = sorted(t for t, _ in pc), sorted(t for t, _ in gc)
-    if len(pc) < len(gc): cats["charge missed"] += len(gc) - len(pc); issues.append("charge line(s) missed")
-    elif len(pc) > len(gc): cats["charge added"] += len(pc) - len(gc); issues.append("charge line(s) added")
-    elif pt != gt_: cats["charge type wrong"] += 1; issues.append(f"charge types read {pt}, label {gt_}")
-    elif pc != gc: cats["charge amount wrong"] += 1; issues.append(f"charge amounts read {[a_ for _, a_ in pc]}, label {[a_ for _, a_ in gc]}")
-    if num(p["subtotal"]) != num(g["subtotal"]): cats["subtotal wrong"] += 1; issues.append(f"subtotal read {p['subtotal']}, label {g['subtotal']}")
-    if num(p["grand_total"]) != num(g["grand_total"]): cats["grand total wrong"] += 1; issues.append(f"grand total read {p['grand_total']}, label {g['grand_total']}")
+    if len(pc) < len(gc): cats["charge missed"] += len(gc) - len(pc); issues.append({"text": "charge line(s) missed", "kind": "charge missed", "path": "charges", "flagged": False})
+    elif len(pc) > len(gc): cats["charge added"] += len(pc) - len(gc); issues.append({"text": "charge line(s) added", "kind": "charge added", "path": "charges", "flagged": False})
+    elif pt != gt_: cats["charge type wrong"] += 1; issues.append({"text": f"charge types read {pt}, label {gt_}", "kind": "charge type wrong", "read": str(pt), "label": str(gt_), "path": "charges", "flagged": any(q.startswith("charges") for q in low)})
+    elif pc != gc: cats["charge amount wrong"] += 1; issues.append({"text": "charge amounts differ", "kind": "charge amount wrong", "path": "charges", "flagged": any(q.startswith("charges") for q in low)})
+    if num(p["subtotal"]) != num(g["subtotal"]): cats["subtotal wrong"] += 1; issues.append({"text": "subtotal wrong", "kind": "subtotal wrong", "path": "subtotal", "flagged": "subtotal" in low})
+    if num(p["grand_total"]) != num(g["grand_total"]): cats["grand total wrong"] += 1; issues.append({"text": "grand total wrong", "kind": "grand total wrong", "path": "grand_total", "flagged": "grand_total" in low})
     if issues:
-        bills_with_error += 1; low = [fl["path"] for fl in fields if fl["p_min"] < THR]
-        examples.append({"bill": os.path.basename(f), "issues": issues, "flagged_fields": low})
+        bills_with_error += 1
+        examples.append({"bill": os.path.basename(f), "issues": issues})
 total = sum(cats.values())
-out = {"bills": a.n, "bills_with_any_error": bills_with_error, "error_counts": cats, "errors_total": total, "examples": examples[:12]}
+flagged = sum(1 for e in examples for i in e["issues"] if i.get("flagged")); n_issues = sum(len(e["issues"]) for e in examples)
+out = {"bills": a.n, "bills_with_any_error": bills_with_error, "error_counts": cats, "errors_total": total, "errors_highlighted_by_the_app": flagged, "errors_listed": n_issues, "examples": examples}
 json.dump(out, open(a.out, "w"), indent=1); print("ERR", json.dumps({k: v for k, v in cats.items() if v}), "bills with an error:", bills_with_error)

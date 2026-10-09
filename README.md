@@ -12,7 +12,7 @@ Built for the Nalafaad Hackathon, Track 1: SplitSnap. Everything in the extracti
 
 | Quick links | |
 |---|---|
-| Model report (PDF) | [`report/SplitSnap_Model_Report.pdf`](report/SplitSnap_Model_Report.pdf) |
+| Model report (PDF, 14 pages: 9 numbered pages plus appendices with the full tables) | [`report/SplitSnap_Model_Report.pdf`](report/SplitSnap_Model_Report.pdf) |
 | Three processed sample bills | [`examples/processed_bills/`](examples/processed_bills/) |
 | Measured results (raw JSON and logs) | [`results/`](results/) |
 | Documentation index | [`docs/README.md`](docs/README.md) |
