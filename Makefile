@@ -2,7 +2,7 @@
 PY ?= python
 CKPT ?= ckpt/best_fp16
 
-.PHONY: app demo test e2e report studies
+.PHONY: app demo test e2e report studies notebooks
 app:            ## run the web app with the real model on http://localhost:8000
 	CKPT=$(CKPT) PRELOAD=1 $(PY) -m uvicorn splitsnap.app:app --host 127.0.0.1 --port 8000
 demo:           ## run the web app without a model (two built-in sample bills)
@@ -19,3 +19,5 @@ studies:        ## local measurements behind the report (need the checkpoint and
 	$(PY) scripts/error_analysis.py --ckpt $(CKPT)
 	$(PY) scripts/sroie_scan_check.py --ckpt $(CKPT)
 	$(PY) scripts/load_test.py
+notebooks:      ## regenerate the three notebooks in notebooks/
+	$(PY) scripts/make_notebooks.py

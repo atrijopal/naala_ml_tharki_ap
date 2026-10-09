@@ -14,6 +14,7 @@ Built for the Nalafaad Hackathon, Track 1: SplitSnap. Everything in the extracti
 |---|---|
 | Model report (PDF, 14 pages: 9 numbered pages plus appendices with the full tables) | [`report/SplitSnap_Model_Report.pdf`](report/SplitSnap_Model_Report.pdf) |
 | Three processed sample bills | [`examples/processed_bills/`](examples/processed_bills/) |
+| Notebooks (Kaggle training, inference and split demo, results) | [`notebooks/`](notebooks/) |
 | Measured results (raw JSON and logs) | [`results/`](results/) |
 | Documentation index | [`docs/README.md`](docs/README.md) |
 
@@ -190,6 +191,8 @@ If a photo yields no items (the main task is weak on retail-style scans, see bel
 
 ## Training and reproducing the results
 
+Notebook versions are in [`notebooks/`](notebooks/): a Kaggle training notebook, an inference and split demo (runs locally or on Colab with the checkpoint) and a results notebook that redraws the figures from `results/`. The training notebook runs the same commands as the script below; the other two have been run locally cell by cell.
+
 Training runs on Kaggle (free T4); the laptop is used only for inference and the studies below. You need a Kaggle account with a token in `~/.kaggle/` and the CLI (`pip install -r requirements-dev.txt`). Kaggle usernames and kernel names in the scripts belong to the original authors; change `atrijopal` to yours.
 
 ```bash
@@ -292,6 +295,7 @@ splitsnap/            the Python package
 kaggle/               the kernel entry point that runs every training and evaluation stage
 scripts/              Kaggle helpers, benchmarks, the studies above, report data, screenshots
 tests/                unit, property and endpoint tests; browser end-to-end test
+notebooks/            Kaggle training notebook, inference and split demo, results and figures
 examples/             generated example bills, 100 unseen bills, three processed sample bills
 results/              measured results (JSON) and training logs behind every number
 report/               LaTeX source and PDF of the model report
